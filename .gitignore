@@ -172,3 +172,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Test and data folders
+/data/
+/tests/temp_krawl_data/
+/tests/__pycache__/

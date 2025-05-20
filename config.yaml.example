@@ -1,0 +1,11 @@
+grobid:
+  server_url: http://localhost:8070
+
+data_paths:
+  root_dir: data
+
+sources:
+  acl_anthology:
+    enabled: true
+    target_years: [2020]
+    query_id: acl_test_2020 
