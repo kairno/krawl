@@ -1,2 +1,6 @@
 # Add runtime dependencies here 
 acl-anthology
+grobid-client-python
+beautifulsoup4
+tqdm
+pandas

@@ -1,9 +1,0 @@
-version: '3.8'
-services:
-  grobid:
-    image: lfoppiano/grobid:0.7.2
-    ports:
-      - "8070:8070"
-    environment:
-      - JAVA_OPTS=-Xmx1g
-    restart: unless-stopped 
