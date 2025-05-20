@@ -1,9 +1,6 @@
-__all__ = ["PaperMetadata", "ACLSource"]
-
 """
 Source for fetching papers from ACL Anthology.
 """
-# TODO: from acl_anthology import Anthology # Uncomment and use in real implementation
 from .base_source import BaseSource
 from krawl.sources.paper_metadata import PaperMetadata
 from acl_anthology import Anthology
@@ -12,24 +9,59 @@ class ACLSource(BaseSource):
     def __init__(self):
         self.anthology = Anthology.from_repo()
 
-    def fetch_papers(self, year=None, event_id=None):
+    def _to_paper_metadata(self, paper, event_id=None):
+        web_url = getattr(paper, 'web_url', None)
+        pdf_url = getattr(paper, 'pdf_url', None)
+        if not pdf_url and web_url:
+            # Generate pdf_url from web_url by replacing the final '/' with '.pdf'
+            if web_url.endswith('/'):
+                pdf_url = web_url[:-1] + '.pdf'
+            else:
+                pdf_url = web_url + '.pdf'
+        return PaperMetadata(
+            title=str(paper.title),
+            authors=[str(author.name) for author in paper.authors],
+            year=paper.year,
+            pdf_url=pdf_url,
+            source_name="acl_anthology",
+            event_id=event_id if event_id is not None else getattr(paper, 'venue', None),
+            abstract=str(paper.abstract) if getattr(paper, 'abstract', None) else None,
+            doi=getattr(paper, 'doi', None),
+            bibkey=getattr(paper, 'bibkey', None),
+            full_id=getattr(paper, 'full_id', None),
+            web_url=web_url,
+            awards=getattr(paper, 'awards', None),
+            editors=[str(editor.name) for editor in getattr(paper, 'editors', [])] if getattr(paper, 'editors', None) else None,
+            month=getattr(paper, 'month', None),
+            publisher=getattr(paper, 'publisher', None),
+            address=getattr(paper, 'address', None),
+            language_name=getattr(paper, 'language_name', None),
+            volume_id=getattr(paper, 'volume_id', None),
+            collection_id=getattr(paper, 'collection_id', None),
+        )
+
+    def fetch_papers(self, event_id=None):
         """
-        Fetch papers from ACL Anthology by year or event_id.
+        Fetch papers from ACL Anthology by event_id.
         Returns a list of PaperMetadata.
         """
+        if event_id is None:
+            raise ValueError("event_id must be provided for ACLSource.fetch_papers")
         papers = []
-        for paper in self.anthology.papers.values():
-            if year is not None and paper.year != year:
-                continue
-            if event_id is not None and paper.venue != event_id:
-                continue
-            papers.append(
-                PaperMetadata(
-                    title=str(paper.title),
-                    authors=[str(author.name) for author in paper.authors],
-                    year=paper.year,
-                    pdf_url=paper.pdf_url,
-                    event_id=paper.venue,
-                )
-            )
-        return papers 
+        event = self.anthology.get_event(event_id)
+        for volume in event.volumes():
+            for paper in volume.papers():
+                papers.append(self._to_paper_metadata(paper, event_id=event_id))
+        return papers
+
+if __name__ == "__main__":
+
+    # RUN: python -m krawl.sources.acl_source
+
+    source = ACLSource()
+    event_id = "acl-2022"
+    print(f"Fetching papers for event_id: {event_id}\n")
+    papers = source.fetch_papers(event_id=event_id)
+    print(f"Total papers found: {len(papers)}\n")
+    for i, paper in enumerate(papers[:5]):
+        print(f"Paper {i+1}: {paper}")
