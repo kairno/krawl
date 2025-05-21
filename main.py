@@ -18,35 +18,32 @@ def main(event_id: str):
         source.export_metadata_to_json(papers, metadata_path)
 
     # Download PDFs
-    if not os.path.exists(pdf_dir):
-        downloader = PaperDownloader()
-        pdf_urls = pd.read_json(metadata_path)['pdf_url'].tolist()
-        pdf_urls = [(url, os.path.join(pdf_dir, os.path.basename(url))) for url in pdf_urls if url is not None]
-        downloader.download_pdfs(pdf_urls)
+    downloader = PaperDownloader()
+    pdf_urls = pd.read_json(metadata_path)['pdf_url'].tolist()
+    pdf_urls = [(url, os.path.join(pdf_dir, os.path.basename(url))) for url in pdf_urls if url is not None]
+    downloader.download_pdfs(pdf_urls)
 
-    # Parse PDFs
-    parser = PaperParser(
-        input_pdf_dir=pdf_dir,
-        output_dir=parses_dir,
-        consolidate_citations=True,
-        tei_coordinates=True,
-        force=False, 
-        config_path="./krawl/parser/config/config.json",    
-        processing_batch_size=1
-    )
-    parser.run()
-    summary_info = parser.summary()
-    print(summary_info)
+    # # Parse PDFs
+    # parser = PaperParser(
+    #     input_pdf_dir=pdf_dir,
+    #     output_dir=parses_dir,
+    #     consolidate_citations=True,
+    #     tei_coordinates=True,
+    #     force=False, 
+    #     config_path="./krawl/parser/config/config.json",    
+    #     processing_batch_size=1
+    # )
+    # parser.run()
+    # summary_info = parser.summary()
+    # print(summary_info)
 
 if __name__ == "__main__":
 
     # RUN: python -m main
 
-    main("acl-2022")
+    source = ACLSource()
+    event_ids = source.get_event_ids(filter_by_str=["tacl", "acl", "naacl", "emnlp"])
+    event_ids.sort(key=lambda x: int(x.split('-')[1]), reverse=True)
 
-    # source = ACLSource()
-    # event_ids = source.get_event_ids(filter_by_str=["tacl", "acl", "naacl", "emnlp"])
-    # event_ids.sort(key=lambda x: int(x.split('-')[1]), reverse=True)
-
-    # for event_id in event_ids:
-    #     main(event_id)
+    for event_id in event_ids:
+        main(event_id)
