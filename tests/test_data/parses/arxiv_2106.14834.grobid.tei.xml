@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">On the matrices in B-spline collocation methods for Riesz fractional equations and their spectral properties</title>
+				<funder ref="#_u3T5Uj3">
+					<orgName type="full">MIUR Excellence Department Project</orgName>
+				</funder>
+				<funder ref="#_xYBnHAn">
+					<orgName type="full">unknown</orgName>
+				</funder>
+				<funder ref="#_8nAxEeg">
+					<orgName type="full">Department of Mathematics, University of Rome Tor Vergata</orgName>
+				</funder>
+				<funder ref="#_TjYmbU9">
+					<orgName type="full">Beyond Borders Program of the University of Rome Tor Vergata</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability  status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2021-06-28">28 Jun 2021</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName coords="1,135.60,153.82,50.61,10.74"><forename type="first">M</forename><surname>Mazza</surname></persName>
+							<affiliation key="aff0" coords="1,88.68,649.47,445.34,7.60">
+								<orgName type="department">Department of Humanities and Innovation</orgName>
+								<orgName type="institution">University of Insubria</orgName>
+								<address>
+									<addrLine>via Valleggio 11</addrLine>
+									<postCode>22100</postCode>
+									<settlement>Como</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,225.96,153.82,64.56,10.74"><forename type="first">M</forename><surname>Donatelli</surname></persName>
+							<email>marco.donatelli@uninsubria.it</email>
+							<affiliation key="aff1" coords="1,87.96,668.43,446.06,7.60">
+								<orgName type="department">Department of Science and High Technology</orgName>
+								<orgName type="institution">University of Insubria</orgName>
+								<address>
+									<addrLine>via Valleggio 11</addrLine>
+									<postCode>22100</postCode>
+									<settlement>Como</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,327.84,153.82,48.36,10.74"><forename type="first">C</forename><surname>Manni</surname></persName>
+							<email>manni@mat.uniroma2.it</email>
+							<affiliation key="aff2" coords="1,85.92,687.39,448.10,7.60">
+								<orgName type="department">Department of Mathematics</orgName>
+								<orgName type="institution">University of Rome Tor Vergata</orgName>
+								<address>
+									<addrLine>Via della Ricerca Scientifica 1</addrLine>
+									<postCode>00133</postCode>
+									<settlement>Rome</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,413.64,153.82,57.18,10.74"><forename type="first">H</forename><surname>Speleers</surname></persName>
+							<email>speleers@mat.uniroma2.it</email>
+							<affiliation key="aff2" coords="1,85.92,687.39,448.10,7.60">
+								<orgName type="department">Department of Mathematics</orgName>
+								<orgName type="institution">University of Rome Tor Vergata</orgName>
+								<address>
+									<addrLine>Via della Ricerca Scientifica 1</addrLine>
+									<postCode>00133</postCode>
+									<settlement>Rome</settlement>
+									<country key="IT">Italy</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">On the matrices in B-spline collocation methods for Riesz fractional equations and their spectral properties</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date type="published" when="2021-06-28">28 Jun 2021</date>
+						</imprint>
+					</monogr>
+					<idno type="MD5">A321366EAC13E9003AFD3BA46CD6BF44</idno>
+					<idno type="arXiv">arXiv:2106.14834v1[math.NA]</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2025-05-21T00:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=1, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[affiliation, biblStruct, figure, formula, head, note, persName, ref, s], sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Spectral distribution</term>
+					<term>B-spline collocation</term>
+					<term>Isogeometric analysis</term>
+					<term>Fractional operators</term>
+					<term>Toeplitz matrices MSC 2010: 15A12</term>
+					<term>15A18</term>
+					<term>41A15</term>
+					<term>65M70</term>
+					<term>26A33</term>
+					<term>15B05</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>In this work, we focus on a fractional differential equation in Riesz form discretized by a polynomial B-spline collocation method. For an arbitrary polynomial degree p, we show that the resulting coefficient matrices possess a Toeplitz-like structure. We investigate their spectral properties via their symbol and we prove that, like for second order differential problems, also in this case the given matrices are ill-conditioned both in the low and high frequencies for large p. More precisely, in the fractional scenario the symbol has a single zero at 0 of order α, with α the fractional derivative order that ranges from 1 to 2, and it presents an exponential decay to zero at π for increasing p that becomes faster as α approaches 1. This translates in a mitigated conditioning in the low frequencies and in a deterioration in the high frequencies when compared to second order problems. Furthermore, the derivation of the symbol reveals another similarity of our problem with a classical diffusion problem. Since the entries of the coefficient matrices are defined as evaluations of fractional derivatives of the B-spline basis at the collocation points, we are able to express the central entries of the coefficient matrix as inner products of two fractional derivatives of cardinal B-splines. Finally, we perform a numerical study of the approximation behavior of polynomial B-spline collocation. This study suggests that, in line with non-fractional diffusion problems, the approximation order for smooth solutions in the fractional case is p + 2 -α for even p, and p + 1 -α for odd p.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<facsimile>
+		<surface n="1" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="2" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="3" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="4" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="5" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="6" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="7" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="8" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="9" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="10" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="11" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="12" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="13" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="14" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="15" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="16" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="17" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="18" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="19" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="20" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="21" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="22" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+		<surface n="23" ulx="0.0" uly="0.0" lrx="612.0" lry="792.0"/>
+	</facsimile>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1" coords="1,77.04,452.80,8.06,12.93;1,101.28,452.80,88.77,12.93">Introduction</head><p>Fractional diffusion equations (FDEs) generalize classical partial differential equations (PDEs). Their recent success is due to the non-local behavior of fractional operators resulting in an appropriate modeling of anomalous diffusion phenomena that appear in several applicative fields, like imaging or electrophysiology <ref type="bibr" coords="1,103.68,513.09,10.44,9.96" target="#b1">[2,</ref><ref type="bibr" coords="1,117.84,513.09,6.96,9.96" target="#b5">6]</ref>. In particular, a standard diffusion equation can be "fractionalized", either by replacing the derivative in time with a fractional one whose fractional order ranges from 0 to 1, or by introducing a fractional derivative in space with order between 1 and 2. The two approaches can also be combined and lead to similar computational issues.</p><p>The improved physical description of the considered phenomenon obtained by "fractionalizing" the derivatives, however, translates in a more challenging numerical treatment of the corresponding discretized problems. Indeed, the evaluation/approximation of a fractional operator is numerically more expensive (and often less stable). Moreover, even when standard local discretization methods are adopted, the nonlocality of the fractional operators causes absence of sparsity in the discretization matrices. This makes FDEs computationally more demanding than PDEs.</p><p>Various numerical discretization methods for FDE problems (e.g., finite differences, finite volumes, finite elements, spectral methods) can be found in the literature. We refer the reader to <ref type="bibr" coords="2,469.56,74.01,15.48,9.96" target="#b13">[14,</ref><ref type="bibr" coords="2,488.64,74.01,12.72,9.96" target="#b18">19,</ref><ref type="bibr" coords="2,505.08,74.01,12.72,9.96" target="#b20">21,</ref><ref type="bibr" coords="2,521.40,74.01,12.72,9.96" target="#b23">24,</ref><ref type="bibr" coords="2,77.04,86.01,12.72,9.96" target="#b25">26,</ref><ref type="bibr" coords="2,92.64,86.01,12.72,9.96" target="#b36">37,</ref><ref type="bibr" coords="2,108.12,86.01,12.84,9.96" target="#b38">39,</ref><ref type="bibr" coords="2,123.72,86.01,12.72,9.96" target="#b39">40]</ref> and references therein. In the case of regular spatial domain subdivisions, the discretization matrices inherit a Toeplitz-like structure from the space-invariant property of the underlying operators that can be exploited for the design of ad hoc iterative schemes of multigrid and preconditioned Krylov type (see, e.g., <ref type="bibr" coords="2,121.68,121.89,15.48,9.96" target="#b11">[12,</ref><ref type="bibr" coords="2,140.76,121.89,12.72,9.96" target="#b12">13,</ref><ref type="bibr" coords="2,157.20,121.89,12.72,9.96" target="#b19">20,</ref><ref type="bibr" coords="2,173.52,121.89,12.72,9.96" target="#b26">27,</ref><ref type="bibr" coords="2,189.96,121.89,12.72,9.96" target="#b28">29,</ref><ref type="bibr" coords="2,206.28,121.89,11.59,9.96" target="#b29">30]</ref>). In the context of finite difference/volume discretizations, we mention the structure preserving preconditioning and the algebraic multigrid methods presented in <ref type="bibr" coords="2,474.00,133.77,15.48,9.96" target="#b11">[12,</ref><ref type="bibr" coords="2,492.84,133.77,11.61,9.96" target="#b12">13]</ref>. Both strategies are based on the spectral analysis of the coefficient matrices via their symbol, a function which provides an approximation of their eigenvalues/singular values.</p><p>A similar symbol-based approach has also been successfully employed in the context of isogeometric analysis (IgA) for the discretization of integer order differential problems; see, e.g., <ref type="bibr" coords="2,447.00,181.65,10.56,9.96" target="#b8">[9,</ref><ref type="bibr" coords="2,461.28,181.65,12.72,9.96" target="#b10">11,</ref><ref type="bibr" coords="2,477.84,181.65,11.61,9.96" target="#b24">25]</ref>. In these papers, the spectral information provided by the symbol has been leveraged for the design of effective preconditioners and fast multigrid/multi-iterative solvers whose convergence speed is independent of the fineness parameters and the approximation parameters.</p><p>The present work aims at uncovering the structure and studying the symbol of the discretization matrices obtained by IgA collocation for FDE problems. As a first step towards the spectral treatment of general differential problems involving fractional diffusion operators, we consider here the following fractional diffusion boundary value problem with absorbing boundary conditions:</p><formula xml:id="formula_0" coords="2,254.16,284.68,279.98,35.93">d α u(x) d|x| α = s(x), x ∈ Ω, u(x) = 0, x ∈ R\Ω,<label>(1)</label></formula><p>where Ω := (0, 1), α ∈ (1, 2), and</p><formula xml:id="formula_1" coords="2,199.32,346.01,209.19,24.88">d α u(x) d|x| α := 1 2 cos(πα/2) RL 0 D α x u(x) + RL x D α 1 u(x)</formula><p>is the so-called Riesz fractional operator, while RL 0 D α x u(x), RL x D α 1 u(x) are the left and right Riemann-Liouville fractional derivatives of u (see Section 2.1 for their definition). More precisely, we are interested in a polynomial B-spline collocation-based discretization of <ref type="bibr" coords="2,338.64,407.37,12.75,9.96" target="#b0">(1)</ref> where the so-called Greville abscissae are chosen as collocation points.</p><p>Collocation methods based on polynomial splines were applied to fractional problems for the first time in <ref type="bibr" coords="2,113.40,443.25,10.44,9.96" target="#b3">[4]</ref> and further developed in <ref type="bibr" coords="2,242.88,443.25,14.59,9.96" target="#b30">[31]</ref>. Polynomial B-spline bases have been used for solving timefractional problems in <ref type="bibr" coords="2,180.36,455.13,15.48,9.96" target="#b32">[33]</ref> and (left-sided) space-fractional problems in <ref type="bibr" coords="2,403.56,455.13,14.59,9.96" target="#b33">[34]</ref>. Among non-polynomial spline collocation methods for fractional problems, we mention the work <ref type="bibr" coords="2,392.40,467.13,15.48,9.96" target="#b31">[32]</ref> in which the authors explore the application of fractional B-splines.</p><p>Our choice of classical polynomial B-splines is motivated by the fact that, contrarily to their fractional counterpart, they have compact support and naturally fulfill boundary and/or initial conditions. Furthermore, they possess good approximation properties. Seminal results concerning the structure of the quadratic spline collocation matrices can be found in <ref type="bibr" coords="2,307.08,526.89,14.59,9.96" target="#b21">[22]</ref>. Therein, the authors recognize the Toeplitz-like structure of the coefficient matrices and use a classical circulant preconditioner to solve the corresponding linear systems by means of Krylov methods.</p><p>To the best of our knowledge, this is the first time that the structure and the spectral properties of polynomial B-spline collocation matrices are investigated for an arbitrary polynomial degree p. We show that the coefficient matrices retain the Toeplitz-like structure and we study their spectral properties via their symbol. It turns out that the symbol:</p><p>(a) has a single zero at 0 of order α;</p><p>(b) presents an exponential decay to zero at π for increasing p, a so-called numerical zero, that becomes faster as α approaches 1;</p><p>(c) is bounded in the proximity of π.</p><p>This translates in a mitigated conditioning in the low frequencies and in a deterioration in the high frequencies when compared to second order problems (see <ref type="bibr" coords="2,339.12,702.09,14.72,9.96" target="#b9">[10]</ref>). The symbol, and so the (asymptotic) spectral properties of the involved matrices, do not change if reaction and/or advection terms are added to <ref type="bibr" coords="3,89.28,74.01,11.61,9.96" target="#b0">(1)</ref>. As a side result of the symbol computation, we propose a new way of expressing both a left and a right fractional derivative of a cardinal B-spline as inner products of two fractional derivatives of cardinal B-splines.</p><p>Furthermore, we provide a numerical study of the approximation behavior of polynomial B-spline collocation for an arbitrary degree p. It turns out that the approximation order for smooth solutions is p + 2 -α for even p, and p + 1 -α for odd p. This is again in agreement with the approximation results known for standard (non-fractional) diffusion problems <ref type="bibr" coords="3,351.12,157.77,9.99,9.96" target="#b0">[1]</ref>. We refer the reader to <ref type="bibr" coords="3,468.36,157.77,10.56,9.96" target="#b6">[7,</ref><ref type="bibr" coords="3,482.16,157.77,12.72,9.96" target="#b17">18,</ref><ref type="bibr" coords="3,498.12,157.77,12.72,9.96" target="#b23">24]</ref> for a smoothness analysis of the solution in (weighted) Sobolev spaces.</p><p>The paper is organized as follows. Section 2 is devoted to notations, definitions, and preliminary results. In Section 3 we present a new way of writing the fractional derivative of a cardinal B-spline. In Section 4 we describe the IgA collocation approximation of the problem reported in (1), while in Sections 5 and 6 we perform a detailed spectral analysis of the resulting coefficient matrices. We validate our theoretical spectral findings with a selection of numerical experiments in Section 7 and we do a numerical study of the approximation order of the polynomial B-spline collocation method as well. We end with some concluding remarks in Section 8.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2" coords="3,77.04,283.72,8.06,12.93;3,101.28,283.72,93.24,12.93">Preliminaries</head><p>In this section we collect some preliminary tools on fractional derivatives, spectral analysis and IgA discretizations. Firstly, we give two definitions of fractional derivatives (Section 2.1). Secondly, after introducing the definition of spectral distribution of general matrix-sequences, we summarize the essentials of Toeplitz sequences (Section 2.2). Finally, we recall the definition of B-splines and cardinal B-splines (Section 2.3).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1" coords="3,77.04,382.95,156.74,10.77">Fractional derivatives</head><p>A common definition of fractional derivatives is given by the Riemann-Liouville formula. For a given function u with absolutely continuous (m -1)-th derivative on [a, b], the left and right Riemann-Liouville fractional derivatives of order α are defined by</p><formula xml:id="formula_2" coords="3,187.20,444.29,236.88,61.96">RL a D α x u(x) := 1 Γ(m -α) d m dx m x a (x -y) m-α-1 u(y) dy, RL x D α b u(x) := (-1) m Γ(m -α) d m dx m b x (y -x) m-α-1 u(y) dy,</formula><p>with m the integer such that m-1 ≤ α &lt; m and Γ the Euler gamma function. Note that the left fractional derivative of the function u computed at x depends on all function values to the left of x, while the right fractional derivative depends on the ones to the right.</p><p>Another common definition of fractional derivative was proposed by Caputo:</p><formula xml:id="formula_3" coords="3,193.56,563.57,336.34,61.96">C a D α x u(x) := 1 Γ(m -α) x a (x -y) m-α-1 u (m) (y) dy, C x D α b u(x) := (-1) m Γ(m -α) b x (y -x) m-α-1 u (m) (y) dy. (<label>2</label></formula><formula xml:id="formula_4" coords="3,529.90,587.25,4.25,9.96">)</formula><p>Note that (2) requires the m-th derivative of u to be absolutely integrable. Higher regularity of the solution is typically imposed in time rather than in space. As a consequence, the Caputo formulation is mainly used for fractional derivatives in time, while Riemann-Liouville's is preferred for fractional derivatives in space. The use of Caputo's derivative provides some advantages in the treatment of boundary conditions when applying the Laplace transform method (see <ref type="bibr" coords="3,299.64,677.25,15.48,9.96" target="#b34">[35,</ref><ref type="bibr" coords="3,318.48,677.25,53.56,9.96">Chapter 2.8]</ref>).</p><p>The Riemann-Liouville derivatives are related to the Caputo ones as follows</p><formula xml:id="formula_5" coords="4,184.56,82.73,349.59,69.03">RL a D α x u(x) = C a D α x u(x) + m-1 k=0 (x -a) k-α Γ(k -α + 1) u (k) (a + ), RL x D α b u(x) = C x D α b u(x) + m-1 k=0 (-1) k (b -x) k-α Γ(k -α + 1) u (k) (b -),<label>(3)</label></formula><p>and the two coincide if u satisfies homogeneous conditions, i.e., u (k) (a + ) = u (k) (b -) = 0 for k = 0, . . . , m-1.</p><p>Remark 2.1. Throughout the paper, whenever we write RL a D α x u(ξ) or RL x D α b u(ξ) for a fixed ξ we mean</p><formula xml:id="formula_6" coords="4,77.04,202.37,105.66,14.17">RL a D α x u(x) or RL x D α b u(x)</formula><p>, where x = ξ, respectively.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2" coords="4,77.04,231.51,111.74,10.77">Spectral tools</head><p>We begin with the formal definition of spectral distribution in the sense of the eigenvalues for a general matrix-sequence.</p><p>Definition 2.2. Let f : G → C be a measurable function, defined on a measurable set G ⊂ R k with k ≥ 1 and Lebesgue measure 0 &lt; µ k (G) &lt; ∞. Let C 0 (C) be the set of continuous functions with compact support over C, and let A n be a matrix of size d n with eigenvalues λ j (A n ), j = 1, . . . , d n . The matrix-sequence {A n } n (with d n &lt; d n+1 ) is distributed as the pair (f, G) in the sense of the eigenvalues, denoted by</p><formula xml:id="formula_7" coords="4,268.20,340.41,74.76,17.04">{A n } n ∼ λ (f, G),</formula><p>if the following limit relation holds for all F ∈ C 0 (C):</p><formula xml:id="formula_8" coords="4,203.88,383.81,330.26,31.33">lim n→∞ 1 d n dn j=1 F (λ j (A n )) = 1 µ k (G) G F (f (t)) dt.<label>(4)</label></formula><p>We say that f is the (spectral) symbol of the matrix-sequence {A n } n .</p><p>Remark 2.3. Throughout the paper, when it is not of crucial importance to know what is the domain of f , we replace the notation</p><formula xml:id="formula_9" coords="4,193.92,458.61,153.17,17.04">{A n } n ∼ λ (f, G) with {A n } n ∼ λ f .</formula><p>Remark 2.4. When f is continuous, an informal interpretation of the limit relation (4) is that when the matrix-size is sufficiently large, the eigenvalues of A n can be approximated by a sampling of f on a uniform equispaced grid of the domain G.</p><p>The following result allows us to determine the spectral distribution of a Hermitian matrix-sequence plus a correction (see <ref type="bibr" coords="4,173.04,534.33,10.22,9.96" target="#b2">[3]</ref>).</p><p>Theorem 2.5. Let {X n } n and {Y n } n be two matrix-sequences, with X n , Y n ∈ C dn×dn , and assume that (a) X n is Hermitian for all n and</p><formula xml:id="formula_10" coords="4,77.04,574.17,288.29,56.88">{X n } n ∼ λ f ; (b) Y n F = o( √ d n ) as n → ∞, with • F the Frobenius norm. Then, {X n + Y n } n ∼ λ f .</formula><p>For a given matrix X ∈ C m×m , let us denote by X 1, * the trace norm defined by X 1, * := m j=1 σ j (X), where σ j (X) are the m singular values of X.</p><p>Corollary 2.6. Let {X n } n and {Y n } n be two matrix-sequences, with X n , Y n ∈ C dn×dn , and assume that (a) in Theorem 2.5 is satisfied. Moreover, assume that any of the following two conditions is met:</p><formula xml:id="formula_11" coords="4,91.92,691.77,89.93,18.45">• Y n 1, * = o( √ d n ); • Y n 2 = o(1), with • 2 the spectral norm. Then, {X n + Y n } n ∼ λ f .</formula><p>Remark 2.7. In <ref type="bibr" coords="5,158.64,100.89,11.21,9.96" target="#b2">[3]</ref> the authors conjecture that Theorem 2.5 is also valid when (b) is replaced by the weaker condition</p><formula xml:id="formula_12" coords="5,158.40,112.77,66.53,10.66">Y n 1, * = o(d n ).</formula><p>We now recall the definition of Toeplitz sequences generated by univariate functions in</p><formula xml:id="formula_13" coords="5,77.04,131.18,448.32,37.39">L 1 ([-π, π]). Definition 2.8. Let f ∈ L 1 ([-π, π]</formula><p>) and let f k be its Fourier coefficients,</p><formula xml:id="formula_14" coords="5,225.48,169.61,308.67,27.13">f k := 1 2π π -π f (θ)e -ı(kθ) dθ, k ∈ Z.<label>(5)</label></formula><p>The n-th Toeplitz matrix associated with f is the n × n matrix defined by</p><formula xml:id="formula_15" coords="5,191.40,218.87,342.75,92.02">T n (f ) :=          f 0 f -1 • • • • • • f -(n-1) f 1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . f -1 f n-1 • • • • • • f 1 f 0          ∈ C n×n .<label>(6)</label></formula><p>The matrix-sequence {T n (f )} n is called the Toeplitz sequence generated by f .</p><p>For real-valued Toeplitz matrix-sequences, the following theorem holds (see, e.g., <ref type="bibr" coords="5,447.60,334.53,14.72,9.96" target="#b16">[17]</ref>).</p><p>Theorem 2.9.</p><formula xml:id="formula_16" coords="5,148.56,352.94,218.69,39.31">Let f ∈ L 1 ([π, π]) be a real-valued function. Then, {T n (f )} n ∼ λ (f, [-π, π]).</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.3" coords="5,77.04,402.03,218.78,10.77">B-splines and cardinal B-splines</head><p>For p ≥ 0 and n ≥ 1, consider the following uniform knot sequence</p><formula xml:id="formula_17" coords="5,77.04,442.53,387.12,52.44">ξ 1 = • • • = ξ p+1 := 0 &lt; ξ p+2 &lt; • • • &lt; ξ p+n &lt; 1 =: ξ p+n+1 = • • • = ξ 2p+n+1 , where ξ i+p+1 := i n , i = 0, . . . , n.</formula><p>This knot sequence allows us to define n + p B-splines of degree p.</p><p>Definition 2.10. The B-splines of degree p over a uniform mesh of [0, 1], consisting of n intervals, are denoted by</p><formula xml:id="formula_18" coords="5,231.12,539.21,108.24,19.59">N p i : [0, 1] → R, i = 1, .</formula><p>. . , n + p, and defined recursively as follows: for</p><formula xml:id="formula_19" coords="5,77.04,559.29,345.84,108.96">1 ≤ i ≤ n + 2p, N 0 i (x) := 1, x ∈ [ξ i , ξ i+1 ), 0, otherwise; for 1 ≤ k ≤ p and 1 ≤ i ≤ n + 2p -k, N k i (x) := x -ξ i ξ i+k -ξ i N k-1 i (x) + ξ i+k+1 -x ξ i+k+1 -ξ i+1 N k-1 i+1 (x),</formula><p>where a fraction with zero denominator is assumed to be zero.</p><p>It is well known that the B-splines N p i , i = 1, . . . , n + p, are linearly independent and they enjoy the following list of properties (see, e.g., <ref type="bibr" coords="5,237.84,702.09,10.44,9.96" target="#b4">[5,</ref><ref type="bibr" coords="5,251.64,702.09,11.59,9.96" target="#b22">23]</ref>).</p><formula xml:id="formula_20" coords="6,92.04,62.13,442.10,23.86">• Local support: supp(N p i ) = [ξ i , ξ i+p+1 ], i = 1, . . . , n + p;<label>(7)</label></formula><p>• Smoothness:</p><formula xml:id="formula_21" coords="6,241.68,103.25,152.76,19.60">N p i ∈ C p-1 (0, 1), i = 1, . . . , n + p;</formula><p>• Differentiation:</p><formula xml:id="formula_22" coords="6,164.16,141.41,369.98,33.88">(N p i (x)) ′ = p N p-1 i (x) ξ i+p -ξ i - N p-1 i+1 (x) ξ i+p+1 -ξ i+1 , i = 1, . . . , n + p, p ≥ 1;<label>(8)</label></formula><p>• Non-negative partition of unity:</p><formula xml:id="formula_23" coords="6,210.00,200.45,216.24,31.57">N p i (x) ≥ 0, i = 1, . . . , n + p, n+p i=1 N p i (x) = 1;</formula><p>• Vanishing at the boundary:</p><formula xml:id="formula_24" coords="6,225.24,259.25,308.90,19.60">N p i (0) = N p i (1) = 0, i = 2, . . . , n + p -1;<label>(9)</label></formula><p>• Bound for the second derivatives:</p><formula xml:id="formula_25" coords="6,234.96,301.37,294.86,19.59">|(N p i (x)) ′′ | ≤ 4p(p -1)n 2 , x ∈ (0, 1). (<label>10</label></formula><formula xml:id="formula_26" coords="6,529.82,303.93,4.45,9.96">)</formula><p>We also add a property concerning fractional derivatives, which follows from ( <ref type="formula" coords="6,418.45,326.61,4.21,9.96" target="#formula_5">3</ref>) and ( <ref type="formula" coords="6,453.79,326.61,4.16,9.96" target="#formula_22">8</ref>)-( <ref type="formula" coords="6,470.41,326.61,4.16,9.96" target="#formula_24">9</ref>).</p><p>• The Riemann-Liouville and the Caputo derivatives of interior B-splines coincide:</p><formula xml:id="formula_27" coords="6,211.20,361.25,323.07,27.25">RL 0 D α x N p i = C 0 D α x N p i RL x D α 1 N p i = C x D α 1 N p i , i = m + 1, . . . , n + p -m.<label>(11)</label></formula><p>From now onwards, we will denote the left and right Riemann-Liouville derivatives simply by 0 D α x and x D α 1 . In view of the last B-spline property, these also stand for the left and right Caputo derivatives in case of interior B-splines.</p><p>The B-splines N p i , i = p + 1, . . . , n, are uniformly shifted and scaled versions of a single shape function, the so-called cardinal B-spline φ p : R → R,</p><formula xml:id="formula_28" coords="6,251.40,468.45,282.87,24.36">φ 0 (t) := 1, t ∈ [0, 1), 0, otherwise,<label>(12)</label></formula><p>and</p><formula xml:id="formula_29" coords="6,195.84,510.33,338.42,23.88">φ p (t) := t p φ p-1 (t) + p + 1 -t p φ p-1 (t -1), p ≥ 1.<label>(13)</label></formula><p>More precisely, we have</p><formula xml:id="formula_30" coords="6,77.04,547.61,457.18,69.16">N p i (x) = φ p (nx -i + p + 1), i = p + 1, . . . , n, and (N p i (x)) ′ = nφ ′ p (nx -i + p + 1), i = p + 1, . . . , n. The cardinal B-spline φ p belongs to C p-1 (R) and is supported on the interval [0, p + 1]. It is a symmetric function with respect to p+1</formula><p>2 , the midpoint of its support. The left Caputo derivative of φ p has the following explicit expression (see <ref type="bibr" coords="6,222.24,618.69,14.72,9.96" target="#b32">[33]</ref>):</p><formula xml:id="formula_31" coords="6,160.08,637.25,374.19,34.60">0 D α t φ p (t) = 1 Γ(p -α + 1) p+1 j=0 (-1) j p + 1 j (t -j) p-α + , 0 ≤ α &lt; p,<label>(14)</label></formula><p>where (•) q + is the truncated power function of degree q. Note that the function in ( <ref type="formula" coords="6,455.17,678.21,8.89,9.96" target="#formula_31">14</ref>) is a fractional spline, i.e., a spline with fractional degree <ref type="bibr" coords="6,267.24,690.21,14.59,9.96" target="#b37">[38]</ref>. For other common properties of cardinal B-splines, we refer the reader to [15, Section 3.1].</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3" coords="7,77.04,59.56,8.06,12.93;7,101.28,59.56,300.72,12.93">Fractional derivatives of cardinal B-splines</head><p>The aim of this section is to write the fractional derivative of a cardinal B-spline as the inner product of fractional derivatives of cardinal B-splines (see <ref type="bibr" coords="7,296.28,95.85,57.82,9.96">Theorem 3.3)</ref>. This result will be used in Section 5 to derive an explicit expression of the symbol of the coefficient matrices of interest.</p><p>All the results in this section refer to fractional derivatives on the half-axes. More precisely, for a given compactly supported function u with absolutely continuous (m -1)-th derivative on R, we consider <ref type="bibr" coords="7,516.48,173.97,17.79,9.96" target="#b14">(15)</ref> with m the integer such that m -1 ≤ α &lt; m. For functions u that are solutions of problem ( <ref type="formula" coords="7,505.49,216.09,4.25,9.96" target="#formula_0">1</ref>) and m = 2, these derivatives reduce to 0 D α x u(x) and x D α 1 u(x) since the adopted boundary conditions ensure u to be identically zero on R\(0, 1).</p><formula xml:id="formula_32" coords="7,181.08,150.29,249.12,62.08">-∞ D α x u(x) := 1 Γ(m -α) d m dx m x -∞ (x -y) m-α-1 u(y) dy, x D α +∞ u(x) := (-1) m Γ(m -α) d m dx m +∞ x (y -x) m-α-1 u(y) dy,</formula><p>Let f denote the Fourier transform of f ∈ L 2 (R), i.e.,</p><formula xml:id="formula_33" coords="7,252.72,278.33,105.72,20.17">f (θ) := R f (x)e -ı θx dx.</formula><p>We start with a lemma addressing the Fourier transform of the derivatives in <ref type="bibr" coords="7,417.24,307.65,17.67,9.96" target="#b14">(15)</ref> for cardinal B-splines.</p><p>Lemma 3.1. Let φ p be the cardinal B-spline as defined in ( <ref type="formula" coords="7,340.48,327.45,8.96,9.96" target="#formula_28">12</ref>)-( <ref type="formula" coords="7,362.89,327.45,8.96,9.96" target="#formula_29">13</ref>). Then, for 0 ≤ α &lt; p we have</p><formula xml:id="formula_34" coords="7,226.20,347.81,308.06,27.28">-∞ D α x φ p (θ) = (ıθ) α 1 -e -ıθ ıθ p+1 ,<label>(16)</label></formula><p>and</p><formula xml:id="formula_35" coords="7,222.60,403.13,307.22,27.28">x D α +∞ φ p (θ) = (-ıθ) α 1 -e -ıθ ıθ p+1 . (<label>17</label></formula><formula xml:id="formula_36" coords="7,529.82,413.61,4.45,9.96">)</formula><p>Proof. From <ref type="bibr" coords="7,134.52,441.45,15.48,9.96" target="#b34">[35]</ref> we know that</p><formula xml:id="formula_37" coords="7,192.96,463.37,225.24,13.57">-∞ D α x f (θ) = (ıθ) α f (θ), x D α +∞ f (θ) = (-ıθ) α f (θ),</formula><p>and from <ref type="bibr" coords="7,120.00,487.05,10.56,9.96" target="#b7">[8,</ref><ref type="bibr" coords="7,133.80,487.05,11.61,9.96" target="#b22">23]</ref>,</p><formula xml:id="formula_38" coords="7,252.00,497.33,107.28,27.28">φ p (θ) = 1 -e -ıθ ıθ p+1 .</formula><p>Combining these results immediately gives ( <ref type="formula" coords="7,270.45,531.57,8.83,9.96" target="#formula_34">16</ref>) and ( <ref type="formula" coords="7,310.56,531.57,8.16,9.96" target="#formula_35">17</ref>).</p><p>In the following α 1 , α 2 stand for real numbers.</p><p>Lemma 3.2. Let z denote the conjugate of the complex number z. Then, for any real number θ we have</p><formula xml:id="formula_39" coords="7,248.52,591.29,114.12,11.80">(ıθ) α1 (-ıθ) α2 = (ıθ) α1+α2 .</formula><p>Proof. Let us consider the polar form of the complex number (ıθ) α , i.e., (ıθ) α = |θ| α e ı π 2 sign(θ)α .</p><p>Hence,</p><formula xml:id="formula_40" coords="7,143.16,677.68,324.84,19.73">(ıθ) α1 (-ıθ) α2 = |θ| α1 e ı π 2 sign(θ)α1 |θ| α2 e ı π 2 sign(θ)α2 = |θ| α1+α2 e ı π 2 sign(θ)(α1+α2) ,</formula><p>which completes the proof.</p><p>We are now ready for the main result of this section.</p><p>Theorem 3.3. Let φ p be the cardinal B-spline as defined in ( <ref type="formula" coords="8,359.56,82.05,8.96,9.96" target="#formula_28">12</ref>)- <ref type="bibr" coords="8,377.48,82.05,17.92,9.96" target="#b12">(13)</ref>. Then, for 0 ≤ α 1 &lt; p 1 and 0 ≤ α 2 &lt; p 2 we have</p><formula xml:id="formula_41" coords="8,153.00,118.25,381.27,20.53">R -∞ D α1 x φ p1 (x) x D α2 +∞ φ p2 (x + k) dx = -∞ D α1+α2 x φ p1+p2+1 (p 2 + 1 -k),<label>(18)</label></formula><formula xml:id="formula_42" coords="8,153.00,144.89,381.27,20.41">R x D α1 +∞ φ p1 (x) -∞ D α2 x φ p2 (x + k) dx = x D α1+α2 +∞ φ p1+p2+1 (p 2 + 1 -k).<label>(19)</label></formula><p>Proof. We first recall the Parseval identity for Fourier transforms, i.e.,</p><formula xml:id="formula_43" coords="8,194.76,193.77,227.16,24.94">R ϕ(x)ψ(x) dx = 1 2π R ϕ(θ) ψ(θ) dθ, ϕ, ψ ∈ L 2 (R),</formula><p>and the translation property of the Fourier transform, i.e.,</p><formula xml:id="formula_44" coords="8,209.16,249.86,192.84,18.55">ψ(• + k)(θ) = ψ(θ) e ıkθ , ψ ∈ L 1 (R), k ∈ R.</formula><p>Starting from the above equalities, and using Lemmas 3.1 and 3.2, we get</p><formula xml:id="formula_45" coords="8,181.44,297.53,255.23,108.13">R -∞ D α1 x φ p1 (x) x D α2 +∞ φ p2 (x + k) dx = 1 2π R -∞ D α1 x φ p1 (θ) x D α2 +∞ φ p2 (θ)e ıkθ dθ = 1 2π R (ıθ) α1+α2 1 -e -ıθ ıθ p1+1 e ıθ -1 ıθ p2+1 e -ıkθ dθ = 1 2π R (ıθ) α1+α2 1 -e -ıθ ıθ p1+p2+2 e ı(p2+1-k)θ dθ.</formula><p>By taking the inverse Fourier transform of the right-hand side we arrive at <ref type="bibr" coords="8,417.12,415.29,16.42,9.96" target="#b17">(18)</ref>. The proof of ( <ref type="formula" coords="8,510.10,415.29,8.83,9.96" target="#formula_42">19</ref>) is analogous.</p><p>Remark 3.4. Theorem 3.3 is a generalization of a known explicit formula for inner products of integer derivatives of cardinal B-splines (see <ref type="bibr" coords="8,239.88,459.09,16.37,9.96" target="#b14">[15,</ref><ref type="bibr" coords="8,259.80,459.09,13.25,9.96" target="#b22">23]</ref> and also <ref type="bibr" coords="8,316.32,459.09,15.55,9.96" target="#b35">[36]</ref>).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4" coords="8,77.04,489.52,8.06,12.93;8,101.28,489.52,432.82,12.93">IgA collocation discretization of the fractional Riesz operator</head><p>From now onwards, we assume that α is fixed in the open interval <ref type="bibr" coords="8,372.24,513.81,11.64,9.96" target="#b0">(1,</ref><ref type="bibr" coords="8,385.56,513.81,7.76,9.96" target="#b1">2)</ref>. Let W be a finite dimensional vector space of sufficiently smooth functions defined on the closure of Ω and vanishing at its boundary, and let N := dim(W). Applying the collocation method to (1) means looking for a function</p><formula xml:id="formula_46" coords="8,77.04,537.81,457.22,43.92">u W ∈ W such that d α u W (x i ) d|x| α = s(x i ), i = 1, . . . , N,<label>(20)</label></formula><p>with x i ∈ Ω, the so-called collocation points. Given a basis {ϕ j : j = 1, . . . , N } of W, problem (20) can be rewritten in matrix form as follows:</p><formula xml:id="formula_47" coords="8,77.04,612.57,256.92,27.96">A col u = b col ,<label>with</label></formula><formula xml:id="formula_48" coords="8,158.88,638.57,293.52,28.93">A col := 1 2 cos(πα/2) ( 0 D α x + x D α 1 )ϕ j (x i ) N i,j=1 , b col := [s(x i )] N i=1 ,</formula><p>and u := [u 1 , . . . , u N ] T such that u W (x) = N j=1 u j ϕ j (x). In this paper, we choose W as the space of splines of degree p ≥ 2 that vanish at the boundary, and the collocation points as the Greville abscissae. More precisely, we take</p><p>• the approximation space as the space spanned by the B-splines of degree p ≥ 2 that are zero at the boundary (see ( <ref type="formula" coords="9,170.66,74.01,3.86,9.96" target="#formula_24">9</ref>)), i.e., S p n := span{N p i : i = 2, . . . , n + p -1};</p><p>• the collocation points as the Greville abscissae corresponding to the B-splines in <ref type="bibr" coords="9,455.88,106.65,16.32,9.96" target="#b20">(21)</ref>, i.e.,</p><formula xml:id="formula_50" coords="9,218.28,125.49,199.68,23.88">η i := ξ i+1 + • • • + ξ i+p p , i = 2, . . . , n + p -1.</formula><p>Thus <ref type="bibr" coords="9,102.36,161.61,17.67,9.96" target="#b19">(20)</ref> translates in the following linear system</p><formula xml:id="formula_51" coords="9,77.04,180.17,457.23,84.49">A p,α n u n = b n , where A p,α n := 1 2 cos(πα/2) (A L n + A R n ), b n := [s(η i+1 )] n+p-2 i=1 , with A L n := 0 D α x N p j+1 (η i+1 ) n+p-2 i,j=1 , A R n := x D α 1 N p j+1 (η i+1 ) n+p-2 i,j=1 ,<label>(22)</label></formula><p>and u n := [u 1 , . . . , u n+p-2 ] T , the vector of the coefficients of u with respect to the B-spline basis functions in the space S p n . In order to assemble the matrices A L n and A R n , we need to compute the left and right fractional derivatives of any B-spline. By using <ref type="bibr" coords="9,247.56,307.17,16.42,9.96" target="#b13">(14)</ref>, for the B-splines N p i corresponding to the indexes i = p + 1, . . . , n, we have</p><formula xml:id="formula_52" coords="9,154.56,336.89,302.16,52.48">0 D α x N p i (x) = n α 0 D α nx φ p (nx -i + p + 1) = n α Γ(p -α + 1) p+1 j=0 (-1) j p + 1 j (nx -i + p + 1 -j) p-α + .</formula><p>Thanks to this relation, and recalling that the Greville abscissae for i = p + 1, . . . , n reduce to</p><formula xml:id="formula_53" coords="9,230.16,413.85,150.84,23.76">η i = i n - p + 1 2n , i = p + 1, . . . , n,</formula><p>or equivalently,</p><formula xml:id="formula_54" coords="9,212.52,453.21,186.24,23.52">nη i + p + 1 = i + p + 1 2 , i = p + 1, . . . , n,</formula><p>we can immediately recognize that the central part of the matrix A L n corresponding to the indexes p + 1, . . . , n has a Toeplitz structure. In other words, we have</p><formula xml:id="formula_55" coords="9,261.72,511.61,87.84,13.57">A L n = n α (T L n + R L n ),</formula><p>where</p><formula xml:id="formula_56" coords="9,217.20,541.61,171.85,28.93">T L n := 0 D α nx φ p p + 1 2 + i -j n+p-2 i,j=1</formula><p>, and R L n is a matrix whose rank is bounded by 4(p -1). A similar reasoning can be applied to the matrix A R n , and we have</p><formula xml:id="formula_57" coords="9,77.04,599.21,312.97,55.45">A R n = n α (T R n + R R n ), where T R n := nx D α n φ p p + 1 2 + i -j n+p-2 i,j=1</formula><p>, and R R n is a matrix whose rank is bounded by 4(p -1). As a consequence, the coefficient matrix A p,α n inherits the Toeplitz plus rank correction structure and can be written as follows:</p><formula xml:id="formula_58" coords="9,195.84,691.05,338.42,23.52">A p,α n = 1 2 cos(πα/2) (A L n + A R n ) = n α (T p,α n + R p,α n ),<label>(23)</label></formula><p>with</p><formula xml:id="formula_59" coords="10,161.64,69.57,372.63,23.52">T p,α n := 1 2 cos(πα/2) (T L n + T R n ), R p,α n := 1 2 cos(πα/2) (R L n + R R n ).<label>(24)</label></formula><p>In Section 6 we will show that the symbol of {n -α A p,α n } n coincides with the symbol of {T p,α n } n , denoted by f p,α , but first we discuss some properties of this function in the next section.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5" coords="10,77.04,142.60,8.06,12.93;10,101.28,142.40,195.43,13.17;10,298.32,139.89,14.17,9.96">Properties of the function f p,α</head><p>We start with a theorem that provides an explicit expression of the generating function f p,α of the Toeplitz matrix T p,α n , and whose proof uses the results obtained in Section 3.</p><p>Theorem 5.1. Let T p,α n be defined as in <ref type="bibr" coords="10,260.16,198.57,16.65,9.96" target="#b23">(24)</ref>. Then, T p,α n = T n+p-2 (f p,α ) with</p><formula xml:id="formula_60" coords="10,207.24,218.81,322.58,30.97">f p,α (θ) = l∈Z |θ + 2lπ| α sin(θ/2 + lπ) θ/2 + lπ p+1 . (<label>25</label></formula><formula xml:id="formula_61" coords="10,529.82,228.57,4.45,9.96">)</formula><p>Proof. From its construction it is clear that T p,α n is a Toeplitz matrix of dimension n + p -2. According to the definition in (6), the entries f k of this matrix are given by</p><formula xml:id="formula_62" coords="10,153.72,292.53,303.72,23.76">f k = 1 2 cos(πα/2) -∞ D α x φ p p + 1 2 -k + x D α +∞ φ p p + 1 2 -k .</formula><p>We differentiate the cases of odd and even degree p. We start by proving the expression (25) of the generating function f p,α for p = 2q + 1. Using Theorem 3.3 (and its proof) with α = α 1 + α 2 and q = p 1 = p 2 , we have</p><formula xml:id="formula_63" coords="10,77.04,370.49,395.15,119.56">2 cos(πα/2)f k = -∞ D α x φ 2q+1 (q + 1 -k) + x D α +∞ φ 2q+1 (q + 1 -k) = 1 2π R [(ıθ) α + (-ıθ) α ] 1 -e -ıθ ıθ q+1 e ıθ -1 ıθ q+1 e -ıkθ dθ = 1 2π R 2|θ| α cos(πα/2) 1 -e -ıθ θ 2q+2 e -ıkθ dθ. Set w(θ) := |θ| α 1 -e -ıθ θ 2q+2 = |θ| α sin(θ/2) θ/2 2q+2 .</formula><p>Then,</p><formula xml:id="formula_64" coords="10,149.04,516.62,313.08,64.61">f k = 1 2π R w(θ)e -ıkθ dθ = l∈Z 1 2π (2l+1)π (2l-1)π w(θ)e -ıkθ dθ = l∈Z 1 2π π -π w(θ + 2lπ)e -ıkθ dθ = 1 2π π -π l∈Z w(θ + 2lπ) e -ıkθ dθ.</formula><p>The expression (25) of the generating function f p,α follows from (5) for p = 2q + 1. Now we consider even degree p = 2q. Using again Theorem 3.3 (and its proof) with α = α 1 + α 2 and q = p 1 + 1 = p 2 , we have</p><formula xml:id="formula_65" coords="10,131.64,635.33,323.43,44.89">2 cos(πα/2)f k = -∞ D α x φ 2q (q + 1 -k -1/2) + x D α +∞ φ 2q (q + 1 -k -1/2) = 1 2π R [(ıθ) α + (-ıθ) α ]</formula><p>1 -e -ıθ ıθ q e ıθ -1 ıθ Starting from <ref type="bibr" coords="11,152.64,158.01,17.67,9.96" target="#b24">(25)</ref> and applying the same line of arguments as in the proofs of [10, Lemmas 3.4 and 3.6], we obtain the following results for f p,α (θ).</p><p>Theorem 5.3. Let f p,α be as in <ref type="bibr" coords="11,225.36,189.81,16.55,9.96" target="#b24">(25)</ref>. Then, f p,α (θ) = f p,α (-θ), and for p &gt; α,</p><formula xml:id="formula_66" coords="11,145.08,210.05,389.19,26.80">|θ| α sin(θ/2) θ/2 p+1 ≤ f p,α (θ) ≤ |θ| α sin(θ/2) θ/2 p+1 + C p,α (sin(θ/2)) p+1 ,<label>(26)</label></formula><p>where C p,α is a constant depending on p and α and θ ∈ [0, π]. Moreover,</p><formula xml:id="formula_67" coords="11,224.40,267.53,305.42,25.69">f p,α (π) max θ f p,α (θ) ≤ f p,α (π) f p,α (π/2) ≤ 2 2α+1-p 2 . (<label>27</label></formula><formula xml:id="formula_68" coords="11,529.82,275.73,4.45,9.96">)</formula><p>From the bounds in ( <ref type="formula" coords="11,186.10,303.45,8.83,9.96" target="#formula_66">26</ref>) we can immediately deduce the vanishing properties of f p,α .</p><p>Corollary 5.4. Let f p,α be as in <ref type="bibr" coords="11,229.20,323.37,16.65,9.96" target="#b24">(25)</ref>. Then, f p,α is non-negative for θ ∈ [-π, π], and it only vanishes at θ = 0 where it has a zero of order α.</p><p>Let f p,α := f p,α /max θ f p,α (θ) be the normalized version of f p,α . The inequality in <ref type="bibr" coords="11,465.24,355.29,17.67,9.96" target="#b26">(27)</ref> shows that f p,α (θ) converges exponentially to zero at θ = ±π for increasing p. Hence, we say that f p,α has a numerical zero at ±π for large p.</p><p>Remark 5.5. The upper bound in <ref type="bibr" coords="11,234.48,399.09,17.67,9.96" target="#b26">(27)</ref> depends not only on p but also on α. In this view, the decay at ±π of f p,α is expected to become faster as α approaches 1.</p><p>In the following propositions we bound f p,α (θ) in terms of f p,0 (θ) and f p,2 (θ) for high enough value of |θ|.</p><p>Proposition 5.6. For p odd, we have</p><formula xml:id="formula_69" coords="11,216.84,482.93,317.43,18.87">f p,0 (θ) ≤ f p,α (θ) ≤ f p,2 (θ), |θ| ∈ [1, π].<label>(28)</label></formula><p>Proof. Since</p><formula xml:id="formula_70" coords="11,77.04,516.77,354.84,54.28">1 = |θ + 2lπ| 0 ≤ |θ + 2lπ| α ≤ |θ + 2lπ| 2 , l ∈ Z, |θ| ≥ 1, and sin(θ/2 + lπ) θ/2 + lπ 2q+2 ≥ 0, l ∈ Z,</formula><p>it is clear from the definition of f p,α in ( <ref type="formula" coords="11,254.74,578.01,8.83,9.96" target="#formula_60">25</ref>) that (28) holds for p = 2q + 1.</p><p>Proposition 5.7. For p even and p &gt; α, we have</p><formula xml:id="formula_71" coords="11,238.08,617.93,296.19,18.87">f p,0 (θ) ≤ f p,α (θ), |θ| ∈ [a, π],<label>(29)</label></formula><p>where</p><formula xml:id="formula_72" coords="11,272.16,650.54,66.96,26.59">a := π 4 48 1/α . Proof. Let p = 2q &gt; α. It is easy to check that f p,α (θ) = |θ| α sin(θ/2) θ/2 p+1 + (2 sin(θ/2)) p+1 r p,α (θ),</formula><p>where</p><formula xml:id="formula_73" coords="12,178.56,126.05,254.16,34.12">r p,α (θ) := ∞ k=1 (-1) k 1 (2kπ + θ) p+1-α - 1 (2kπ -θ) p+1-α .</formula><p>With the same line of arguments as in the proof of <ref type="bibr" coords="12,304.68,163.65,15.48,9.96" target="#b9">[10,</ref><ref type="bibr" coords="12,323.88,163.65,53.76,9.96">Lemma A.2]</ref> we deduce that r p,α (θ) is a strictly increasing function, which implies that r p,α (π) ≥ r p,α (θ) &gt; r p,α (0) = 0 for θ ∈ (0, π]. Moreover, from the same lemma we know</p><formula xml:id="formula_74" coords="12,222.36,195.62,166.56,24.91">r p,0 (θ) ≤ π 4 48 -1 1 π p+1 , θ ∈ [0, π].</formula><p>From the above bounds we get</p><formula xml:id="formula_75" coords="12,77.04,246.41,403.94,134.07">f p,α (θ) -f p,0 (θ) = (|θ| α -1) sin(θ/2) θ/2 p+1 + (2 sin(θ/2)) p+1 (r p,α (θ) -r p,0 (θ)) ≥ (2 sin(θ/2)) p+1 |θ| α -1 θ p+1 - π 4 48 -1 1 π p+1 ≥ 2 sin(θ/2) π p+1 |θ| α -1 - π 4 48 -1 , for θ ∈ [1, π]. Hence, f p,α (θ) -f p,0 (θ) ≥ 0, θ ≥ π 4 48 1/α</formula><p>, which concludes the proof.</p><p>In our final proposition we explicitly state that f p,α is the symbol of the matrix-sequence {T p,α n } n .</p><p>Proposition 5.8. The Toeplitz matrix T p,α n defined in <ref type="bibr" coords="12,320.88,426.57,17.67,9.96" target="#b23">(24)</ref> is symmetric and</p><formula xml:id="formula_76" coords="12,247.56,446.69,286.70,18.88">{T p,α n } n ∼ λ (f p,α , [-π, π]),<label>(30)</label></formula><p>where f p,α is given in <ref type="bibr" coords="12,176.52,470.49,16.65,9.96" target="#b24">(25)</ref>.</p><p>Proof. From Theorem 5.3 we know that f p,α is an even real-valued function, so the matrix T p,α n = T n+p-2 (f p,α ) is symmetric. The spectral distribution of {T p,α n } n = {T n+p-2 (f p,α )} n follows from Theorem 2.9.</p><p>We end this section by summarizing all the discussed properties of the symbol f p,α and highlighting what is their role in the design of an ad hoc solver for a linear system associated with T p,α n (see Remark 5.9). We have shown that f p,α is equipped with the following three properties: (a) it has a single zero at 0 of order α (Corollary 5.4); (b) it presents an exponential decay to zero at π for increasing p that becomes faster as α approaches 1 (Theorem 5.3 and Remark 5.5);</p><p>(c) it is bounded in the proximity of π by f p,0 (Propositions 5.6 and 5.7).</p><p>Properties (a)-(b) give us a clear picture of what are the conditioning peculiarities of the matrix T p,α n . Specifically, they say that T p,α n is poorly conditioned both in the low frequencies (with a conditioning that grows as n α ) and in the high frequencies (with a deterioration that is driven both by p and α). Moreover, property (c) "isolates" the source of ill-conditioning in the high frequencies induced by p, meaning the symbol behaves like f p,0 in the proximity of π, with f p,0 a positive function well-separated from zero.</p><p>Remark 5.9. Based on what has been done in <ref type="bibr" coords="13,294.12,62.13,11.21,9.96" target="#b8">[9,</ref><ref type="bibr" coords="13,309.72,62.13,13.25,9.96" target="#b10">11,</ref><ref type="bibr" coords="13,327.48,62.13,13.25,9.96" target="#b11">12,</ref><ref type="bibr" coords="13,345.12,62.13,12.19,9.96" target="#b12">13]</ref>, all this knowledge can be used for the design of an ad hoc solver for a linear system associated with T p,α n . For instance, from (a) we can infer that a multigrid method with a standard choice of both prolongator and restrictor is able to cope with the standard ill-conditioning in the low frequency subspace, while from (c) we get hints on how to define a smoother that works in the subspace of high frequencies where there exists the ill-conditioning induced by p.</p><p>6 Spectral symbol of {n -α A p,α n } n This section is devoted to the computation of the symbol of the matrix-sequence {n -α A p,α n } n . As we have already anticipated, it turns out that the symbol of {n -α A p,α n } n coincides with the symbol of the Toeplitz part {T p,α n } n . The spectral distribution of {n -α A p,α n } n is given in Theorem 6.5. Its proof uses Corollary 2.6 and needs several preliminary results.</p><p>For a given matrix n be defined as in <ref type="bibr" coords="13,246.24,256.29,16.65,9.96" target="#b21">(22)</ref>. For i, j = 2, . . . , n + p -1 we have</p><formula xml:id="formula_77" coords="13,183.24,222.65,116.76,18.40">X := [x ij ] m i,j=1 ∈ C m×m ,</formula><formula xml:id="formula_78" coords="13,168.48,266.99,365.79,67.06">|(A L n ) i-1,j-1 | ≤          0, η i ≤ ξ j , c L p,α n α , ξ j &lt; η i ≤ ξ j+p+1 + 1 n , c L p,α (η i -ξ j+p+1 ) -α , ξ j+p+1 + 1 n &lt; η i ,<label>(31)</label></formula><p>where c L p,α is a constant depending on p and α. Proof. From the properties of fractional derivatives ( <ref type="formula" coords="13,306.64,355.41,4.36,9.96" target="#formula_3">2</ref>)-( <ref type="formula" coords="13,324.07,355.41,4.36,9.96" target="#formula_5">3</ref>) and the B-spline properties ( <ref type="formula" coords="13,461.13,355.41,4.41,9.96" target="#formula_20">7</ref>)-( <ref type="formula" coords="13,478.79,355.41,8.83,9.96" target="#formula_27">11</ref>) it follows that for j = 2,</p><formula xml:id="formula_79" coords="13,135.00,385.22,399.27,32.35">(A L n ) i-1,1 = 1 Γ(2 -α) min (ηi,ξp+3) 0 (η i -y) 1-α (N p 2 ) ′′ (y) dy + pn Γ(2 -α) (η i ) 1-α ,<label>(32)</label></formula><p>and for j = 3, . . . , n + p -1,</p><formula xml:id="formula_80" coords="13,135.96,427.91,398.30,54.82">(A L n ) i-1,j-1 =      0, η i ≤ ξ j , 1 Γ(2 -α) min (ηi,ξj+p+1) ξj (η i -y) 1-α (N p j ) ′′ (y) dy, otherwise.<label>(33)</label></formula><p>We remark that η i ∈ (0, 1), η i &lt; η i+1 , and ξ j+p+1 -ξ j ≤ p+1 n . In the following, we address the three different cases in <ref type="bibr" coords="13,153.00,498.93,17.79,9.96" target="#b30">(31)</ref> separately.</p><p>If η i ≤ ξ j , then it is clear that (A L n ) i-1,j-1 = 0 for j = 3, . . . , n + p -1. Note that j = 2 is not involved in this case for any i because</p><formula xml:id="formula_81" coords="13,92.04,522.81,309.60,53.76">ξ 2 = 0 &lt; η i . If ξ j &lt; η i ≤ ξ j+p+1 + 1 n , then (η i -y) ≤ p + 2 n , y ∈ [ξ j , min (η i , ξ j+p+1 )].</formula><p>Using <ref type="bibr" coords="13,105.24,581.85,16.32,9.96" target="#b9">(10)</ref>, from <ref type="bibr" coords="13,152.52,581.85,17.79,9.96" target="#b32">(33)</ref> we get for j = 3, . . . , n + p -1,</p><formula xml:id="formula_82" coords="13,179.88,600.26,251.12,63.91">|(A L n ) i-1,j-1 | ≤ 4p(p -1)n 2 Γ(2 -α) min (ηi,ξj+p+1) ξj (η i -y) 1-α dy ≤ 4p(p -1)n 2 Γ(3 -α) p + 2 n 2-α</formula><p>.</p><p>When j = 2 we have ξ 2 = 0 and</p><formula xml:id="formula_83" coords="13,224.04,664.94,133.20,18.43">1 pn = η 2 ≤ η i ≤ ξ p+3 + 1 n ≤ 3 n .</formula><p>Then, we find in a similar way that for j = 2,</p><formula xml:id="formula_84" coords="13,177.96,688.22,255.36,33.31">|(A L n ) i-1,1 | ≤ 4p(p -1)n 2 Γ(3 -α) 3 n 2-α + pn Γ(2 -α) 1 pn 1-α .</formula><p>We now look at the case ξ j+p+1 + 1 n &lt; η i . This case can only happen for 2 ≤ j &lt; n because when j ≥ n we have ξ j+p+1 = 1 &gt; η i . Given y ∈ [ξ j , ξ j+p+1 ], we consider the Taylor expansion of (η i -y) 1-α at ξ j , producing</p><formula xml:id="formula_85" coords="14,173.64,96.05,360.63,18.99">(η i -y) 1-α = (η i -ξ j ) 1-α -(1 -α)(η i -ω i,j (y)) -α (y -ξ j ),<label>(34)</label></formula><p>for some ω i,j (y) ∈ (ξ j , ξ j+p+1 ). Substituting <ref type="bibr" coords="14,272.04,115.41,17.67,9.96" target="#b33">(34)</ref> in <ref type="bibr" coords="14,304.68,115.41,17.67,9.96" target="#b32">(33)</ref> results in</p><formula xml:id="formula_86" coords="14,146.64,137.09,318.00,65.08">|(A L n ) i-1,j-1 | ≤ 1 Γ(2 -α) (η i -ξ j ) 1-α ξj+p+1 ξj (N p j ) ′′ (y) dy + α -1 Γ(2 -α) ξj+p+1 ξj (η i -ω i,j (y)) -α (y -ξ j )|(N p j ) ′′ (y)| dy.</formula><p>Observe that (N p j ) ′ (ξ j ) = (N p j ) ′ (ξ j+p+1 ) = 0 for 3 ≤ j ≤ n + p -2, and (η i -ω i,j (y)) &gt; (η i -ξ j+p+1 ). Then, recalling the bound in <ref type="bibr" coords="14,205.20,219.33,16.42,9.96" target="#b9">(10)</ref>, we obtain for j = 3, . . . , n -1,</p><formula xml:id="formula_87" coords="14,144.36,238.53,321.97,91.32">|(A L n ) i-1,j-1 | ≤ 1 Γ(2 -α) (η i -ξ j ) 1-α ((N p j ) ′ (ξ j+p+1 ) -(N p j ) ′ (ξ j )) + α -1 Γ(2 -α) 4p(p -1)n 2 ξj+p+1 ξj (y -ξ j ) dy (η i -ξ j+p+1 ) -α ≤ α -1 Γ(2 -α) 2p(p -1)n 2 p + 1 n 2 (η i -ξ j+p+1 ) -α .</formula><p>Substituting <ref type="bibr" coords="14,135.36,333.45,17.79,9.96" target="#b33">(34)</ref> in <ref type="bibr" coords="14,170.28,333.45,17.79,9.96" target="#b31">(32)</ref> and observing that (N p 2 ) ′ (0) = np, (N p 2 ) ′ (ξ p+3 ) = 0, we find with a similar argument that for j = 2,</p><formula xml:id="formula_88" coords="14,154.08,364.05,299.17,89.64">|(A L n ) i-1,1 | ≤ 1 Γ(2 -α) (η i ) 1-α ((N p 2 ) ′ (ξ p+3 ) -(N p 2 ) ′ (0)) + np(η i ) 1-α + α -1 Γ(2 -α) 4p(p -1)n 2 ξp+3 0 y dy (η i -ξ j+3 ) -α ≤ α -1 Γ(2 -α) 2p(p -1)n 2 2 n 2 (η i -ξ j+3 ) -α .</formula><p>This concludes the proof.</p><p>Lemma 6.2. Let A L n be defined as in <ref type="bibr" coords="14,246.24,476.13,16.65,9.96" target="#b21">(22)</ref>. We have</p><formula xml:id="formula_89" coords="14,234.96,495.53,146.64,18.87">n -α A L n q ≤ C L p,α , q ∈ {1, 2, ∞},</formula><p>where C L p,α is a constant depending on p and α. Proof. We first consider the infinity-norm</p><formula xml:id="formula_90" coords="14,77.04,559.01,337.68,60.39">n -α A L n ∞ = n -α max i=2...,n+p-1 n+p-1 j=2 |(A L n ) i-1,j-1 |. The entries |(A L n ) i-1,j-1 |, i, j = 2, . . . n + p -1</formula><p>, can be bounded thanks to the results of Lemma 6.1. We observe that for any fixed i,</p><p>• the number of indices in {j : ξ j &lt; η i ≤ ξ j+p+1 + 1 n } is bounded by p + 2;</p><p>• for j = n, . . . , n + p -1 we have ξ j+p+1 = 1, thus either η i ≤ ξ j or ξ j &lt; η i ≤ ξ j+p+1 + 1 n ;</p><formula xml:id="formula_91" coords="14,91.92,671.66,287.88,45.67">• if η i &gt; ξ j+p+1 + 1 n , then 2 ≤ j ≤ n -1 and η i -ξ j+p+1 = η i - j n ≥ ℓ i,j n ,</formula><p>where ℓ i,j := ⌊nη i -j⌋. Note that ℓ i,j ≥ 1 and ℓ i,j = ℓ i,j+1 + 1, so</p><formula xml:id="formula_92" coords="15,231.96,81.53,172.08,34.09">j: ηi&gt;ξj+p+1+ 1 n (ℓ i,j ) -α ≤ ∞ ℓ=1 ℓ -α = ζ(α),</formula><p>with ζ(α) the Riemann zeta function evaluated at α. The series ∞ ℓ=1 ℓ -α is convergent for α ∈ (1, 2). As a consequence, taking into account Lemma 6.1, for any fixed i we have</p><formula xml:id="formula_93" coords="15,121.56,165.89,368.08,136.36">n -α n+p-1 j=2 |(A L n ) i-1,j-1 | ≤ n -α   j: ξj &lt;ηi≤ξj+p+1+ 1 n |(A L n ) i-1,j-1 | + j: ηi&gt;ξj+p+1+ 1 n |(A L n ) i-1,j-1 |   ≤ n -α c L p,α   (p + 2)n α + j: ηi&gt;ξj+p+1+ 1 n ℓ i,j n -α   ≤ c L p,α [p + 2 + ζ(α)] .</formula><p>The bound for the 1-norm</p><formula xml:id="formula_94" coords="15,204.48,324.53,207.36,31.69">n -α A L n 1 = n -α max j=2...,n+p-1 n+p-1 i=2 |(A L n ) i-1,j-1 |</formula><p>can be shown with a similar line of arguments, by observing that for any fixed j,</p><p>• the number of indices in {i :</p><formula xml:id="formula_95" coords="15,91.92,383.30,313.32,56.11">ξ j &lt; η i ≤ ξ j+p+1 + 1 n } is bounded by 2p; • if η i &gt; ξ j+p+1 + 1 n , then η i -ξ j+p+1 ≥ ℓ i,j n ,</formula><p>where ℓ i,j := ⌊n(η i -ξ j+p+1 )⌋. Note that ℓ i,j ≥ 1 for all i and ℓ i+1,j = ℓ i,j + 1 for p + 1 ≤ i ≤ n -1, so</p><formula xml:id="formula_96" coords="15,185.28,462.41,265.32,34.21">i: ηi&gt;ξj+p+1+ 1 n (ℓ i,j ) -α ≤ 2(p -1) + ∞ ℓ=1 ℓ -α = 2(p -1) + ζ(α).</formula><p>Finally, the bound for the spectral norm follows from the inequality</p><formula xml:id="formula_97" coords="15,228.48,529.73,158.89,18.87">n -α A L n 2 ≤ n -α A L n ∞ n -α A L n 1</formula><p>and the above results for the infinity-norm and 1-norm.</p><p>A similar reasoning to the one adopted in the previous lemmas brings us to the following result.</p><p>Lemma 6.3. Let A R n be defined as in <ref type="bibr" coords="15,246.84,593.49,16.55,9.96" target="#b21">(22)</ref>. We have</p><formula xml:id="formula_98" coords="15,234.72,612.89,147.12,18.88">n -α A R n q ≤ C R p,α , q ∈ {1, 2, ∞},</formula><p>where C R p,α is a constant depending on p and α.</p><p>Lemma 6.4. Let R p,α n be defined as in <ref type="bibr" coords="15,252.60,656.73,16.65,9.96" target="#b23">(24)</ref>. We have</p><formula xml:id="formula_99" coords="15,252.48,677.33,111.24,18.99">R p,α n 2 , R p,α n 1, * ≤ C p,α ,</formula><p>where C p,α is a constant depending on p and α.  Note that it suffices to consider the interval [0, π] due to the symmetry of f p,α ; see Theorem 5.3. Figure <ref type="figure" coords="17,123.48,463.17,4.98,9.96">1</ref> shows that, independently of p, the symbol f p,α has a single zero at 0 and the order of such zero increases up to 2 as α tends to 2. On the other hand, f p,α presents a decay at π as p increases. We observe that such decay becomes faster when α decreases to 1, in accordance with Remark 5.5.</p><p>In Figure <ref type="figure" coords="17,137.76,499.05,4.98,9.96">2</ref> we show that, fixing α 1.3, the bounds in <ref type="bibr" coords="17,351.24,499.05,17.79,9.96" target="#b27">(28)</ref> hold for p = 3, and the one in (29) holds for p = 4. Observe that, despite relation <ref type="bibr" coords="17,289.20,510.93,17.67,9.96" target="#b28">(29)</ref> is theoretically proven to be true for all θ ∈ [a, π], a = π 4 48 1/α , it actually also holds for all θ ∈ [1, a], i.e., for all values on the left of the black vertical line θ = a shown in Figure <ref type="figure" coords="17,177.24,543.69,16.80,9.96">2(b)</ref>.</p><p>In order to numerically verify that relations <ref type="bibr" coords="17,286.08,555.57,17.79,9.96" target="#b29">(30)</ref> and ( <ref type="formula" coords="17,330.93,555.57,8.83,9.96">35</ref>) hold, for fixed n, p, we define the following equispaced grid on [0, π]:</p><formula xml:id="formula_100" coords="17,202.68,586.05,205.80,30.60">Γ := θ k := kπ n + p -2 : k = 1, . . . , n + p -2 .</formula><p>Then, we compare the sampling of f p,α on Γ with the eigenvalues of both T p,α n and n -α A p,α n . Both eigenvalues and sampling values have been ordered in ascending way. In all the numerical experiments, the entries of the coefficient matrix A p,α n have been computed using the Gauss-Jacobi-type quadrature rules introduced in <ref type="bibr" coords="17,137.04,654.33,14.59,9.96" target="#b27">[28]</ref>. In Figure <ref type="figure" coords="17,201.72,654.33,4.98,9.96" target="#fig_4">3</ref> we fix p = 3, n = 63 and vary α ∈ {1.2, 1.8}. For both T p,α n and n -α A p,α n we experience a very good matching, which is in accordance with Proposition 5.8 and Theorem 6.5. However, we observe that in the case of n -α A p,α n there are few large eigenvalues that do not behave like the symbol; these are the outliers and their number is independent of n. As a further confirmation of Proposition 5.8 and Theorem 6.5, we obtained similar results also for p = 4, n = 62, and α ∈ {1.2, 1.8}; see Figure <ref type="figure" coords="17,508.80,702.09,3.84,9.96" target="#fig_5">4</ref> We end this section by checking how the approximation order of the considered polynomial B-spline collocation method behaves with respect to p for smooth solutions of problem (1). More precisely, in Tables 1-2 we fix the source function s(x) such that the exact solution of (1) is given by 3 , and</p><formula xml:id="formula_101" coords="18,92.04,510.14,83.06,18.07">• u(x) = x 3 (1 -x)</formula><formula xml:id="formula_102" coords="18,92.04,530.06,81.24,10.99">• u(x) = sin(πx 2 ),</formula><p>respectively. Then, by doubling n repeatedly, we show the infinity-norm of the corresponding errors and the convergence orders for varying p and α. The infinity-norm of the error is computed by taking the maximum value of the error sampled in 1024 points uniformly distributed over [0, 1]. In the case of standard (non-fractional) diffusion problems, we know that the approximation order for smooth solutions is p for even p, and p -1 for odd p; see <ref type="bibr" coords="18,266.40,598.89,9.99,9.96" target="#b0">[1]</ref>. In the fractional case, we observe a dependency of the approximation order on α that seems to vary as p + 2 -α for even p, and as p + 1 -α for odd p.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="8" coords="18,77.04,641.20,8.06,12.93;18,101.28,641.20,242.08,12.93">Conclusion and future perspective</head><p>We focused on a fractional differential equation in Riesz form discretized by a polynomial B-spline collocation method and we showed that, for an arbitrary degree p, the resulting coefficient matrices possess a Toeplitz-like structure. We computed the corresponding spectral symbol and we proved that it has a single zero at 0 of order α, with α the fractional derivative order that ranges from 1 to 2, and it presents an exponential decay to zero at π for increasing p that becomes faster as α approaches 1. This translates in a mitigated conditioning in the low frequencies and in a deterioration in the high frequencies when compared to second order problems. Moreover, we showed that the behavior of the symbol at π is well captured by the symbol corresponding to α = 0 which is a trigonometric polynomial bounded in the neighborhood of π.</p><p>As a side result of the symbol computation, we ended up with a new way to express the central entries of the coefficient matrix as inner products of two fractional derivatives of cardinal B-splines.</p><p>In addition, we performed a numerical study of the approximation behavior of polynomial B-spline collocation. This study suggests that the approximation order for smooth solutions in the fractional case is p + 2 -α for even p, and p + 1 -α for odd p, which is in line with approximation results known for standard (non-fractional) diffusion problems <ref type="bibr" coords="19,273.24,586.89,9.99,9.96" target="#b0">[1]</ref>.</p><p>The investigation presented here is intended as a first step towards the use of collocation methods based on high-order polynomial B-splines for FDE problems. In particular, (locally) non-uniform knot sequences could be considered to improve accuracy for non-smooth solutions. In this perspective, B-spline collocation methods provide a robust, problem-independent tool to face FDE problems. This robustness makes them an appealing alternative to state-of-the-art methods, such as the elegant collocation/Galerkin spectral methods for approximating the solution of (1) obtained by exploiting the connection between Jacobi polynomials and pseudo eigenfunctions of the Riesz fractional operator; see <ref type="bibr" coords="19,438.00,670.53,15.48,9.96" target="#b23">[24,</ref><ref type="bibr" coords="19,456.60,670.53,12.72,9.96" target="#b39">40]</ref> and references therein.</p><p>The spectral analysis in the present work will provide a strong guidance for forthcoming research. Indeed, the result in Theorem 6.5 is a key ingredient for studying the symbol of matrices arising from B-spline collocation methods for more general FDE problems. In particular, additional reaction and advection terms do not modify the symbol of the corresponding matrices; see Remark 6.7. Furthermore, FDE problems involving non-constant coefficients can be addressed by applying the framework of GLT (Generalized locally Toeplitz) sequences <ref type="bibr" coords="20,254.64,354.57,14.59,9.96" target="#b15">[16]</ref>. Following the results in <ref type="bibr" coords="20,195.72,366.45,10.56,9.96" target="#b8">[9,</ref><ref type="bibr" coords="20,209.28,366.45,12.72,9.96" target="#b10">11,</ref><ref type="bibr" coords="20,224.88,366.45,12.72,9.96" target="#b11">12,</ref><ref type="bibr" coords="20,240.60,366.45,11.61,9.96" target="#b12">13]</ref>, all the information provided by the symbol can be leveraged for the design of effective preconditioners and fast multigrid/multi-iterative solvers whose convergence speed is independent of the fineness parameters and the approximation parameters as well as of the fractional derivative order; see also Remarks 5.9 and 6.6. </p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0" coords="10,405.12,651.53,13.93,6.97;10,421.32,662.01,4.42,9.96;10,425.76,660.17,40.99,6.97;10,469.08,662.01,10.19,9.96;10,194.28,692.61,7.74,9.96;10,209.04,685.89,4.98,9.96;10,206.04,699.45,10.72,9.96;10,225.48,704.42,5.04,6.52;10,232.68,692.61,15.48,9.96;10,248.16,690.77,5.17,6.97;10,255.48,692.61,43.47,9.96;10,305.16,685.89,4.98,9.96;10,312.36,685.89,7.74,17.04;10,322.32,685.89,4.42,9.96;10,326.64,684.53,12.31,6.97;10,319.92,699.45,4.67,9.96;10,344.16,682.46,7.61,6.64;10,362.76,685.89,4.42,9.96;10,367.20,684.86,14.41,6.64;10,384.24,685.89,7.74,17.04;10,394.20,685.89,4.42,9.96;10,398.64,684.53,20.65,6.97;10,387.36,699.45,7.43,9.96;10,429.84,692.61,4.42,9.96;10,434.28,690.77,16.63,6.97;10,453.36,692.61,13.20,9.96;11,77.04,62.13,23.04,9.96;11,161.88,82.29,33.30,9.96;11,198.00,82.29,10.44,17.04;11,208.44,80.33,5.17,6.97;11,220.32,75.57,4.98,9.96;11,227.52,75.57,7.74,17.04;11,237.48,75.57,4.42,9.96;11,241.92,74.09,12.31,6.97;11,235.20,89.13,4.67,9.96;11,259.44,72.14,7.61,6.64;11,278.04,75.57,4.42,9.96;11,282.48,74.42,14.41,6.64;11,299.52,75.57,7.74,17.04;11,309.48,75.57,4.42,9.96;11,313.92,74.09,20.65,6.97;11,302.64,89.13,7.43,9.96;11,346.20,82.29,7.74,9.96;11,356.76,82.29,10.44,17.04;11,367.20,80.33,5.17,6.97;11,383.04,75.57,34.95,9.96;11,393.12,89.13,14.94,9.96;11,426.48,72.86,17.89,6.64;11,446.64,82.29,2.76,9.96;11,77.04,106.17,457.06,9.96;11,77.04,118.17,92.71,9.96;11,170.88,116.81,11.65,6.97;11,186.24,118.17,46.20,9.96;11,77.04,138.09,265.69,9.96;11,345.60,138.09,6.64,17.04;11,354.96,138.09,21.14,9.96;11,378.24,138.09,6.64,17.04;11,387.12,138.09,24.17,9.96"><head>q+1e 2 2q+1.Remark 5 . 2 .</head><label>252</label><figDesc>-ı(k+1/2)θ dθ = 1 2π R 2|θ| α cos(πα/2) 1 -e -ıθ θ 2q e ıθ/2 -e -ıθ/2 ıθ e -ıkθ dθ.Here,w(θ) := |θ| α 1 -e -ıθ θ 2q e ıθ/2 -e -ıθ/2 ıθ = |θ| α sin(θ/2) θ/Following then a similar argument as in the odd degree case, we arrive at the expression (25) of the generating function f p,α for p = 2q.The proof of Theorem 5.1 remains valid for α ∈ [0, 1) ∪ (1, 2].</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1" coords="13,305.40,224.01,78.81,9.96;13,390.12,228.02,3.97,6.64;13,399.96,224.01,67.18,10.65;13,479.88,221.21,7.06,6.97;13,479.88,229.25,12.85,6.97;13,494.88,224.01,8.45,17.04;13,503.28,227.69,6.05,6.97;13,510.36,224.01,2.76,17.04;13,518.16,224.01,16.09,9.96;13,82.08,236.97,88.91,10.65;13,183.60,234.17,7.06,6.97;13,183.60,242.21,13.69,6.97;13,199.56,236.97,8.45,17.04;13,207.96,240.65,6.05,6.97;13,215.04,236.97,5.52,17.04;13,223.92,236.97,201.36,9.96;13,77.04,256.29,88.11,9.96;13,165.12,254.93,5.46,6.97"><figDesc>we denote by X 1 := max j=1,...,m m i=1 |x ij | and X ∞ := max i=1,...,m m j=1 |x ij |, the induced 1-and infinity-norm, respectively. Lemma 6.1. Let A L</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2" coords="17,195.96,205.99,219.31,7.68"><head>1 (c) p = 8 Figure 1 :</head><label>181</label><figDesc>Figure 1: Plot of f p,α for p = 3, 5, 8 and α = 1.2, 1.5, 1.8, 2.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3" coords="17,77.04,412.99,456.98,7.68;17,77.04,422.35,149.59,7.68"><head>1 (b) p = 4 Figure 2 :</head><label>142</label><figDesc>Figure 2: (a) Check of the bound in (28) which is valid for odd p, and (b) check of the bound in (29) which is valid for even p. In both cases α has been fixed to 1.3.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4" coords="18,77.04,426.91,162.13,7.68;18,240.36,426.00,10.93,3.80;18,239.16,431.28,4.60,3.80;18,253.80,426.91,38.38,7.68;18,292.20,426.00,10.93,3.80;18,292.20,431.28,4.60,3.80;18,305.64,426.91,228.39,7.68;18,77.04,436.39,268.51,7.68"><head>Figure 3 :</head><label>3</label><figDesc>Figure 3: Comparison of the eigenvalues of T p,α n and n -α A p,α n (o) with a uniform sampling of f p,α on Γ , ordered in ascending way ( * ), for α = 1.2 (top row) and α = 1.8 (bottom row), n = 63, p = 3.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5" coords="19,77.04,426.91,162.13,7.68;19,240.36,426.00,10.93,3.80;19,239.16,431.28,4.60,3.80;19,253.80,426.91,38.38,7.68;19,292.20,426.00,10.93,3.80;19,292.20,431.28,4.60,3.80;19,305.64,426.91,228.39,7.68;19,77.04,436.39,268.51,7.68"><head>Figure 4 :</head><label>4</label><figDesc>Figure 4: Comparison of the eigenvalues of T p,α n and n -α A p,α n (o) with a uniform sampling of f p,α on Γ , ordered in ascending way ( * ), for α = 1.2 (top row) and α = 1.8 (bottom row), n = 62, p = 4.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1" coords="20,77.04,68.33,457.15,215.18"><head>Table 1 :</head><label>1</label><figDesc>Errors and convergence orders of the proposed B-spline collocation method for problem (1) when u(x) = x 3 (1x)3 .</figDesc><table coords="20,128.64,68.33,354.11,193.45"><row><cell></cell><cell></cell><cell>p = 2</cell><cell></cell><cell>p = 3</cell><cell></cell><cell>p = 4</cell><cell></cell><cell>p = 5</cell><cell></cell></row><row><cell>α</cell><cell>n</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell></cell><cell></cell><cell>Error</cell><cell>Order</cell><cell>Error</cell><cell>Order</cell><cell>Error</cell><cell>Order</cell><cell>Error</cell><cell>Order</cell></row><row><cell></cell><cell>4</cell><cell>1.3146e-03</cell><cell></cell><cell>1.1197e-03</cell><cell></cell><cell>2.6802e-04</cell><cell></cell><cell>4.8556e-05</cell><cell></cell></row><row><cell></cell><cell>8</cell><cell>1.5675e-04</cell><cell>3.07</cell><cell>9.8810e-05</cell><cell>3.50</cell><cell>1.0317e-05</cell><cell>4.70</cell><cell>3.4230e-06</cell><cell>3.83</cell></row><row><cell>1.2</cell><cell>16 32</cell><cell>2.4941e-05 3.5227e-06</cell><cell>2.65 2.82</cell><cell>1.5622e-05 2.4433e-06</cell><cell>2.66 2.68</cell><cell>4.1887e-07 1.6226e-08</cell><cell>4.62 4.69</cell><cell>1.3853e-07 5.1403e-09</cell><cell>4.63 4.75</cell></row><row><cell></cell><cell>64</cell><cell>5.0507e-07</cell><cell>2.80</cell><cell>3.6711e-07</cell><cell>2.73</cell><cell>5.9986e-10</cell><cell>4.76</cell><cell>2.1670e-10</cell><cell>4.57</cell></row><row><cell></cell><cell></cell><cell></cell><cell>≈2.8</cell><cell></cell><cell>≈2.8</cell><cell></cell><cell>≈4.8</cell><cell></cell><cell>≈4.8</cell></row><row><cell></cell><cell>4</cell><cell>1.6170e-03</cell><cell></cell><cell>1.8701e-03</cell><cell></cell><cell>3.4358e-04</cell><cell></cell><cell>8.0567e-05</cell><cell></cell></row><row><cell></cell><cell>8</cell><cell>1.7117e-04</cell><cell>3.24</cell><cell>2.0365e-04</cell><cell>3.20</cell><cell>1.9552e-05</cell><cell>4.14</cell><cell>7.4745e-06</cell><cell>3.43</cell></row><row><cell>1.5</cell><cell>16</cell><cell>3.1719e-05</cell><cell>2.43</cell><cell>2.8530e-05</cell><cell>2.84</cell><cell>1.0245e-06</cell><cell>4.25</cell><cell>3.7577e-07</cell><cell>4.31</cell></row><row><cell></cell><cell>32</cell><cell>5.8828e-06</cell><cell>2.43</cell><cell>5.7869e-06</cell><cell>2.30</cell><cell>4.9498e-08</cell><cell>4.37</cell><cell>1.7183e-08</cell><cell>4.45</cell></row><row><cell></cell><cell>64</cell><cell>1.0458e-06</cell><cell>2.49</cell><cell>1.0661e-06</cell><cell>2.44</cell><cell>2.2995e-09</cell><cell>4.43</cell><cell>8.0703e-10</cell><cell>4.41</cell></row><row><cell></cell><cell></cell><cell></cell><cell>≈2.5</cell><cell></cell><cell>≈2.5</cell><cell></cell><cell>≈4.5</cell><cell></cell><cell>≈4.5</cell></row><row><cell></cell><cell>4</cell><cell>1.9908e-03</cell><cell></cell><cell>3.1774e-03</cell><cell></cell><cell>4.3396e-04</cell><cell></cell><cell>1.3425e-04</cell><cell></cell></row><row><cell></cell><cell>8</cell><cell>2.5091e-04</cell><cell>2.99</cell><cell>4.4181e-04</cell><cell>2.85</cell><cell>3.6073e-05</cell><cell>3.59</cell><cell>1.5905e-05</cell><cell>3.08</cell></row><row><cell>1.8</cell><cell>16</cell><cell>4.2953e-05</cell><cell>2.55</cell><cell>6.8611e-05</cell><cell>2.69</cell><cell>2.4045e-06</cell><cell>3.91</cell><cell>9.8386e-07</cell><cell>4.01</cell></row><row><cell></cell><cell>32</cell><cell>9.3400e-06</cell><cell>2.20</cell><cell>1.3336e-05</cell><cell>2.36</cell><cell>1.4401e-07</cell><cell>4.06</cell><cell>5.5249e-08</cell><cell>4.15</cell></row><row><cell></cell><cell>64</cell><cell>2.0702e-06</cell><cell>2.17</cell><cell>3.0292e-06</cell><cell>2.14</cell><cell>8.2251e-09</cell><cell>4.13</cell><cell>3.0499e-09</cell><cell>4.18</cell></row><row><cell></cell><cell></cell><cell></cell><cell>≈2.2</cell><cell></cell><cell>≈2.2</cell><cell></cell><cell>≈4.2</cell><cell></cell><cell>≈4.2</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2" coords="21,77.04,68.33,457.03,215.18"><head>Table 2 :</head><label>2</label><figDesc>Errors and convergence orders of the proposed B-spline collocation method for problem (1) when u(x) = sin(πx 2 ).</figDesc><table coords="21,128.64,68.33,354.11,193.45"><row><cell></cell><cell></cell><cell>p = 2</cell><cell></cell><cell>p = 3</cell><cell></cell><cell>p = 4</cell><cell></cell><cell>p = 5</cell><cell></cell></row><row><cell>α</cell><cell>n</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell></cell><cell></cell><cell>Error</cell><cell>Order</cell><cell>Error</cell><cell>Order</cell><cell>Error</cell><cell>Order</cell><cell>Error</cell><cell>Order</cell></row><row><cell></cell><cell>4</cell><cell>4.0099e-02</cell><cell></cell><cell>1.5948e-02</cell><cell></cell><cell>6.1393e-03</cell><cell></cell><cell>1.9341e-03</cell><cell></cell></row><row><cell></cell><cell>8</cell><cell>8.4523e-03</cell><cell>2.25</cell><cell>4.6043e-03</cell><cell>1.79</cell><cell>2.5317e-04</cell><cell>4.60</cell><cell>1.0271e-04</cell><cell>4.23</cell></row><row><cell>1.2</cell><cell>16 32</cell><cell>1.1497e-03 1.6423e-04</cell><cell>2.88 2.81</cell><cell>7.8372e-04 1.1786e-04</cell><cell>2.55 2.73</cell><cell>7.9503e-06 2.5619e-07</cell><cell>4.99 4.96</cell><cell>2.5175e-06 7.1641e-08</cell><cell>5.35 5.14</cell></row><row><cell></cell><cell>64</cell><cell>2.3468e-05</cell><cell>2.81</cell><cell>1.7096e-05</cell><cell>2.79</cell><cell>9.5594e-09</cell><cell>4.74</cell><cell>1.0289e-08</cell><cell>2.80</cell></row><row><cell></cell><cell></cell><cell></cell><cell>≈2.8</cell><cell></cell><cell>≈2.8</cell><cell></cell><cell>≈ 4.8</cell><cell></cell><cell>≈4.8</cell></row><row><cell></cell><cell>4</cell><cell>4.2457e-02</cell><cell></cell><cell>2.4735e-02</cell><cell></cell><cell>7.7604e-03</cell><cell></cell><cell>2.6753e-03</cell><cell></cell></row><row><cell></cell><cell>8</cell><cell>1.0378e-02</cell><cell>2.03</cell><cell>7.9809e-03</cell><cell>1.63</cell><cell>4.3612e-04</cell><cell>4.15</cell><cell>1.9027e-04</cell><cell>3.81</cell></row><row><cell>1.5</cell><cell>16</cell><cell>1.7932e-03</cell><cell>2.53</cell><cell>1.7304e-03</cell><cell>2.21</cell><cell>1.7374e-05</cell><cell>4.65</cell><cell>6.3744e-06</cell><cell>4.90</cell></row><row><cell></cell><cell>32</cell><cell>3.1466e-04</cell><cell>2.51</cell><cell>3.1905e-04</cell><cell>2.44</cell><cell>7.0999e-07</cell><cell>4.61</cell><cell>2.2599e-07</cell><cell>4.82</cell></row><row><cell></cell><cell>64</cell><cell>5.5887e-05</cell><cell>2.49</cell><cell>5.7202e-05</cell><cell>2.48</cell><cell>2.9859e-08</cell><cell>4.57</cell><cell>7.5065e-09</cell><cell>4.91</cell></row><row><cell></cell><cell></cell><cell></cell><cell>≈2.5</cell><cell></cell><cell>≈2.5</cell><cell></cell><cell>≈4.5</cell><cell></cell><cell>≈4.5</cell></row><row><cell></cell><cell>4</cell><cell>4.2801e-02</cell><cell></cell><cell>3.8129e-02</cell><cell></cell><cell>9.6792e-03</cell><cell></cell><cell>3.8393e-03</cell><cell></cell></row><row><cell></cell><cell>8</cell><cell>1.2259e-02</cell><cell>1.80</cell><cell>1.4094e-02</cell><cell>1.44</cell><cell>7.5244e-04</cell><cell>3.69</cell><cell>3.6381e-04</cell><cell>3.40</cell></row><row><cell>1.8</cell><cell>16</cell><cell>2.7540e-03</cell><cell>2.15</cell><cell>3.8466e-03</cell><cell>1.87</cell><cell>3.9382e-05</cell><cell>4.26</cell><cell>1.6023e-05</cell><cell>4.50</cell></row><row><cell></cell><cell>32</cell><cell>6.0215e-04</cell><cell>2.19</cell><cell>8.8181e-04</cell><cell>2.13</cell><cell>2.0021e-06</cell><cell>4.30</cell><cell>7.1827e-07</cell><cell>4.48</cell></row><row><cell></cell><cell>64</cell><cell>1.3172e-04</cell><cell>2.19</cell><cell>1.9414e-04</cell><cell>2.18</cell><cell>1.0435e-07</cell><cell>4.26</cell><cell>3.2796e-08</cell><cell>4.45</cell></row><row><cell></cell><cell></cell><cell></cell><cell>≈2.2</cell><cell></cell><cell>≈2.2</cell><cell></cell><cell>≈4.2</cell><cell></cell><cell>≈4.2</cell></row></table></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head coords="20,77.04,432.76,133.68,12.93">Acknowledgements</head><p>All authors are members of the <rs type="institution">INDAM research group GNCS</rs>. The first author was partly supported by the <rs type="projectName">GNCS-INDAM Young Researcher</rs> Project 2020 titled "<rs type="projectName">Numerical methods for image restoration and cultural heritage deterioration</rs>". The last two authors are partially supported by the <rs type="funder">Beyond Borders Program of the University of Rome Tor Vergata</rs> through the project <rs type="projectName">ASTRID</rs> (<rs type="grantNumber">CUP E84I19002250005</rs>) and by the <rs type="funder">MIUR Excellence Department Project</rs> awarded to the <rs type="funder">Department of Mathematics, University of Rome Tor Vergata</rs> (<rs type="grantNumber">CUP E83C18000100006</rs>).</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funded-project" xml:id="_xYBnHAn">
+					<orgName type="project" subtype="full">GNCS-INDAM Young Researcher</orgName>
+				</org>
+				<org type="funded-project" xml:id="_TjYmbU9">
+					<orgName type="project" subtype="full">Numerical methods for image restoration and cultural heritage deterioration</orgName>
+				</org>
+				<org type="funded-project" xml:id="_u3T5Uj3">
+					<idno type="grant-number">CUP E84I19002250005</idno>
+					<orgName type="project" subtype="full">ASTRID</orgName>
+				</org>
+				<org type="funding" xml:id="_8nAxEeg">
+					<idno type="grant-number">CUP E83C18000100006</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Proof. The relation in <ref type="bibr" coords="16,177.00,62.13,17.67,9.96" target="#b22">(23)</ref> implies</p><p>and we recall from Section 5 that</p><p>Then, by Lemmas 6.2 and 6.3, we arrive at</p><p>In addition, R p,α n</p><p>. This completes the proof.</p><p>We are now in a position to discuss the spectral distribution of {n -α A p,α n } n .</p><p>Theorem 6.5. Given {n -α A p,α n } n with A p,α n as in <ref type="bibr" coords="16,304.68,243.45,16.55,9.96" target="#b22">(23)</ref>, we have</p><p>where f p,α is given in <ref type="bibr" coords="16,176.52,287.25,16.65,9.96" target="#b24">(25)</ref>.</p><p>Proof. We prove this result by applying Corollary 2.6 with X n = T p,α n and Y n = R p,α n . We first note that, because of Proposition 5.8, condition (a) of Theorem 2.5 is satisfied. The other conditions in Corollary 2.6 hold by Lemma 6.4, which proves the result <ref type="bibr" coords="16,271.68,331.05,16.32,9.96" target="#b34">(35)</ref>. Remark 6.6. Thanks to Theorem 6.5, the matrices n -α A p,α n and T p,α n are asymptotically spectrally equivalent, possibly up to few outliers. As a consequence, the arguments given in Remark 5.9 apply unchanged when the aim is solving a linear system whose coefficient matrix is n -α A p,α n instead of T p,α n .</p><p>Remark 6.7. Let A p,α,γ,ρ n be the coefficient matrix corresponding to the B-spline collocation discretization of the advection-diffusion-reaction problem</p><p>with ρ &gt; 0 and γ ∈ R. From Theorem 6.5, in combination with Theorem 2.5 and [10, Lemma 4.1], we immediately deduce that {n -α A p,α,γ,ρ n</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7" coords="16,77.04,522.28,8.06,12.93;16,101.28,522.28,163.91,12.93">Numerical experiments</head><p>In the following, we verify the spectral results obtained in Sections 5 and 6 through several numerical experiments. We also provide a numerical study of the approximation behavior of the proposed polynomial B-spline collocation method for an arbitrary degree p.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head coords="16,92.04,582.57,137.54,9.96">Let us start by illustrating that</head><p>• the symbol f p,α has a single zero at 0 of order α and it presents an exponential decay to zero at π for increasing p;</p><p>• the symbol f p,α satisfies the bounds in <ref type="bibr" coords="16,274.80,634.41,17.67,9.96" target="#b27">(28)</ref> for odd p, and the bound in (29) for even p;</p><p>• relations (30) and ( <ref type="formula" coords="16,187.30,654.33,8.83,9.96">35</ref>) hold.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct coords="20,97.56,571.65,436.46,9.96;20,97.56,583.65,337.56,9.96" xml:id="b0">
+	<analytic>
+		<title level="a" type="main">ISOGEOMETRIC COLLOCATION METHODS</title>
+		<author>
+			<persName coords=""><forename type="first">F</forename><surname>Auricchio</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">Beirão</forename><surname>Da Veiga</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><forename type="middle">J R</forename><surname>Hughes</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">A</forename><surname>Reali</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">G</forename><surname>Sangalli</surname></persName>
+		</author>
+		<idno type="DOI">10.1142/s0218202510004878</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mathematical Models and Methods in Applied Sciences</title>
+		<title level="j" type="abbrev">Math. Models Methods Appl. Sci.</title>
+		<idno type="ISSN">0218-2025</idno>
+		<idno type="ISSNe">1793-6314</idno>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="2075" to="2107" />
+			<date type="published" when="2010-11">2010</date>
+			<publisher>World Scientific Pub Co Pte Ltd</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="20,97.56,603.57,436.66,9.96;20,97.56,615.45,135.00,9.96" xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Fractional-Order Anisotropic Diffusion for Image Denoising</title>
+		<author>
+			<persName><forename type="first">Jian</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiang-Chu</forename><surname>Feng</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/tip.2007.904971</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Image Processing</title>
+		<title level="j" type="abbrev">IEEE Trans. on Image Process.</title>
+		<idno type="ISSN">1057-7149</idno>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="2492" to="2502" />
+			<date type="published" when="2007-10">2007</date>
+			<publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="20,97.56,635.49,436.66,9.96;20,97.56,647.37,436.64,9.96;20,97.56,659.37,234.72,9.96" xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Non‐Hermitian perturbations of Hermitian matrix‐sequences and applications to the spectral analysis of the numerical approximation of partial differential equations</title>
+		<author>
+			<persName><forename type="first">Giovanni</forename><surname>Barbarino</surname></persName>
+			<idno type="ORCID">0000-0003-0504-7361</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Stefano</forename><surname>Serra‐capizzano</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/nla.2286</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Numerical Linear Algebra with Applications</title>
+		<title level="j" type="abbrev">Numerical Linear Algebra App</title>
+		<idno type="ISSN">1070-5325</idno>
+		<idno type="ISSNe">1099-1506</idno>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">2286</biblScope>
+			<date type="published" when="2020-03-03">2020</date>
+			<publisher>Wiley</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="20,97.56,679.29,436.74,9.96;20,97.56,691.17,48.84,9.96" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">8. Numerical solutions of nonlinear fractional-order differential equations</title>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Blank</surname></persName>
+		</author>
+		<idno type="DOI">10.1515/9783110497977-008</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Fractional-Order Control Systems</title>
+		<imprint>
+			<publisher>De Gruyter</publisher>
+			<date type="published" when="1997">1997</date>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="243" to="292" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="21,97.56,306.69,344.28,9.96" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">The Stable Evaluation of B-Splines and Splines</title>
+		<author>
+			<persName coords=""><forename type="first">Carl</forename><surname>De Boor</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-1-4612-6333-3_10</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Applied Mathematical Sciences</title>
+		<meeting><address><addrLine>New York</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer New York</publisher>
+			<date type="published" when="2001">2001</date>
+			<biblScope unit="page" from="109" to="129" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="21,97.56,326.61,436.54,9.96;21,97.56,338.61,436.68,9.96;21,97.56,350.61,181.92,9.96" xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Fractional diffusion models of cardiac electrical propagation: role of structural heterogeneity in dispersion of repolarization</title>
+		<author>
+			<persName><forename type="first">Alfonso</forename><surname>Bueno-Orovio</surname></persName>
+			<idno type="ORCID">0000-0002-1634-3601</idno>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><surname>Kay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vicente</forename><surname>Grau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Blanca</forename><surname>Rodriguez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kevin</forename><surname>Burrage</surname></persName>
+		</author>
+		<idno type="DOI">10.1098/rsif.2014.0352</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of The Royal Society Interface</title>
+		<title level="j" type="abbrev">J. R. Soc. Interface.</title>
+		<idno type="ISSN">1742-5689</idno>
+		<idno type="ISSNe">1742-5662</idno>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">97</biblScope>
+			<biblScope unit="page">20140352</biblScope>
+			<date type="published" when="2014-08-06">2014</date>
+			<publisher>The Royal Society</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="21,97.56,370.53,436.68,9.96;21,97.56,382.41,143.76,9.96" xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Regularity of the solution to Riesz-type fractional differential equation</title>
+		<author>
+			<persName><forename type="first">Min</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Changpin</forename><surname>Li</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/10652469.2019.1613988</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Integral Transforms and Special Functions</title>
+		<title level="j" type="abbrev">Integral Transforms and Special Functions</title>
+		<idno type="ISSN">1065-2469</idno>
+		<idno type="ISSNe">1476-8291</idno>
+		<imprint>
+			<biblScope unit="volume">30</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="711" to="742" />
+			<date type="published" when="2019-05-13">2019</date>
+			<publisher>Informa UK Limited</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="21,97.56,402.33,287.88,9.96" xml:id="b7">
+	<monogr>
+		<title level="m" type="main">An Introduction to Wavelets</title>
+		<author>
+			<persName coords=""><forename type="first">C</forename><forename type="middle">K</forename><surname>Chui</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1992">1992</date>
+			<publisher>Academic Press</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="21,97.56,422.25,436.46,9.96;21,97.56,434.25,436.80,9.96;21,97.56,446.25,102.00,9.96" xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Robust and optimal multi-iterative techniques for IgA collocation linear systems</title>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Donatelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carlo</forename><surname>Garoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carla</forename><surname>Manni</surname></persName>
+			<idno type="ORCID">0000-0002-1519-4106</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Stefano</forename><surname>Serra-Capizzano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hendrik</forename><surname>Speleers</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cma.2014.11.036</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Computer Methods in Applied Mechanics and Engineering</title>
+		<title level="j" type="abbrev">Computer Methods in Applied Mechanics and Engineering</title>
+		<idno type="ISSN">0045-7825</idno>
+		<imprint>
+			<biblScope unit="volume">284</biblScope>
+			<biblScope unit="page" from="1120" to="1146" />
+			<date type="published" when="2015-02">2015</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="21,97.56,466.17,436.42,9.96;21,97.56,478.05,437.10,9.96;21,97.56,490.05,30.60,9.96" xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Spectral analysis and spectral symbol of matrices in isogeometric collocation methods</title>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Donatelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carlo</forename><surname>Garoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carla</forename><surname>Manni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefano</forename><surname>Serra-Capizzano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hendrik</forename><surname>Speleers</surname></persName>
+		</author>
+		<idno type="DOI">10.1090/mcom/3027</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mathematics of Computation</title>
+		<title level="j" type="abbrev">Math. Comp.</title>
+		<idno type="ISSN">0025-5718</idno>
+		<idno type="ISSNe">1088-6842</idno>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="issue">300</biblScope>
+			<biblScope unit="page" from="1639" to="1680" />
+			<date type="published" when="2016">2016</date>
+			<publisher>American Mathematical Society (AMS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="21,97.56,509.97,436.64,9.96;21,97.56,521.97,431.40,9.96" xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Symbol-Based Multigrid Methods for Galerkin B-Spline Isogeometric Analysis</title>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Donatelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carlo</forename><surname>Garoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carla</forename><surname>Manni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefano</forename><surname>Serra-Capizzano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hendrik</forename><surname>Speleers</surname></persName>
+		</author>
+		<idno type="DOI">10.1137/140988590</idno>
+	</analytic>
+	<monogr>
+		<title level="j">SIAM Journal on Numerical Analysis</title>
+		<title level="j" type="abbrev">SIAM J. Numer. Anal.</title>
+		<idno type="ISSN">0036-1429</idno>
+		<idno type="ISSNe">1095-7170</idno>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="31" to="62" />
+			<date type="published" when="2017-01">2017</date>
+			<publisher>Society for Industrial &amp; Applied Mathematics (SIAM)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="21,97.56,541.89,436.52,9.96;21,97.56,553.77,376.44,9.96" xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Spectral analysis and structure preserving preconditioners for fractional diffusion equations</title>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Donatelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mariarosa</forename><surname>Mazza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefano</forename><surname>Serra-Capizzano</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jcp.2015.11.061</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computational Physics</title>
+		<title level="j" type="abbrev">Journal of Computational Physics</title>
+		<idno type="ISSN">0021-9991</idno>
+		<imprint>
+			<biblScope unit="volume">307</biblScope>
+			<biblScope unit="page" from="262" to="279" />
+			<date type="published" when="2016-02">2016</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="21,97.56,573.69,436.70,9.96;21,97.56,585.69,436.86,9.96;21,97.56,597.57,61.32,9.96" xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Spectral Analysis and Multigrid Methods for Finite Volume Approximations of Space-Fractional Diffusion Equations</title>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Donatelli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mariarosa</forename><surname>Mazza</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefano</forename><surname>Serra-Capizzano</surname></persName>
+		</author>
+		<idno type="DOI">10.1137/17m115164x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">SIAM Journal on Scientific Computing</title>
+		<title level="j" type="abbrev">SIAM J. Sci. Comput.</title>
+		<idno type="ISSN">1064-8275</idno>
+		<idno type="ISSNe">1095-7197</idno>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="A4007" to="A4039" />
+			<date type="published" when="2018-01">2018</date>
+			<publisher>Society for Industrial &amp; Applied Mathematics (SIAM)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="21,97.56,617.61,436.40,9.96;21,97.56,629.49,292.92,9.96" xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Variational formulation for the stationary fractional advection dispersion equation</title>
+		<author>
+			<persName><forename type="first">Vincent</forename><forename type="middle">J</forename><surname>Ervin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">John</forename><forename type="middle">Paul</forename><surname>Roop</surname></persName>
+		</author>
+		<idno type="DOI">10.1002/num.20112</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Numerical Methods for Partial Differential Equations</title>
+		<title level="j" type="abbrev">Numer. Methods Partial Differential Eq.</title>
+		<idno type="ISSN">0749-159X</idno>
+		<idno type="ISSNe">1098-2426</idno>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="558" to="576" />
+			<date type="published" when="2006">2006</date>
+			<publisher>Wiley</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="21,97.56,649.41,436.61,9.96;21,97.56,661.41,390.12,9.96" xml:id="b14">
+	<analytic>
+		<title level="a" type="main">On the spectrum of stiffness matrices arising from isogeometric analysis</title>
+		<author>
+			<persName><forename type="first">Carlo</forename><surname>Garoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carla</forename><surname>Manni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Francesca</forename><surname>Pelosi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefano</forename><surname>Serra-Capizzano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hendrik</forename><surname>Speleers</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00211-013-0600-2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Numerische Mathematik</title>
+		<title level="j" type="abbrev">Numer. Math.</title>
+		<idno type="ISSN">0029-599X</idno>
+		<idno type="ISSNe">0945-3245</idno>
+		<imprint>
+			<biblScope unit="volume">127</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="751" to="799" />
+			<date type="published" when="2014">2014</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="21,97.56,681.33,436.44,9.96;21,97.56,693.33,132.72,9.96" xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Generalized Locally Toeplitz Sequences</title>
+		<author>
+			<persName><forename type="first">Carlo</forename><surname>Garoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefano</forename><surname>Serra-Capizzano</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-319-53679-8_8</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Generalized Locally Toeplitz Sequences: Theory and Applications</title>
+		<meeting><address><addrLine>Cham</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer International Publishing</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">I</biblScope>
+			<biblScope unit="page" from="143" to="164" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,62.13,436.55,9.96;22,97.56,74.01,54.72,9.96" xml:id="b16">
+	<analytic>
+		<title level="a" type="main">&lt;i&gt;Toeplitz Forms and Their Applications&lt;/i&gt;</title>
+		<author>
+			<persName><forename type="first">Ulf</forename><surname>Grenander</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gabor</forename><surname>Szegö</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mark</forename><surname>Kac</surname></persName>
+		</author>
+		<idno type="DOI">10.1063/1.3062237</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Physics Today</title>
+		<idno type="ISSN">0031-9228</idno>
+		<idno type="ISSNe">1945-0699</idno>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="38" to="38" />
+			<date type="published" when="1984">1984</date>
+			<publisher>AIP Publishing</publisher>
+			<pubPlace>Chelsea, New York</pubPlace>
+		</imprint>
+	</monogr>
+	<note>Second Edition</note>
+</biblStruct>
+
+<biblStruct coords="22,97.56,93.93,436.46,9.96;22,97.56,105.93,358.56,9.96" xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Optimal Regularity and Error Estimates of a Spectral Galerkin Method for Fractional Advection-Diffusion-Reaction Equations</title>
+		<author>
+			<persName><forename type="first">Zhaopeng</forename><surname>Hao</surname></persName>
+			<idno type="ORCID">0000-0002-2374-2213</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Zhongqiang</forename><surname>Zhang</surname></persName>
+			<idno type="ORCID">0000-0001-8032-7510</idno>
+		</author>
+		<idno type="DOI">10.1137/18m1234679</idno>
+	</analytic>
+	<monogr>
+		<title level="j">SIAM Journal on Numerical Analysis</title>
+		<title level="j" type="abbrev">SIAM J. Numer. Anal.</title>
+		<idno type="ISSN">0036-1429</idno>
+		<idno type="ISSNe">1095-7170</idno>
+		<imprint>
+			<biblScope unit="volume">58</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="211" to="233" />
+			<date type="published" when="2020-01">2020</date>
+			<publisher>Society for Industrial &amp; Applied Mathematics (SIAM)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,125.85,436.58,9.96;22,97.56,137.85,379.68,9.96" xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Stability and convergence of a finite volume method for the space fractional advection–dispersion equation</title>
+		<author>
+			<persName coords=""><forename type="first">H</forename><surname>Hejazi</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">T</forename><surname>Moroney</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">F</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cam.2013.06.039</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computational and Applied Mathematics</title>
+		<title level="j" type="abbrev">Journal of Computational and Applied Mathematics</title>
+		<idno type="ISSN">0377-0427</idno>
+		<imprint>
+			<biblScope unit="volume">255</biblScope>
+			<biblScope unit="page" from="684" to="697" />
+			<date type="published" when="2014-01">2014</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,157.77,436.68,9.96;22,97.56,169.65,92.04,9.96" xml:id="b19">
+	<analytic>
+		<title level="a" type="main">A circulant preconditioner for fractional diffusion equations</title>
+		<author>
+			<persName><forename type="first">Siu-Long</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hai-Wei</forename><surname>Sun</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jcp.2013.02.025</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computational Physics</title>
+		<title level="j" type="abbrev">Journal of Computational Physics</title>
+		<idno type="ISSN">0021-9991</idno>
+		<imprint>
+			<biblScope unit="volume">242</biblScope>
+			<biblScope unit="page" from="715" to="725" />
+			<date type="published" when="2013-06">2013</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,189.57,436.66,9.96;22,97.56,201.57,412.56,9.96" xml:id="b20">
+	<analytic>
+		<title level="a" type="main">A finite element formulation preserving symmetric and banded diffusion stiffness matrix characteristics for fractional differential equations</title>
+		<author>
+			<persName><forename type="first">Zeng</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dongdong</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s00466-017-1492-2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Computational Mechanics</title>
+		<title level="j" type="abbrev">Comput Mech</title>
+		<idno type="ISSN">0178-7675</idno>
+		<idno type="ISSNe">1432-0924</idno>
+		<imprint>
+			<biblScope unit="volume">62</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="185" to="211" />
+			<date type="published" when="2018">2018</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,221.49,436.55,9.96;22,97.56,233.49,436.80,9.96" xml:id="b21">
+	<analytic>
+		<title level="a" type="main">A preconditioned fast quadratic spline collocation method for two-sided space-fractional partial differential equations</title>
+		<author>
+			<persName><forename type="first">Jun</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hongfei</forename><surname>Fu</surname></persName>
+			<idno type="ORCID">0000-0002-8294-8086</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Hong</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xiaochao</forename><surname>Chai</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cam.2019.03.048</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computational and Applied Mathematics</title>
+		<title level="j" type="abbrev">Journal of Computational and Applied Mathematics</title>
+		<idno type="ISSN">0377-0427</idno>
+		<imprint>
+			<biblScope unit="volume">360</biblScope>
+			<biblScope unit="page" from="138" to="156" />
+			<date type="published" when="2019-11">2019</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,253.41,436.37,9.96;22,97.56,265.29,436.77,9.96;22,97.56,277.29,296.88,9.96" xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Foundations of Spline Theory: B-Splines, Spline Approximation, and Hierarchical Refinement</title>
+		<author>
+			<persName><forename type="first">Tom</forename><surname>Lyche</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Carla</forename><surname>Manni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hendrik</forename><surname>Speleers</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-319-94911-6_1</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Lecture Notes in Mathematics</title>
+		<title level="s">Lect. Notes Math.</title>
+		<editor>
+			<persName><forename type="first">T</forename><surname>Lyche</surname></persName>
+		</editor>
+		<imprint>
+			<publisher>Springer International Publishing</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">2219</biblScope>
+			<biblScope unit="page" from="1" to="76" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,297.21,436.54,9.96;22,97.56,309.21,436.86,9.96;22,97.56,321.09,30.60,9.96" xml:id="b23">
+	<analytic>
+		<title level="a" type="main">A Spectral Method (of Exponential Convergence) for Singular Solutions of the Diffusion Equation with General Two-Sided Fractional Derivative</title>
+		<author>
+			<persName><forename type="first">Zhiping</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><forename type="middle">Em</forename><surname>Karniadakis</surname></persName>
+		</author>
+		<idno type="DOI">10.1137/16m1103622</idno>
+	</analytic>
+	<monogr>
+		<title level="j">SIAM Journal on Numerical Analysis</title>
+		<title level="j" type="abbrev">SIAM J. Numer. Anal.</title>
+		<idno type="ISSN">0036-1429</idno>
+		<idno type="ISSNe">1095-7170</idno>
+		<imprint>
+			<biblScope unit="volume">56</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="24" to="49" />
+			<date type="published" when="2018-01">2018</date>
+			<publisher>Society for Industrial &amp; Applied Mathematics (SIAM)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,341.01,436.42,9.96;22,97.56,353.01,436.56,9.96;22,97.56,365.01,153.72,9.96" xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Isogeometric analysis for 2D and 3D curl–div problems: Spectral symbols and fast iterative solvers</title>
+		<author>
+			<persName><forename type="first">Mariarosa</forename><surname>Mazza</surname></persName>
+			<idno type="ORCID">0000-0002-8505-6788</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Carla</forename><surname>Manni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ahmed</forename><surname>Ratnani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Stefano</forename><surname>Serra-Capizzano</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hendrik</forename><surname>Speleers</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cma.2018.10.008</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Computer Methods in Applied Mechanics and Engineering</title>
+		<title level="j" type="abbrev">Computer Methods in Applied Mechanics and Engineering</title>
+		<idno type="ISSN">0045-7825</idno>
+		<imprint>
+			<biblScope unit="volume">344</biblScope>
+			<biblScope unit="page" from="970" to="997" />
+			<date type="published" when="2019-02">2019</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,384.93,436.40,9.96;22,97.56,396.81,306.24,9.96" xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Finite difference approximations for fractional advection–dispersion flow equations</title>
+		<author>
+			<persName><forename type="first">Mark</forename><forename type="middle">M</forename><surname>Meerschaert</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Charles</forename><surname>Tadjeran</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cam.2004.01.033</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computational and Applied Mathematics</title>
+		<title level="j" type="abbrev">Journal of Computational and Applied Mathematics</title>
+		<idno type="ISSN">0377-0427</idno>
+		<imprint>
+			<biblScope unit="volume">172</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="65" to="77" />
+			<date type="published" when="2004-11">2004</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,416.73,436.64,9.96;22,97.56,428.73,436.98,9.96;22,97.56,440.73,30.60,9.96" xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Spectral analysis and multigrid preconditioners for two-dimensional space-fractional diffusion equations</title>
+		<author>
+			<persName><forename type="first">Hamid</forename><surname>Moghaderi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mehdi</forename><surname>Dehghan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marco</forename><surname>Donatelli</surname></persName>
+			<idno type="ORCID">0000-0001-7958-9126</idno>
+		</author>
+		<author>
+			<persName><forename type="first">Mariarosa</forename><surname>Mazza</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jcp.2017.08.064</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computational Physics</title>
+		<title level="j" type="abbrev">Journal of Computational Physics</title>
+		<idno type="ISSN">0021-9991</idno>
+		<imprint>
+			<biblScope unit="volume">350</biblScope>
+			<biblScope unit="page" from="992" to="1011" />
+			<date type="published" when="2017-12">2017</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,460.65,436.56,9.96;22,97.56,472.53,184.80,9.96" xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Gauss–Jacobi-type quadrature rules for fractional directional integrals</title>
+		<author>
+			<persName><forename type="first">Guofei</forename><surname>Pang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Wen</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">K</forename><forename type="middle">Y</forename><surname>Sze</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.camwa.2013.04.020</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Computers &amp; Mathematics with Applications</title>
+		<title level="j" type="abbrev">Computers &amp; Mathematics with Applications</title>
+		<idno type="ISSN">0898-1221</idno>
+		<imprint>
+			<biblScope unit="volume">66</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="597" to="607" />
+			<date type="published" when="2013-09">2013</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,492.45,436.40,9.96;22,97.56,504.45,375.84,9.96" xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Fast preconditioned iterative methods for finite volume discretization of steady-state space-fractional diffusion equations</title>
+		<author>
+			<persName><forename type="first">Jianyu</forename><surname>Pan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hong</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s11075-016-0143-6</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Numerical Algorithms</title>
+		<title level="j" type="abbrev">Numer Algor</title>
+		<idno type="ISSN">1017-1398</idno>
+		<idno type="ISSNe">1572-9265</idno>
+		<imprint>
+			<biblScope unit="volume">74</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="153" to="173" />
+			<date type="published" when="2017">2017</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,524.37,436.68,9.96;22,97.56,536.37,68.76,9.96" xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Multigrid method for fractional diffusion equations</title>
+		<author>
+			<persName><forename type="first">Hong-Kui</forename><surname>Pang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hai-Wei</forename><surname>Sun</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jcp.2011.10.005</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computational Physics</title>
+		<title level="j" type="abbrev">Journal of Computational Physics</title>
+		<idno type="ISSN">0021-9991</idno>
+		<imprint>
+			<biblScope unit="volume">231</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="693" to="703" />
+			<date type="published" when="2012-01">2012</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,556.29,436.40,9.96;22,97.56,568.17,297.12,9.96" xml:id="b30">
+	<analytic>
+		<title level="a" type="main">On the convergence of spline collocation methods for solving fractional differential equations</title>
+		<author>
+			<persName><forename type="first">Arvet</forename><surname>Pedas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Enn</forename><surname>Tamme</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cam.2010.10.054</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computational and Applied Mathematics</title>
+		<title level="j" type="abbrev">Journal of Computational and Applied Mathematics</title>
+		<idno type="ISSN">0377-0427</idno>
+		<imprint>
+			<biblScope unit="volume">235</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="3502" to="3514" />
+			<date type="published" when="2011-04">2011</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,588.09,436.56,9.96;22,97.56,600.09,164.28,9.96" xml:id="b31">
+	<analytic>
+		<title level="a" type="main">A multiscale collocation method for fractional differential problems</title>
+		<author>
+			<persName coords=""><forename type="first">L</forename><surname>Pezza</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">F</forename><surname>Pitolli</surname></persName>
+			<idno type="ORCID">0000-0002-7159-0533</idno>
+		</author>
+		<idno type="DOI">10.1016/j.matcom.2017.07.005</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mathematics and Computers in Simulation</title>
+		<title level="j" type="abbrev">Mathematics and Computers in Simulation</title>
+		<idno type="ISSN">0378-4754</idno>
+		<imprint>
+			<biblScope unit="volume">147</biblScope>
+			<biblScope unit="page" from="210" to="219" />
+			<date type="published" when="2018-05">2018</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,620.01,436.64,9.96;22,97.56,632.01,55.68,9.96" xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Optimal B-Spline Bases for the Numerical Solution of Fractional Differential Problems</title>
+		<author>
+			<persName coords=""><forename type="first">Francesca</forename><surname>Pitolli</surname></persName>
+			<idno type="ORCID">0000-0002-7159-0533</idno>
+		</author>
+		<idno type="DOI">10.3390/axioms7030046</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Axioms</title>
+		<title level="j" type="abbrev">Axioms</title>
+		<idno type="ISSNe">2075-1680</idno>
+		<imprint>
+			<biblScope unit="volume">7</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">46</biblScope>
+			<date type="published" when="2018-07-02">2018</date>
+			<publisher>MDPI AG</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,651.93,436.52,9.96;22,97.56,663.81,183.96,9.96" xml:id="b33">
+	<analytic>
+		<title level="a" type="main">On the Numerical Solution of Fractional Boundary Value Problems by a Spline Quasi-Interpolant Operator</title>
+		<author>
+			<persName coords=""><forename type="first">Francesca</forename><surname>Pitolli</surname></persName>
+			<idno type="ORCID">0000-0002-7159-0533</idno>
+		</author>
+		<idno type="DOI">10.3390/axioms9020061</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Axioms</title>
+		<title level="j" type="abbrev">Axioms</title>
+		<idno type="ISSNe">2075-1680</idno>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">61</biblScope>
+			<date type="published" when="2020-05-25">2020</date>
+			<publisher>MDPI AG</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="22,97.56,683.73,317.88,9.96" xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Isoclinal matrices and numerical solution of fractional differential equations</title>
+		<author>
+			<persName coords=""><forename type="first">I</forename><surname>Podlubny</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kacenak</surname></persName>
+		</author>
+		<idno type="DOI">10.23919/ecc.2001.7076125</idno>
+	</analytic>
+	<monogr>
+		<title level="m">2001 European Control Conference (ECC)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="1998">1998</date>
+			<biblScope unit="page" from="1467" to="1470" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="23,97.56,62.13,436.98,9.96;23,97.56,74.01,30.60,9.96" xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Inner products of box splines and their derivatives</title>
+		<author>
+			<persName coords=""><forename type="first">Hendrik</forename><surname>Speleers</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10543-014-0513-1</idno>
+	</analytic>
+	<monogr>
+		<title level="j">BIT Numerical Mathematics</title>
+		<title level="j" type="abbrev">Bit Numer Math</title>
+		<idno type="ISSN">0006-3835</idno>
+		<idno type="ISSNe">1572-9125</idno>
+		<imprint>
+			<biblScope unit="volume">55</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="559" to="567" />
+			<date type="published" when="2015">2015</date>
+			<publisher>Springer Science and Business Media LLC</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="23,97.56,93.93,436.52,9.96;23,97.56,105.93,299.40,9.96" xml:id="b36">
+	<analytic>
+		<title level="a" type="main">A class of second order difference approximations for solving space fractional diffusion equations</title>
+		<author>
+			<persName><forename type="first">Wenyi</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Han</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Weihua</forename><surname>Deng</surname></persName>
+		</author>
+		<idno type="DOI">10.1090/s0025-5718-2015-02917-2</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Mathematics of Computation</title>
+		<title level="j" type="abbrev">Math. Comp.</title>
+		<idno type="ISSN">0025-5718</idno>
+		<idno type="ISSNe">1088-6842</idno>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="issue">294</biblScope>
+			<biblScope unit="page" from="1703" to="1727" />
+			<date type="published" when="2015-01-06">2015</date>
+			<publisher>American Mathematical Society (AMS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="23,97.56,125.85,363.84,9.96" xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Fractional Splines and Wavelets</title>
+		<author>
+			<persName><forename type="first">Michael</forename><surname>Unser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thierry</forename><surname>Blu</surname></persName>
+		</author>
+		<idno type="DOI">10.1137/s0036144598349435</idno>
+	</analytic>
+	<monogr>
+		<title level="j">SIAM Review</title>
+		<title level="j" type="abbrev">SIAM Rev.</title>
+		<idno type="ISSN">0036-1445</idno>
+		<idno type="ISSNe">1095-7200</idno>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="43" to="67" />
+			<date type="published" when="2000-01">2000</date>
+			<publisher>Society for Industrial &amp; Applied Mathematics (SIAM)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="23,97.56,145.77,436.40,9.96;23,97.56,157.77,238.20,9.96" xml:id="b38">
+	<analytic>
+		<title level="a" type="main">A superfast-preconditioned iterative method for steady-state space-fractional diffusion equations</title>
+		<author>
+			<persName><forename type="first">Hong</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ning</forename><surname>Du</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.jcp.2012.07.045</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Computational Physics</title>
+		<title level="j" type="abbrev">Journal of Computational Physics</title>
+		<idno type="ISSN">0021-9991</idno>
+		<imprint>
+			<biblScope unit="volume">240</biblScope>
+			<biblScope unit="page" from="49" to="57" />
+			<date type="published" when="2013-05">2013</date>
+			<publisher>Elsevier BV</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="23,97.56,177.69,436.70,9.96;23,97.56,189.57,436.68,9.96;23,97.56,201.57,83.76,9.96" xml:id="b39">
+	<analytic>
+		<title level="a" type="main">A Generalized Spectral Collocation Method with Tunable Accuracy for Fractional Differential Equations with End-Point Singularities</title>
+		<author>
+			<persName><forename type="first">Fanhai</forename><surname>Zeng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhiping</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><forename type="middle">Em</forename><surname>Karniadakis</surname></persName>
+		</author>
+		<idno type="DOI">10.1137/16m1076083</idno>
+	</analytic>
+	<monogr>
+		<title level="j">SIAM Journal on Scientific Computing</title>
+		<title level="j" type="abbrev">SIAM J. Sci. Comput.</title>
+		<idno type="ISSN">1064-8275</idno>
+		<idno type="ISSNe">1095-7197</idno>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="A360" to="A383" />
+			<date type="published" when="2017-01">2017</date>
+			<publisher>Society for Industrial &amp; Applied Mathematics (SIAM)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

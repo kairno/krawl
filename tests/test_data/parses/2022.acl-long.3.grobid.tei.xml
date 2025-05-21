@@ -1,0 +1,1180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Rare Tokens Degenerate All Tokens: Improving Neural Text Generation via Adaptive Gradient Gating for Rare Token Embeddings</title>
+				<funder ref="#_Ry8QU7J">
+					<orgName type="full">Artificial Intelligence Graduate School Program (Seoul National University)</orgName>
+				</funder>
+				<funder ref="#_5ERGrXc">
+					<orgName type="full">for Future ICT Pioneers</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">AIRS Company in Hyundai Motor Company</orgName>
+				</funder>
+				<funder ref="#_ZrT3PUn">
+					<orgName type="full">Korea government(MSIT)</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Institute of Information &amp; communications Technology Planning &amp; Evaluation</orgName>
+					<orgName type="abbreviated">IITP</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Seoul National University</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName coords="1,139.56,125.13,63.56,10.75"><forename type="first">Sangwon</forename><surname>Yu</surname></persName>
+							<affiliation key="aff0" coords="1,146.34,153.50,310.32,10.37">
+								<orgName type="department">Data Science &amp; AI Laboratory</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,210.84,125.13,76.92,10.75"><forename type="first">Jongyoon</forename><surname>Song</surname></persName>
+							<affiliation key="aff0" coords="1,146.34,153.50,310.32,10.37">
+								<orgName type="department">Data Science &amp; AI Laboratory</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,295.48,125.13,74.72,10.75"><forename type="first">Heeseung</forename><surname>Kim</surname></persName>
+							<affiliation key="aff0" coords="1,146.34,153.50,310.32,10.37">
+								<orgName type="department">Data Science &amp; AI Laboratory</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,377.93,125.13,76.05,10.75"><forename type="first">Seong-Min</forename><surname>Lee</surname></persName>
+							<affiliation key="aff2" coords="1,189.45,181.39,224.10,10.37">
+								<orgName type="institution" key="instit1">AIRS Company</orgName>
+								<orgName type="institution" key="instit2">Hyundai Motor Group</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,214.35,139.08,75.64,10.75"><forename type="first">Woo-Jong</forename><surname>Ryu</surname></persName>
+							<email>woojong.ryu@hyundai.com</email>
+							<affiliation key="aff2" coords="1,189.45,181.39,224.10,10.37">
+								<orgName type="institution" key="instit1">AIRS Company</orgName>
+								<orgName type="institution" key="instit2">Hyundai Motor Group</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,297.71,139.08,72.54,10.75"><forename type="first">Sungroh</forename><surname>Yoon</surname></persName>
+							<email>sryoon@snu.ac.krblueworm7</email>
+							<affiliation key="aff0" coords="1,146.34,153.50,310.32,10.37">
+								<orgName type="department">Data Science &amp; AI Laboratory</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1" coords="1,145.77,167.45,311.47,10.37">
+								<orgName type="department" key="dep1">ASRI</orgName>
+								<orgName type="department" key="dep2">ECE</orgName>
+								<orgName type="department" key="dep3">GSAI, and INMC</orgName>
+								<orgName type="institution">Seoul National University</orgName>
+								<address>
+									<country key="KR">Korea</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Rare Tokens Degenerate All Tokens: Improving Neural Text Generation via Adaptive Gradient Gating for Rare Token Embeddings</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">0C6571DEF440FE7CE8E2C227F7D222A2</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2025-05-21T00:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=1, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[affiliation, biblStruct, figure, formula, head, note, persName, ref, s], sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Recent studies have determined that the learned token embeddings of large-scale neural language models are degenerated to be anisotropic with a narrow-cone shape. This phenomenon, called the representation degeneration problem, facilitates an increase in the overall similarity between token embeddings that negatively affect the performance of the models. Although the existing methods that address the degeneration problem based on observations of the phenomenon triggered by the problem improves the performance of the text generation, the training dynamics of token embeddings behind the degeneration problem are still not explored. In this study, we analyze the training dynamics of the token embeddings focusing on rare token embedding. We demonstrate that the specific part of the gradient for rare token embeddings is the key cause of the degeneration problem for all tokens during training stage. Based on the analysis, we propose a novel method called, adaptive gradient gating (AGG). AGG addresses the degeneration problem by gating the specific part of the gradient for rare token embeddings. Experimental results from language modeling, word similarity, and machine translation tasks quantitatively and qualitatively verify the effectiveness of AGG.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<facsimile>
+		<surface n="1" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="2" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="3" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="4" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="5" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="6" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="7" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="8" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="9" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="10" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="11" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="12" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="13" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="14" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="15" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="16" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="17" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+	</facsimile>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1" coords="1,70.86,602.98,82.82,10.75">Introduction</head><p>Neural language models have been developed with various architectures during recent years <ref type="bibr" coords="1,252.96,638.27,37.54,9.46;1,70.86,651.82,24.98,9.46" target="#b12">(Graves, 2013;</ref><ref type="bibr" coords="1,98.56,651.82,98.33,9.46" target="#b2">Bahdanau et al., 2015;</ref><ref type="bibr" coords="1,199.63,651.82,90.41,9.46" target="#b9">Gehring et al., 2017;</ref><ref type="bibr" coords="1,70.46,665.37,89.86,9.46" target="#b27">Vaswani et al., 2017)</ref>. Despite the improvement in model architectures, models usually share the same process for input and output. They process token embeddings as inputs to compute contextualized features and subsequently project the features into a categorical distribution of tokens at the output softmax layer whose weight is token embedding matrix <ref type="bibr" coords="1,336.59,239.14,85.39,9.46" target="#b16">(Merity et al., 2017;</ref><ref type="bibr" coords="1,424.52,239.14,74.80,9.46" target="#b32">Yang et al., 2018;</ref><ref type="bibr" coords="1,501.85,239.14,22.57,9.46;1,306.14,252.69,70.20,9.46" target="#b22">Press and Wolf, 2017)</ref>. Recent studies have determined that the learned embedding distribution is biased in a common direction, thereby resulting in a narrow cone-shaped anisotropy <ref type="bibr" coords="1,410.66,293.34,114.67,9.46" target="#b17">(Mu and Viswanath, 2018;</ref><ref type="bibr" coords="1,306.14,306.89,75.71,9.46" target="#b7">Ethayarajh, 2019;</ref><ref type="bibr" coords="1,384.20,306.89,70.03,9.46" target="#b8">Gao et al., 2019;</ref><ref type="bibr" coords="1,456.59,306.89,65.14,9.46" target="#b4">Biś et al., 2021)</ref>. This phenomenon, named the representation degeneration problem by <ref type="bibr" coords="1,390.77,333.99,71.19,9.46" target="#b8">Gao et al. (2019)</ref>, increases the overall similarity between embeddings, and leads to a problem in which the expressiveness of the token embeddings decreases. Therefore, it is difficult for the model to learn the semantic relationship between the tokens and to generate high quality texts. Existing studies addressing this problem suggest methods that apply post-processing or regularization techniques to all token embeddings based on the observed phenomena owing to the degeneration problem <ref type="bibr" coords="1,364.16,469.49,114.61,9.46" target="#b17">(Mu and Viswanath, 2018;</ref><ref type="bibr" coords="1,481.51,469.49,44.27,9.46;1,306.14,483.04,25.35,9.46" target="#b8">Gao et al., 2019;</ref><ref type="bibr" coords="1,335.13,483.04,83.58,9.46" target="#b28">Wang et al., 2019;</ref><ref type="bibr" coords="1,422.35,483.04,83.59,9.46" target="#b30">Wang et al., 2020;</ref><ref type="bibr" coords="1,509.58,483.04,14.84,9.46;1,306.14,496.59,52.88,9.46" target="#b4">Biś et al., 2021)</ref>. Although these works improve the quality of token embeddings and generated texts, it is still not clear how token embeddings become degenerate during training procedure. Also, there exists the problem of over regularization for the token embeddings whose semantic relationships are trained well because the above methods are applied for all token embeddings.</p><p>In this study, we conduct empirical studies about training dynamics of token embeddings, focusing on rare token embeddings. By observing the initial training dynamics of token embeddings grouped based on appearance frequency, we hypothesize that the degeneration of the rare token embeddings triggers the degeneration of the embeddings of the remaining tokens. We show that the entire degeneration problem is mitigated by only freezing rare tokens during training, and we demonstrate that the main cause of the entire degeneration problem is the specific part of the gradient for rare token em- beddings. This gradient part pushes away rare token embeddings from the feature vector of the non-rare targets in the current training sample. Based on the analysis, we propose a new method, adaptive gradient gating (AGG). With a dynamic grouping of rare tokens at each training step, AGG solves the entire degeneration problem by gating a specific part of the gradient that is solely about rare tokens. Because AGG is optimized to target the main cause of the degeneration problem, rare token embeddings, it can prevent the over regularization problem about frequent token embeddings which occurs in other methods addressing the degeneration problem. The proposed method is evaluated in three tasks: language modeling, word similarity, and machine translation. The AGG outperforms the baseline and other existing methods in all tasks. In addition, it shows compatibility with other method that addresses the neural text degeneration problem.</p><p>Via qualitative studies, we identify a correlation between our method and the frequency bias problem of learned embeddings <ref type="bibr" coords="2,169.80,521.29,79.35,9.46" target="#b11">(Gong et al., 2018;</ref><ref type="bibr" coords="2,251.46,521.29,39.04,9.46;2,70.86,534.84,23.48,9.46" target="#b18">Ott et al., 2018)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2" coords="2,70.86,559.35,80.83,10.75">Background</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.1" coords="2,70.86,582.35,195.66,9.81;2,95.40,595.90,33.94,9.81">Text Generation of Neural Language Models</head><p>Neural language generative models process text generation tasks as conditional language modeling, in which the model is typically trained by minimizing the negative log likelihood of the training data. With a vocabulary of tokens V = {v 1 , ..., v N } and embedding vectors {w 1 , ..., w N }, where w i corresponds to token v i , at every training step, the model obtains a mini-batch input and target text corpus pair (x, y), where x i , y i ∈ V , and y ∈ V T . The conditional probability for the target token y t , P θ (y t |h t ), where h t is a context feature vector of the t-th position of the generated text conditioned by (x, y &lt;t ), and θ denotes model parameters, which is defined as follows.</p><formula xml:id="formula_0" coords="2,345.26,270.04,174.92,33.76">P θ (y t |h t ) = exp (h t w T I(yt) ) N l=1 exp (h t w T l ) , (<label>1</label></formula><formula xml:id="formula_1" coords="2,520.18,282.36,4.24,9.46">)</formula><p>where w is the output token embedding which roles the weight of the output softmax layer, and I(y t ) represents the index of token y t . The negative log likelihood loss for an input and target pair (x, y), L N LL is expressed as follows.</p><formula xml:id="formula_2" coords="2,350.23,392.38,130.11,33.58">L N LL = - T t=1 log P θ (y t |h t ).</formula><p>(2)</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.2" coords="2,306.14,447.55,218.28,9.81;2,330.69,461.10,33.94,9.81">Embedding Problems in Neural Language Models</head><p>Recent studies on the geometric properties of contextual embedding space have observed that the distribution of embedding vectors is far from isotropic and occupies a relatively narrow cone space <ref type="bibr" coords="2,507.97,520.04,16.45,9.46;2,306.14,533.59,94.87,9.46" target="#b17">(Mu and Viswanath, 2018;</ref><ref type="bibr" coords="2,403.74,533.59,69.52,9.46" target="#b13">Liu et al., 2019;</ref><ref type="bibr" coords="2,476.00,533.59,49.79,9.46;2,306.14,547.14,24.65,9.46" target="#b34">Zhou et al., 2019;</ref><ref type="bibr" coords="2,333.51,547.14,74.42,9.46" target="#b7">Ethayarajh, 2019;</ref><ref type="bibr" coords="2,407.93,547.14,4.42,9.46">)</ref>. <ref type="bibr" coords="2,419.50,547.14,73.35,9.46" target="#b8">Gao et al. (2019)</ref> named this phenomenon the representation degeneration problem. This degeneration problem results in an increase in the overall cosine similarity between token embeddings, making it difficult for the model to learn semantic relationships between tokens. <ref type="bibr" coords="2,306.14,628.44,94.41,9.46" target="#b6">Demeter et al. (2020)</ref> demonstrated that the norm information of the token embeddings is so dominant that angle information about the feature vector is ignored when calculating the logits in the output layer. Owing to this structural weakness of the embedding space, embeddings with small norms are always assigned with a low probability, which reduces the diversity of the text generated by the model. Anisotropy of the embedding space is a still problem for the pre-trained large language models, and language models with improved isotropic</p><p>Methods PPL ↓ I(W) ↑ Freq Med Rare Total Freq Med Rare Total MLE 16.58 224.24 813.76 20.77 0.426 0.286 0.198 0.293 Freeze 16.48 233.92 3017.53 20.78 0.840 0.651 0.831 0.739 Table 1: Perplexity and I(W) for each token groups. Lower is better for PPL and higher is better for I(W). embedding space performs well in downstream tasks <ref type="bibr" coords="3,93.08,354.48,72.02,9.46" target="#b4">(Biś et al., 2021;</ref><ref type="bibr" coords="3,167.83,354.48,115.92,9.46" target="#b24">Rajaee and Pilehvar, 2021)</ref>.</p><p>Although the problem has been theoretically analyzed in several studies, existing methods are based on the observed phenomena as a result of the problem. To mitigate the phenomena observed from the problem, the post-processing of the embedding vectors <ref type="bibr" coords="3,105.60,436.60,112.25,9.46" target="#b17">(Mu and Viswanath, 2018;</ref><ref type="bibr" coords="3,220.59,436.60,69.28,9.46" target="#b4">Biś et al., 2021)</ref> or regularization terms about the phenomena <ref type="bibr" coords="3,266.82,450.15,22.32,9.46;3,70.86,463.70,52.33,9.46" target="#b8">(Gao et al., 2019;</ref><ref type="bibr" coords="3,125.91,463.70,80.71,9.46" target="#b28">Wang et al., 2019;</ref><ref type="bibr" coords="3,209.34,463.70,80.71,9.46" target="#b30">Wang et al., 2020;</ref><ref type="bibr" coords="3,70.86,477.25,84.39,9.46" target="#b33">Zhang et al., 2020)</ref> were introduced. These methods are applied to all token embeddings, so there is the problem of over regularization for the embeddings whose semantic relationship is trained well. Also, methodologies based on the training dynamics of the token embeddings concerning the degeneration problem remain subject to study.</p><p>Frequency bias in embedding space is another problem. <ref type="bibr" coords="3,112.40,586.47,69.28,9.46" target="#b18">Ott et al. (2018)</ref> conducted a comprehensive study on the under-estimation of rare tokens in neural machine translation. <ref type="bibr" coords="3,207.26,613.57,82.60,9.46" target="#b11">Gong et al. (2018)</ref> observed that embeddings in the language model were biased towards frequency and proposed an adversarial training scheme to address this problem.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3" coords="3,70.86,679.68,202.40,10.75">Empirical Study: Token Embedding</head><p>Training Dynamics led by Rare Tokens</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1" coords="3,70.86,717.30,217.72,9.81">Initial Training Dynamics of Embeddings</head><p>To analyze the training procedure of token embeddings, we train a Transformer language model at the WikiText-103 dataset from scratch. Whole vocabulary tokens are divided into three groups: frequent, medium, and rare groups. Based on the appearance frequency in the training corpus, the 30%, 50%, and 20% tokens are assigned to the frequent, medium, and rare group. We visualize the initial training dynamics of these groups via the projection of the embeddings into 2D, using singular value decomposition (SVD) projection. As illustrated in Figure <ref type="figure" coords="3,394.27,449.33,4.06,9.46" target="#fig_0">1</ref>, rare groups degenerate first, as they emerge from the entire embedding distribution. Subsequently, other groups also start to degenerate, following the degeneration of the rare group.</p><p>Based on this observation, we hypothesize that the degeneration of rare token embeddings induces the degeneration of non-rare token embeddings.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2" coords="3,306.14,554.97,218.27,9.81">Rare Tokens Degenerate Non-Rare Tokens</head><p>Because Transformer <ref type="bibr" coords="3,401.44,574.24,94.68,9.46" target="#b27">(Vaswani et al., 2017)</ref>  tings relative to freezing steps and examine whether the degeneration of rare token embeddings depends on when training of rare embeddings begins.</p><p>The performance of the models is evaluated in two ways; the likelihood and isotropy of token embeddings. Perplexity <ref type="bibr" coords="4,181.42,273.47,96.08,9.46" target="#b3">(Bengio et al., 2000)</ref> is adopted to evaluate the performance of the likelihood of the model. To measure the isotropy of the token embedding distribution, we adopt the partition function Z(a) = N i=1 exp (w i a T ) defined in <ref type="bibr" coords="4,70.46,341.22,81.55,9.46" target="#b1">Arora et al. (2016)</ref>, where w i denotes the embedding vector of token v i , and a represents a unit vector. Lemma 2.1. in <ref type="bibr" coords="4,153.37,368.32,80.35,9.46" target="#b1">Arora et al. (2016)</ref> demonstrate that if the embedding vectors are isotropic, Z(a) is approximately constant. Based on this property, we measure the isotropy of an embedding matrix W using I(W), which is defined as follows.</p><formula xml:id="formula_3" coords="4,127.40,443.17,161.73,25.71">I(W) = min a∈X Z(a) max a∈X Z(a) ,<label>(3)</label></formula><p>where I(W) ∈ [0, 1] and X represents the set of eigenvectors of W T W <ref type="bibr" coords="4,172.11,492.94,117.94,9.46" target="#b17">(Mu and Viswanath, 2018;</ref><ref type="bibr" coords="4,70.34,506.49,81.62,9.46" target="#b30">Wang et al., 2020;</ref><ref type="bibr" coords="4,154.95,506.49,69.38,9.46" target="#b4">Biś et al., 2021)</ref>. Furthermore, we measure the relatedness between the rare and frequent group token embeddings to verify that the degeneration of the frequent group follows the degeneration of the rare group. We calculate the average cosine similarity between the rare and frequent group embeddings to measure the relatedness.</p><p>Table <ref type="table" coords="4,109.80,601.34,5.56,9.46">1</ref> shows the comparison of the baseline model and the model with frozen rare tokens. We denote the baseline as "MLE" and the freezing method as "Freeze". Surprisingly, the PPL of frequent group tokens and overall I(W) improved by simply not training the rare token embeddings. Figure 2 illustrates the change in I(W) for the frequent and rare token embeddings, including the similarity between frequent and rare token embeddings at various freezing step settings. Whenever the rare token embeddings start to be trained, their I(W) decreases steeply, followed by decreasing I(W) of frequent embeddings and increasing similarities between the frequent and rare embeddings. From the analysis in this subsection, we demonstrate that the entire degeneration problem can be solved by solely handling just rare embeddings during the entire training procedure.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3" coords="4,306.14,281.74,180.61,9.81;4,330.69,295.29,154.43,9.81;4,330.69,308.84,42.43,9.81">Finding the Primary Cause of the Degeneration Problem: From the Gradient</head><p>With T context feature vectors h i (i ∈ [1, T ]) from the training sample, the negative log-likelihood loss gradient for the rare token embedding w r is calculated as follows.</p><formula xml:id="formula_4" coords="4,318.98,389.73,205.45,90.14">∇ wr L N LL = y i =vr (p r|i -1)h i (a) + y j / ∈Vr p r|j h j (b) + y k ∈Vr p r|k h k (c) ,<label>(4)</label></formula><p>where y i denotes the target token for h i , V r is the rare token vocabulary group, and p r|i represents the conditional probability of token v r given h i , which is calculated as [softmax(h i W T )] r . We divide the gradient for w r to 3 parts in Eq. 4. Part (a) pulls w r close to the feature vectors whose target tokens are v r . Part (b) pushes away w r from the feature vectors whose target tokens are not rare. Part (c) pushes away w r from the feature vectors whose target tokens are rare. As an extension of the analysis in the previous subsection, we freeze these parts of the gradient with various settings during training to identify the key cause of the degeneration problem. In other words, depending on the settings, the specific gradient parts that will not be used for embedding training is detached from the computation graph during training stage. This can be easily implemented by detach() function of Pytorch <ref type="bibr" coords="4,305.78,736.84,88.64,9.46" target="#b21">(Paszke et al., 2019)</ref>. All model and training configurations are the same as in the previous sections, except those to be frozen.</p><p>Table <ref type="table" coords="5,107.76,74.70,5.35,9.46" target="#tab_1">2</ref> presents the results of the experiments in this subsection. We freeze the parts of the gradient for the rare tokens with three settings. Because part (a) is a key component required to train the token embedding to be aligned to the target, all settings activate part (a). We notice that when part (b) is activated (solely freezing part (c)), I(W) decreases and PPL for rare tokens increases almost 10 times compared to when part (b) is frozen. Because activating part (c) is not seen to be negative for PPL and I(W), we conclude that part (b) of Eq. 4 is the bedrock cause for the degeneration problem. From the analysis in this section, we demonstrate that the degeneration problem could be solved to a large extent by mainly addressing the part of the gradient for rare embeddings that pushes away rare token embeddings from non-rare feature vectors.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4" coords="5,70.86,313.90,57.78,10.75">Method</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1" coords="5,70.86,335.32,171.24,9.81">Dynamic Rare Token Grouping</head><p>To handle the specific part of the gradient for the rare token embeddings studied in the previous section, we need to properly group the rare tokens. A naive approach can be used to group rare tokens based on the appearance frequency of the training corpus, as described in the previous section. However, this static grouping method is suboptimal because the model is typically trained via mini-batch training. The group of rare tokens that appeared less frequently in recent batch samples is variable in the mini-batch training. Therefore, it is necessary to dynamically group rare tokens based on token appearances in recent batch samples.</p><p>To consider the token appearances in recent batch samples, we introduce the token counter memory that remembers the number of the appearances of each token during the previous K training steps. For K memories, [m 1 , ..., m K ], m t ∈ R N represents the number of appearances of each token of N -size vocabulary at the t-th previous training step. Memories are set as zero vectors at the initial stage. At each training step, the token appearance, a ∈ R N , is calculated as the sum of all K memories: a = K t=1 m t . Based on a, we determine whether token v i is in the rare token group V r as follows.</p><formula xml:id="formula_5" coords="5,137.73,697.42,151.41,47.98">a i K &lt; α ⇒ v i ∈ V r a i K ≥ α ⇒ v i / ∈ V r ,<label>(5)</label></formula><p>where a i is the i-th component of a, and α is a hyper-parameter in our method that controls the proportion of rare tokens in the entire vocabulary.</p><p>In this study, we set K to the number of iteration steps during one epoch of training stage.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2" coords="5,306.14,123.47,188.70,9.81;5,330.33,137.02,32.84,9.81">Adaptive Gradient Gating for Rare Tokens</head><p>After dynamically grouping the rare tokens at each training step, we need to handle a specific part of the gradient for the rare token embeddings to solve the degeneration problem of all embeddings. To solely control the gradient for rare token embeddings, we introduce a gradient gating method for a parameter x. We define x as a tensor whose value is the same as x, but detached from the current training graph. This implies that x is considered a constant, hence, gradient about x does not exist. In practice, x can be easily obtained from x using the detach() function of Pytorch <ref type="bibr" coords="5,463.44,303.97,62.35,9.46;5,306.14,317.52,23.95,9.46" target="#b21">(Paszke et al., 2019)</ref>. With x, we can gate the gradient for x as follows.</p><formula xml:id="formula_6" coords="5,350.41,350.07,174.02,27.71">x gated = g ⊙ x + (1 -g) ⊙ x ∇ x f (x gated ) = g ⊙ ∇ x f (x),<label>(6)</label></formula><p>where x gated is a new parameter whose value is the same as x, and g ∈ [0, 1] is a gate tensor. When the x gated is fed to the function f (•) as input, the gradient for x is gated by g. As we described in section 3, part (b) of Eq. 4 should mainly be handled to solve the degeneration problem. To address part (b) of Eq. 4, given a context feature vector of the i-th position h i , we introduce a gate vector g 1 ∈ R N as follows.</p><formula xml:id="formula_7" coords="5,335.80,521.37,188.63,26.07">g 1k = a k /K if v k ∈ V r , v k ̸ = y i 1 else ,<label>(7)</label></formula><p>where g 1k denotes a k-th component of g 1 . g 1 controls the degree to which rare token embeddings move away from non-rare feature vectors whose targets differ from each rare token embedding. Also, each component of g 1 is calculated based on the rarity of each rare token, a k , so gradient gating for part (b) of Eq. 4 is adaptive for each rare tokens.</p><p>Although part (c) of Eq. 4, which pushes embeddings away from the feature vectors whose targets are other rare tokens, is not to be seen as the cause of the degeneration problem in section 3, this part also induces the degeneration problem for the certain situation when rare tokens degenerate other rare tokens. To address this, we approximate the multiple levels of rarity in the rare token group to two levels in this paper: 'less rare' and 'very rare'. Table 4: Experimental results for each token group in WikiText-103 language modeling task comparing UL and UL+AGG.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head coords="6,102.79,83.90,40.61,9.81">Methods</head><p>We define the two rarity levels based on the average number of appearances of the entire rare tokens: if the token appearance a k is smaller than the mean of a r where r ∈ V r , corresponding token is a very rare token. For the very rare token embeddings, part (c) of the gradient about embeddings pushes them away from the feature vectors whose targets are less rare tokens that are relatively frequent compared to them. This means that part (c) roles like part (b) in the above situation, which becomes the cause of the degeneration problem. Therefore, we need to handle part (c) of Eq. 4 for very rare tokens.</p><p>To address part (c) of Eq. 4 for the very rare token embeddings, we introduce another gate vector g 2 ∈ R N as follows.</p><formula xml:id="formula_8" coords="6,82.28,535.39,206.86,28.85">g 2k = min( a k ār , 1) if v k ∈ V r , v k ̸ = y i 1 else,<label>(8)</label></formula><p>where g 2k is the k-th component of g 2 and ār is the mean of a r where r ∈ V r . g 2 controls the degree to which very rare token embeddings move away from less rare feature vectors whose targets differ from each very rare token embedding. Also, each component of g 2 is calculated based on the rarity of each very rare token, a k , so gradient gating for part (c) of Eq. 4 is adaptive for each very rare tokens.</p><p>To calculate the loss of h i , we calculate three logits, z 0 i , z 1 i , and z 2 i , as follows.</p><formula xml:id="formula_9" coords="6,97.92,719.64,191.21,34.98">z 0 i = h i WT z l i = g l ⊙ hi W T + (1 -g l ) ⊙ hi WT ,<label>(9)</label></formula><p>where W denotes an embedding matrix, and l = 1, 2. Because our method solely handles the gradient for embeddings, we calculate z 0 i for a gradient about h i , which does not need to be gated. Finally, the negative log-likelihood loss for i-th position L i is computed as follows.</p><formula xml:id="formula_10" coords="6,354.09,409.86,165.79,53.22">L i = -log p 0 I(y i )|i -1(y i / ∈ V r ) log p 1 I(y i )|i -1(y i ∈ V r ) log p 2 I(y i )|i , (<label>10</label></formula><formula xml:id="formula_11" coords="6,519.88,432.05,4.54,9.46">)</formula><p>where p m I(y i )|i = [softmax(z m i )] I(y i ) with m=0, 1, 2 and 1(•) denotes the Indicator function. Derivation of the gradient for rare token embeddings, ∇ wr L i , is provided in Appendix A.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5" coords="6,306.14,558.32,83.02,10.75">Experiments</head><p>We evaluate our method on various tasks including language modeling, word similarity, and machine translation. In the language modeling task, we focus on verifying the diversity of the generated texts. We test the learning of the semantic relationships between tokens on the word similarity task. Finally, we evaluate the quality of generated texts on the machine translation task. For all the experimental results below, we adopt the state-of-the-art model architecture as a baseline to properly demonstrate the effectiveness of our method. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.1" coords="7,70.86,248.34,117.60,9.81">Language Modeling</head><p>Setting We conduct experiments using WikiText-103 dataset, which is a significantly large dataset for language modeling task with approximately 103M words and 260K vocabulary size <ref type="bibr" coords="7,255.52,311.82,34.00,9.46;7,70.86,325.37,50.46,9.46" target="#b15">(Merity et al., 2018)</ref>. Texts in the dataset are preprocessed based on the byte-pair encoding <ref type="bibr" coords="7,216.46,338.92,74.04,9.46;7,70.86,352.47,23.95,9.46" target="#b26">(Sennrich et al., 2016)</ref>. We adopt the GPT-2 medium architecture <ref type="bibr" coords="7,90.01,366.02,97.39,9.46" target="#b23">(Radford et al., 2019)</ref>, which comprises 24 Transformer decoder layers as a baseline model.</p><p>Because our method is about learning token embeddings, we train the models from scratch for a maximum of 50k iterations and evaluate them based on the perplexity of the validation set.</p><p>For hyper-parameter searching, we select α ∈ {0.01, 0.02, 0.03, 0.04, 0.05} for AGG method on the language modeling task. The hyper-parameter sensitivity for the AGG are given in Appendix D.</p><p>We use three quantitative metrics to evaluate our method: Perplexity, Uniq, and I(W). Related to the likelihood of generated texts, Perplexity quantifies the prediction difficulty over the next token. Uniq <ref type="bibr" coords="7,95.05,558.20,92.55,9.46" target="#b31">(Welleck et al., 2020)</ref> quantify the number of unique next-token predictions, measuring the token diversity. As described in section 3, I(W) measures the isotropy of the token embedding space. Results We present our results for the testset in Table <ref type="table" coords="7,97.45,628.44,4.13,9.46" target="#tab_2">3</ref>. We denote the baseline method as 'MLE' and our method as 'AGG'. We measure Perplexity and Uniq for each token group defined in Section 3. As presented in Table <ref type="table" coords="7,169.95,669.09,4.17,9.46" target="#tab_2">3</ref>, AGG improves the overall metrics for the medium and rare groups while maintaining performance for the frequent token group. This shows that our method not only improves the quality of rare token embeddings, but also the quality of non-rare token embeddings. In particular, for the rare group, the Perplexity score decrease significantly and the number of unique predictions surpasses the human distribution. The I(W) for all token embeddings increased over 2 times the baseline. Experimental results of I(W) for the embeddings of each frequency groups can be found in Appendix C. Table <ref type="table" coords="7,444.81,302.96,5.50,9.46" target="#tab_4">5</ref> shows examples of generated texts from MLE baseline and AGG. We also show additional examples of generated texts in Appendix F.</p><p>Compatibility Neural text degeneration problem is another problem in neural text generative models, where the model generates texts that are less likely to match human word distributions. Existing methods for this problem focus on the diversity of the generated texts by adding an auxiliary loss to the original negative log-likelihood loss <ref type="bibr" coords="7,484.86,438.63,39.84,9.46;7,306.14,452.17,51.85,9.46" target="#b31">(Welleck et al., 2020)</ref>. Although <ref type="bibr" coords="7,411.09,452.17,94.13,9.46" target="#b31">Welleck et al. (2020)</ref> and AGG attempts to address the same problem about diversity, AGG can be compatible with the existing method in the text degeneration problem because AGG does not alter the form of the loss function in MLE training. Table <ref type="table" coords="7,415.32,519.92,5.56,9.46">4</ref> presents the results of the experiments about fusion of unlikelihood training <ref type="bibr" coords="7,320.49,547.02,92.74,9.46" target="#b31">(Welleck et al., 2020)</ref> and AGG. We denote the unlikelihood training as UL. From Table <ref type="table" coords="7,485.35,560.57,4.09,9.46">4</ref>, we notice that when UL and AGG are fused, it produces a synergistic effect that exceeds the gain of each for the baseline. This indicates that AGG is compatible with methods that address other problems in text generation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.2" coords="7,306.14,650.86,100.40,9.81">Word Similarity</head><p>Setting We evaluate the semantic relationship between tokens for AGG and the baseline with four word similarity datasets: MEN, WS353, RG65, and RW <ref type="bibr" coords="7,317.52,709.74,88.38,9.46" target="#b5">(Bruni et al., 2014;</ref><ref type="bibr" coords="7,408.61,709.74,82.76,9.46" target="#b0">Agirre et al., 2009;</ref><ref type="bibr" coords="7,494.09,709.74,26.79,9.46;7,306.14,723.29,130.27,9.46" target="#b25">Rubenstein and Goodenough, 1965;</ref><ref type="bibr" coords="7,439.13,723.29,82.44,9.46" target="#b14">Luong et al., 2013)</ref>. Methods are tested whether the similarity between the given two words in the embedding space is consistent with the ground truth, in terms of Spear- </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head coords="8,78.63,204.21,36.28,8.76">Methods</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head coords="8,238.87,198.16,33.85,8.76;8,227.80,211.56,53.82,6.86">BLEU ↑ Base Big</head><p>Transformer <ref type="bibr" coords="8,129.45,223.11,85.17,8.45" target="#b27">(Vaswani et al., 2017)</ref> 27.30 28.40 CosReg <ref type="bibr" coords="8,111.80,235.21,68.49,8.45" target="#b8">(Gao et al., 2019)</ref> 28.38 28.94 Adv MLE <ref type="bibr" coords="8,120.87,247.32,74.75,8.45" target="#b28">(Wang et al., 2019)</ref> 28.43 29.52 SC <ref type="bibr" coords="8,92.99,259.43,74.74,8.45" target="#b30">(Wang et al., 2020)</ref> 28.45 29.32 AGG 28.70 29.81</p><p>Table 7: Comparison of different methods in terms of BLEU scores.</p><p>man's rank correlation. We adopt cosine distance to compute the similarity between embeddings. We use the same models trained on language modeling tasks with the WikiText-103 dataset for the word similarity task.</p><p>Results Table <ref type="table" coords="8,135.34,410.34,5.56,9.46" target="#tab_5">6</ref> presents the result obtained from the evaluation of the word similarity task. From this table, it can be observed that our method outperforms the baseline on overall datasets. Although AGG handles only training of rare tokens, the semantic relationships between all tokens are also well learned. Qualitative studies on semantic alignment between tokens are provided in Appendix E.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5.3" coords="8,70.86,528.27,121.63,9.81">Machine Translation</head><p>Setting We utilize a dataset from standard WMT 2014 containing 4.5M English→German sentence pairs. The source and target sentences are encoded by 37K shared tokens based on byte-pair encoding <ref type="bibr" coords="8,85.23,601.02,98.16,9.46" target="#b26">(Sennrich et al., 2016)</ref>. We adopt the two version of Transformer <ref type="bibr" coords="8,161.28,614.56,98.30,9.46" target="#b27">(Vaswani et al., 2017)</ref> as the baseline model for applying our method: base and big. The model configuration is the same as that proposed in <ref type="bibr" coords="8,124.90,655.21,90.98,9.46" target="#b27">Vaswani et al. (2017)</ref>. To evaluate the quality of the generated texts, we measure BLEU score <ref type="bibr" coords="8,98.56,682.31,100.77,9.46" target="#b20">(Papineni et al., 2002)</ref>, which is standard metric for machine translation task.</p><p>Results Table <ref type="table" coords="8,140.34,709.74,5.56,9.46">7</ref> presents a comparison of our method and other methods in terms of the BLEU score. Our method achieves 1.4 and 1.41 BLEU score improvements on the machine translation task for the base and big baseline models. In addi- Table 9: Ablation study about dynamic grouping of AGG.</p><p>tion, our method is better than all other previous works in handling the representation degeneration problem that reported BLEU scores in the same tasks. These results demonstrate the effectiveness of AGG in the quality of the generated texts. While other methods addressing the degeneration problem targets all token embeddings, target of AGG, rare token embeddings, are optimized based on the analysis about the training dynamics of token embeddings. Due to this difference, our method can prevent the over regularization problem for frequent token embeddings, which is the main advantage of AGG compared to other works. Qualitative study about cross-lingual semantic alignment between tokens of the source and target languages is provided in Appendix E.</p><p>6 Analysis of AGG</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.1" coords="8,306.14,554.13,95.18,9.81">Ablation Study</head><p>In our method, AGG, we introduce two gate vectors, g 1 , and g 2 , to handle the gradient for rare and very rare token embeddings. We conduct experiments on these gate vectors. Table <ref type="table" coords="8,462.70,614.15,5.56,9.46" target="#tab_7">8</ref> presents the results of the ablation studies compared with the MLE and AGG. When g 1 is excluded from AGG (denoted as 'no g 1 '), Uniq and I(W) decreased significantly, because g 1 is the key component for the gradient gating. When g 2 is excluded from AGG (denoted as 'no g 2 '), Uniq and I(W) slightly decrease. Accordingly, we notice that g 2 is important for the gating of gradients fort the very rare token embeddings. Also, we present the analysis about rare token grouping method of AGG. Figure <ref type="figure" coords="8,461.85,763.94,5.56,9.46" target="#fig_3">4</ref> presents the  size of the rare token group during initial 1k training steps when the model is trained with WikiText-103 dataset. As presented in the figure, rare group size fluctuate wildly at the initial training stage.</p><p>We expect for this grouping method to determine an optimal rare token group for the current training step. Table <ref type="table" coords="9,141.15,554.11,5.56,9.46">9</ref> presents the results of ablation study about dynamic grouping. To except dynamic grouping from AGG, we fixed the rare token group after 1 epoch. For this static grouping AGG method, Next-token diversity(Uniq) and the isotropy of the token embedding space(I(W)) perform worse than dynamic grouping AGG.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6.2" coords="9,70.86,662.05,85.37,9.81">Visualization</head><p>Figure <ref type="figure" coords="9,101.05,682.64,5.35,9.46">3</ref> (a) and (b) present the visualizations of the embedding space of baseline MLE and our method.</p><p>In the figure, applying the AGG method restores the isotropy of the token embedding space. In addition, we observe that the regions occupied by each token group are not disjoint when applying AGG. For baseline, the regions occupied by rare group and the frequent group are disjoint, which is refered as the frequency bias problem of embeddings <ref type="bibr" coords="9,496.33,280.66,28.10,9.46;9,306.14,294.20,49.42,9.46" target="#b11">(Gong et al., 2018)</ref>. From the analysis of the visualization of the embedding space, we notice that the manipulating the training of the rare token embeddings can alleviate the frequency bias problem. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="7" coords="9,306.14,415.91,75.07,10.75">Conclusion</head><p>In this study, we analyzed the training dynamics of the token embeddings concerning the representation degeneration problem of the learned embeddings, focusing on the rare tokens. Based on the analysis, we propose an adaptive gradient gating method that solves the problem by solely handling the training for rare token embeddings. Experiments and qualitative studies in various tasks of text generation demonstrate the effectiveness of our method. Beyond the two-level approximation of rarity of rare tokens which is applied to our study, addressing multiple levels of rarity can be an interesting region to study for the future work.</p><p>Corporation through HMC/KIA-SNU AI Consortium Fund, and SNU-Naver Hyperscale AI Center.</p><p>A Derivation of the gradient of AGG loss w.r.t. rare token embedding</p><p>We follow the same notation as in the main paper. Before we write the derivation of the gradient about rare token embedding w r , we write the gradient of f ( wj ) and (z l i ) j about w r , where f ( wj ) is the function of wj with j = 1, ..., N and (z l i ) j is a j-th component of z l i with l = 0, 1, 2 as follows.</p><p>∇ wr f ( wj ) = ∇ wj f ( wj ) ⊙ ∇ wr wj = ∇ wj f ( wj ) ⊙ 0 = 0 for all j (∵ wj is treated as a constant.)</p><p>(11)</p><formula xml:id="formula_12" coords="12,75.10,294.32,209.79,105.91">∇ wr (z l i ) j = ∇ wr [g lj • hi w T j + (1 -g lj • hi wT j )] = g lj ∇ wr hi w T j + 0 = g lj hi if j = r 0 else = g lj h i if j = r 0 else</formula><p>(∵ h i = hi in terms of value.) (12) Considering the case of y i / ∈ V r , AGG negative log-likelihood loss for the i-th position of token generation, L AGG i is written as follows.</p><formula xml:id="formula_13" coords="12,92.72,486.20,196.41,15.54">L AGG i = -log p 0 I(y i )|i -log p 1 I(y i )|i<label>(13)</label></formula><p>Then gradient of L AGG i about w r is written as follows.</p><formula xml:id="formula_14" coords="12,77.98,551.76,204.04,193.73">∇ wr L AGG i = -∇ wr log p 0 I(y i )|i -∇ wr log p 1 I(y i )|i = -∇ wr log p 1 I(y i )|i -0 (∵ log p 0 I(y i )|i is a function of wr .) = - 1 p 1 I(y i )|i ∇ wr p 1 I(y i )|i = - 1 p 1 I(y i )|i N j=1 ∇ (z 1 i ) j p 1 I(y i )|i • ∇ wr (z 1 i ) j (∵ p 1 I(y i )|i is a function of (z 1 i ) j , j = 1, ..., N .) = - 1 p 1 I(y i )|i ∇ (z 1 i )r p 1 I(y i )|i • ∇ wr (z 1 i ) r</formula><p>(By Eq. 12.)</p><p>As</p><formula xml:id="formula_16" coords="12,331.90,72.40,192.52,42.11">p 1 I(y i )|i = [softmax(z 1 i )] I(y i )|i , ∇ (z 1 i )r p 1 I(y i )|i = -p 1 I(y i )|i p 1 r|i .<label>(15)</label></formula><p>Thus, ∇ wr L AGG i is computed as follows.</p><formula xml:id="formula_17" coords="12,324.30,147.13,163.06,46.44">∇ wr L AGG i = - 1 p 1 I(y i )|i ∇ (z 1 i )r p 1 I(y i )|i • ∇ wr (z 1 i ) r</formula><p>(By Eq. 14.)</p><formula xml:id="formula_18" coords="12,327.33,214.40,76.77,31.97">= p 1 r|i • ∇ wr (z 1 i ) r = g 1r p 1</formula><p>r|i h i (By Eq. 12.) ( <ref type="formula" coords="12,510.79,202.16,9.09,9.46">16</ref>) Considering the case of y i ∈ V r but y i ̸ = v r , L AGG i is written as follows.</p><formula xml:id="formula_19" coords="12,328.01,310.62,196.41,15.54">L AGG i = -log p 0 I(y i )|i -log p 2 I(y i )|i<label>(17)</label></formula><p>Then ∇ wr L AGG i is written as follows.</p><formula xml:id="formula_20" coords="12,313.26,359.56,211.16,265.53">∇ wr L AGG i = -∇ wr log p 0 I(y i )|i -∇ wr log p 2 I(y i )|i = -∇ wr log p 2 I(y i )|i -0 (∵ log p 0 I(y i )|i is a function of wr .) = - 1 p 2 I(y i )|i ∇ wr p 2 I(y i )|i = - 1 p 2 I(y i )|i N j=1 ∇ (z 2 i ) j p 2 I(y i )|i • ∇ wr (z 2 i ) j (∵ p 2 I(y i )|i is a function of (z 2 i ) j , j = 1, ..., N .) = - 1 p 2 I(y i )|i ∇ (z 2 i )r p 2 I(y i )|i • ∇ wr (z 2 i ) r (∵ Eq. 12.) (18) As p 2 I(y i )|i = [softmax(z 2 i )] I(y i )|i , ∇ (z 2 i )r p 2 I(y i )|i = -p 2 I(y i )|i p 2 r|i .<label>(19)</label></formula><p>Thus, ∇ wr L AGG i is computed as follows.</p><formula xml:id="formula_21" coords="12,324.30,657.71,163.06,99.24">∇ wr L AGG i = - 1 p 2 I(y i )|i ∇ (z 2 i )r p 2 I(y i )|i • ∇ wr (z 2 i ) r (By Eq. 18.) = p 2 r|i • ∇ wr (z 2 i ) r = g 2r p 2</formula><p>r|i h i (By Eq. 12.) (20)</p><p>Considering the remained case of y i = v r , since y i ∈ V r , L AGG i is same as the second case, and derivation process of ∇ wr L AGG i shares the same process with Eq. 18. As I(y i ) = r,</p><formula xml:id="formula_22" coords="13,91.44,136.10,197.69,16.60">∇ (z 2 i )r p 2 I(y i )|i = p 2 I(y i )|i (1 -p 2 I(y i )|i )<label>(21)</label></formula><p>Thus, ∇ wr L AGG i is computed as follows.</p><formula xml:id="formula_23" coords="13,84.00,187.39,205.13,154.30">∇ wr L AGG i = - 1 p 2 I(y i )|i ∇ (z 2 i )r p 2 I(y i )|i • ∇ wr (z 2 i ) r (By Eq. 21.) = -(1 -p 2 I(y i )|i ) • ∇ wr (z 2 i ) r = -g 2r (1 -p 2 I(y i )|i )h i (By Eq. 12.) = (p 2 r|i -1)h i (∵ I(y i ) = r and g 2r = 1 if I(y i ) = r.)<label>(22)</label></formula><p>As p r|i = p m r|i with m = 0, 1, 2 in terms of value, we finally write ∇ wr L AGG i as follows.</p><formula xml:id="formula_24" coords="13,90.32,393.61,198.81,46.63">∇ wr L i =      (p r|i -1)h i if y i = v r g 1r p r|i h i if y i / ∈ V r g 2r p r|i h i else,<label>(23)</label></formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head coords="13,70.86,453.03,127.86,10.75">B Experimental Details</head><p>In this section, we present the details of the experiments in main page. All the experiments were conducted with a single GPU on our machine (GPU: NVIDIA A40) and from single run. For each task in the experiments, we use the same model architecture and train it with different objectives(i.e., MLE, AGG, UL). The hyper-parameters used for different training methods in the same task are exactly same. The detailed hyper-parameters are described in Table <ref type="table" coords="13,108.77,596.99,9.09,9.46" target="#tab_1">12</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head coords="13,70.86,619.57,215.20,10.75;13,91.44,633.52,88.90,10.75">C Experimental Results of I(W) for each frequency groups</head><p>In this section, we present the experimental results about I(W) for the embeddings of each frequency groups. Table <ref type="table" coords="13,131.68,682.64,10.71,9.46">10</ref> shows the I(W) comparing MLE baseline and AGG.</p><p>Table 11 shows the I(W) comparing UL baseline and the fusion of UL and AGG. As presented in Table 10 and 11, AGG improves isotropy of the embedding space for all frequency groups, indicating that our method solves the whole degeneration problem. Methods I(W)↑ Freq Med Rare MLE 0.51 0.33 0.278 AGG 0.702 0.714 0.813 Table 10: Experimental results about I(W) for each token group in WikiText-103 language modeling task comparing MLE baseline and AGG. Methods I(W)↑ Freq Med Rare UL 0.533 0.351 0.293 UL + AGG 0.731 0.626 0.696</p><p>Table 11: Experimental results about I(W) for each token group in WikiText-103 language modeling task comparing UL baseline and UL + AGG.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head coords="13,306.14,323.83,162.80,10.75">D Hyperparameter Sensitivity</head><p>In this sections we show how the metrics used on language modeling task change with the hyperparameter α in Figure <ref type="figure" coords="13,412.14,375.09,4.17,9.46" target="#fig_5">5</ref>. We observed an interesting phenomenon about the non-rare token group when rare token group size increases over a specific threshold. For the rare token group, Uniq and I(W) metrics have a positive correlation. They increase together up to a certain alpha value and decrease together as alpha increases over that value. However, for the non-rare token group, Uniq increases as alpha increases over that certain value while there are negative effects where I(W) decreases and Ppl increases. Because non-rare tokens are a major group, Figure <ref type="figure" coords="13,394.47,524.13,5.35,9.46" target="#fig_5">5</ref> (b) and (c) present the above phenomenon about the non-rare token group although they present metrics for overall tokens. We consider this phenomenon to be another degeneration problem, as the increase of Uniq with negative impacts on isotropy and likelihood does not imply improvement of text quality, implying just generation of unproper tokens. This problem which occurs when rare token group size increases over a certain threshold can be handled in future work.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head coords="13,306.14,671.63,192.07,10.75;13,325.64,685.58,142.25,10.75">E Qualitative Study about Semantic Alignments between Tokens</head><p>In this section, we present qualitative studies about semantic alignments between tokens for language modeling and machine translation tasks. We select three rare token from each datasets: "homepage", "Werewolf", and "policymakers" for WikiText-103 dataset, and "optimum", "criminal", and "happiness" for WMT14 En→De dataset. For each rare token, we extract the top-5 nearest neighbor token predicted by the cosine distance between token embeddings. Compared with baseline MLE method, AGG shows significant improvement to train semantic alignments for rare tokens. From Table <ref type="table" coords="14,276.80,156.00,9.14,9.46" target="#tab_13">13</ref>, we notice that the rare tokens trained with AGG are semantically well aligned and not biased about token frequency. Table <ref type="table" coords="14,179.19,196.65,11.13,9.46">14</ref> demonstrates that token embeddings trained with AGG also learn the cross-lingual semantic alignments between target language tokens.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head coords="14,70.86,259.92,69.08,10.75">F Examples</head><p>We present additional generated text samples from the model trained on language modeling task in Table 12: Model configurations and training hyper-parameters for all experiments conducted in the main page. For word similarity task, the model trained on language modeling task are evaluated for word similarity datasets.  @@ optimalen * perpetr@@ krimi@@ * ocopying happ@@ sofar maximum secution kriminellen * ratory Glück * protection@@ Optim@@ xious crime sacri@@ pleasure Table 14: Top-5 nearest neighbors of each rare source tokens in WMT14 En→De dataset. Performance of AGG method is compared with the baseline MLE method. The symbol @@ stands for sub-word tokenization of the dataset. The symbol * denotes the synonym token of the target language.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0" coords="2,70.86,178.97,453.57,8.64;2,70.86,190.93,453.57,8.64;2,70.86,202.89,52.03,8.64;2,70.86,72.12,108.86,79.07"><head>Figure 1 :</head><label>1</label><figDesc>Figure 1: Visualization of token embeddings of language model trained on WikiText-103. Red, green, and blue points represent rare, medium, and frequent groups respecively. (a), (b), (c), (d) present a visualization of each training step.</figDesc><graphic coords="2,70.86,72.12,108.86,79.07" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1" coords="3,70.86,294.80,453.56,8.96;3,70.86,307.08,324.76,8.64;3,225.07,166.79,145.15,100.54"><head>Figure 2 :</head><label>2</label><figDesc>Figure 2: Plot of I(W) for rare and frequent groups and average cosine similarity between rare and frequent embeddings when freezing the training of rare tokens until specific training steps.</figDesc><graphic coords="3,225.07,166.79,145.15,100.54" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2" coords="9,70.86,209.34,453.57,8.64;9,70.86,221.29,454.24,8.64;9,70.86,233.25,186.12,8.64;9,77.94,263.25,204.11,149.21"><figDesc>Figure 3: (a), (b) Token embedding visualization for the baseline model and AGG on the language modeling task with WikiText-103. Red, green, and blue points represent rare, medium, and frequent groups respecively; (c) Normalized singular value for MLE and AGG.</figDesc><graphic coords="9,77.94,263.25,204.11,149.21" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3" coords="9,70.86,424.30,218.53,8.64;9,70.86,436.26,174.75,8.64"><head>Figure 4 :</head><label>4</label><figDesc>Figure 4: Size of the rare token group during initial 1k steps of training with WikiText-103 dataset.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4" coords="9,472.78,334.85,52.38,9.46;9,306.14,348.40,218.28,9.46;9,306.14,361.95,218.66,9.46;9,306.14,375.50,218.28,9.46;9,306.14,389.05,199.78,9.46"><figDesc>Figure 3 (c) presents the plot of the normalized singular value of embedding matrix for MLE and AGG. Slowly decaying singular values of AGG demonstrate an isotropic distribution of the embedding space.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_5" coords="15,87.88,692.33,419.53,8.64;15,379.28,557.01,145.14,107.53"><head>Figure 5 :</head><label>5</label><figDesc>Figure 5: Hyper-parameter(α) sensitivity of AGG in the language modeling task on Wikitext-103 dataset.</figDesc><graphic coords="15,379.28,557.01,145.14,107.53" type="bitmap" /></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1" coords="3,305.87,574.24,220.37,199.16"><head>Table 2 :</head><label>2</label><figDesc>Perplexity and I(W) for each token group at gradient partial freezing experiment.</figDesc><table coords="3,498.85,574.24,27.39,9.46"><row><cell>is rep-</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2" coords="6,70.55,77.13,453.87,186.33"><head>Table 3 :</head><label>3</label><figDesc>Experimental results for each token group in WikiText-103 language modeling task comparing MLE baseline and AGG.</figDesc><table coords="6,101.15,77.13,392.98,186.33"><row><cell></cell><cell>Freq</cell><cell cols="2">PPL ↓ Med Rare</cell><cell>Total</cell><cell>Freq</cell><cell cols="2">Uniq ↑ Med Rare Total</cell><cell>I(W)↑</cell></row><row><cell>MLE</cell><cell cols="6">13.30 146.47 438.67 15.51 9107 3945</cell><cell>91</cell><cell>13143 0.377</cell></row><row><cell>AGG</cell><cell cols="7">13.35 146.44 75.39 15.51 9105 4287 345 13737 0.813</cell></row><row><cell>Human</cell><cell>-</cell><cell>-</cell><cell>-</cell><cell>-</cell><cell cols="3">10844 7146 300 18920</cell><cell>-</cell></row><row><cell>Methods</cell><cell>Freq</cell><cell cols="3">PPL ↓ Med Rare Total</cell><cell>Freq</cell><cell cols="2">Uniq ↑ Med Rare Total</cell><cell>I(W)↑</cell></row><row><cell>UL</cell><cell cols="6">14.05 125.17 385.6 16.17 9527 4402</cell><cell>97</cell><cell>14026 0.396</cell></row><row><cell cols="8">UL + AGG 14.17 125.93 71.48 16.25 9625 4884 453 14962 0.654</cell></row><row><cell>Human</cell><cell>-</cell><cell>-</cell><cell>-</cell><cell>-</cell><cell cols="3">10844 7146 300 18920</cell><cell>-</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4" coords="6,306.14,723.29,218.66,50.11"><head>Table 5 :</head><label>5</label><figDesc>Royal Australian Air Force ( RAAF ) support squadron . Coming under the control of No. 96 Wing , it is responsible for the management of the airfield at RAAF Base Woomera , South Australia . The squadron MLE is responsible for air defence , air defence , and air defence , as well as air defence , aerial reconnaissance , and air defence . It is also responsible for air defence , air defence , and air defence , as well as air defence , aerial reconnaissance , and air defence .Generated texts on the Wikitext-103 test set and uniq tokens for each texts. 50 BPE tokens are given as prefix and the models are to generate the continuation of 100 next BPE tokens.</figDesc><table coords="7,78.74,75.96,68.90,8.06"><row><cell>Method</cell><cell>Texts</cell></row></table><note coords="6,444.30,723.29,80.12,9.46;6,306.14,736.84,218.28,9.46;6,306.14,750.39,218.66,9.46;6,306.14,763.94,124.37,9.46"><p>Every detail on the experiment, such as model hyper-parameters and training configurations, regard the reproducibility are provided in Appendix B.</p></note></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5" coords="8,70.55,77.13,220.24,101.38"><head>Table 6 :</head><label>6</label><figDesc>Performance(Spearman's γ × 100) of the models on the four word similarity datasets.</figDesc><table coords="8,122.25,77.13,115.48,64.48"><row><cell cols="2">Datasets MLE AGG</cell></row><row><cell>MEN</cell><cell>33.57 55.13</cell></row><row><cell>WS353</cell><cell>47.51 56.54</cell></row><row><cell>RG65</cell><cell>35.48 65.45</cell></row><row><cell>RW</cell><cell>32.13 36.36</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7" coords="8,316.34,77.13,197.57,161.51"><head>Table 8 :</head><label>8</label><figDesc>Ablation study on gating vector of AGG.</figDesc><table coords="8,327.88,77.13,174.81,161.51"><row><cell cols="3">Method PPL↓ Uniq↑ I(W)↑</cell></row><row><cell>MLE</cell><cell>15.51 13143</cell><cell>0.377</cell></row><row><cell>AGG</cell><cell>15.51 13737</cell><cell>0.813</cell></row><row><cell>no g 1</cell><cell>15.48 13018</cell><cell>0.367</cell></row><row><cell>no g 2</cell><cell>15.51 13682</cell><cell>0.701</cell></row><row><cell>Method</cell><cell cols="2">PPL↓ Uniq↑ I(W)↑</cell></row><row><cell>MLE</cell><cell>15.51 13143</cell><cell>0.377</cell></row><row><cell>AGG</cell><cell>15.51 13737</cell><cell>0.813</cell></row><row><cell cols="2">static AGG 15.55 13614</cell><cell>0.752</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_11" coords="14,70.52,309.08,218.62,36.56"><head>Table 15 .</head><label>15</label><figDesc>From the table, we notice that the model trained with AGG generates more diverse and high quality text than the baseline.</figDesc><table coords="15,90.97,145.76,412.94,227.48"><row><cell>Hyperparameter</cell><cell cols="2">Empirical Study Language Modeling</cell><cell cols="2">Machine Translation Base Big</cell></row><row><cell># of layers</cell><cell>6</cell><cell>24</cell><cell>6-6</cell><cell>6-6</cell></row><row><cell>Hidden dimension</cell><cell>512</cell><cell>1024</cell><cell>512</cell><cell>1024</cell></row><row><cell>Projection dimension</cell><cell>2048</cell><cell>4096</cell><cell>2048</cell><cell>4096</cell></row><row><cell># of heads</cell><cell>8</cell><cell>16</cell><cell>8</cell><cell>16</cell></row><row><cell>Dropout</cell><cell>0.1</cell><cell>0.1</cell><cell>0.1</cell><cell>0.3</cell></row><row><cell>Vocabulary size</cell><cell>44256</cell><cell>44256</cell><cell>40624</cell><cell>40624</cell></row><row><cell># of parameters</cell><cell>42M</cell><cell>358M</cell><cell>65M</cell><cell>218M</cell></row><row><cell>Learning rate</cell><cell>7 • 10 -4</cell><cell>7 • 10 -4</cell><cell>1 • 10 -3</cell><cell>1 • 10 -3</cell></row><row><cell>Max tokens per batch</cell><cell>32k</cell><cell>32k</cell><cell>64k</cell><cell>64k</cell></row><row><cell>Maximum training steps</cell><cell>40k</cell><cell>50k</cell><cell>190k</cell><cell>190k</cell></row><row><cell>Warmup steps</cell><cell>4k</cell><cell>4k</cell><cell>4k</cell><cell>4k</cell></row><row><cell>Optimizer</cell><cell>Adam</cell><cell>Adam</cell><cell>Adam</cell><cell>Adam</cell></row><row><cell>Weight decay</cell><cell>0.01</cell><cell>0.01</cell><cell>0.01</cell><cell>0.01</cell></row><row><cell>α for AGG</cell><cell>-</cell><cell>0.03</cell><cell>0.08</cell><cell>0.08</cell></row><row><cell>α for UL</cell><cell>-</cell><cell>1.0</cell><cell>-</cell><cell>-</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_13" coords="16,70.55,178.90,453.87,412.98"><head>Table 13 :</head><label>13</label><figDesc>Top-5 nearest neighbors of each rare tokens in WikiText-103 dataset. Performance of AGG method is compared with the baseline MLE method. Red color denotes the rare tokens among neighbors.</figDesc><table coords="16,125.49,178.90,344.30,91.98"><row><cell cols="2">homepage</cell><cell cols="2">Werewolf</cell><cell cols="2">policymakers</cell></row><row><cell>MLE</cell><cell>AGG</cell><cell>MLE</cell><cell>AGG</cell><cell>MLE</cell><cell>AGG</cell></row><row><cell>BOX</cell><cell>website</cell><cell>ASUS</cell><cell>Creature</cell><cell>Steam</cell><cell>politicians</cell></row><row><cell>inbox</cell><cell>webpage</cell><cell>riet</cell><cell>Nightmare</cell><cell>death</cell><cell>environmentalists</cell></row><row><cell>livestream</cell><cell>blog</cell><cell>480</cell><cell>Bride</cell><cell>Venezuel</cell><cell>activists</cell></row><row><cell cols="3">namespace Tumblr nuclear</cell><cell>Sneak</cell><cell>includ</cell><cell>planners</cell></row><row><cell>hashes</cell><cell cols="2">websites ATCH</cell><cell>Sniper</cell><cell>reason</cell><cell>economists</cell></row></table></figure>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head coords="9,306.14,630.45,98.84,10.75">Acknowledgements</head><p>This work was supported by <rs type="funder">Institute of Information &amp; communications Technology Planning &amp; Evaluation (IITP)</rs> grant funded by the <rs type="funder">Korea government(MSIT)</rs> [<rs type="grantNumber">NO.2021-0-01343</rs>, <rs type="funder">Artificial Intelligence Graduate School Program (Seoul National University)</rs>], the <rs type="programName">BK21 FOUR program</rs> of the <rs type="programName">Education and Research Program</rs> <rs type="funder">for Future ICT Pioneers</rs>, <rs type="funder">Seoul National University</rs> in 2022, <rs type="funder">AIRS Company in Hyundai Motor Company</rs> &amp; Kia</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_ZrT3PUn">
+					<idno type="grant-number">NO.2021-0-01343</idno>
+				</org>
+				<org type="funding" xml:id="_Ry8QU7J">
+					<orgName type="program" subtype="full">BK21 FOUR program</orgName>
+				</org>
+				<org type="funding" xml:id="_5ERGrXc">
+					<orgName type="program" subtype="full">Education and Research Program</orgName>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0" />			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct coords="10,70.86,143.00,218.28,8.64;10,81.77,153.96,207.73,8.64;10,81.77,164.92,209.02,8.64;10,81.77,175.70,209.02,8.82;10,81.77,186.66,207.37,8.59;10,81.16,197.62,207.98,8.59;10,81.77,208.58,207.37,8.82;10,81.02,219.72,209.77,8.64;10,81.77,230.68,71.96,8.64" xml:id="b0">
+	<analytic>
+		<title level="a" type="main">A study on similarity and relatedness using distributional and WordNet-based approaches</title>
+		<author>
+			<persName coords=""><forename type="first">Eneko</forename><surname>Agirre</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Enrique</forename><surname>Alfonseca</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Keith</forename><surname>Hall</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Jana</forename><surname>Kravalova</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Marius</forename><surname>Paşca</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Aitor</forename><surname>Soroa</surname></persName>
+		</author>
+		<idno type="DOI">10.3115/1620754.1620758</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of Human Language Technologies: The 2009 Annual Conference of the North American Chapter of the Association for Computational Linguistics on - NAACL &apos;09</title>
+		<meeting>Human Language Technologies: The 2009 Annual Conference of the North American Chapter of the Association for Computational Linguistics on - NAACL &apos;09<address><addrLine>Boulder, Colorado</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2009">2009</date>
+			<biblScope unit="page" from="19" to="27" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,70.86,250.58,219.53,8.64;10,81.77,261.54,207.37,8.64;10,81.77,272.32,209.02,8.82;10,81.77,283.28,209.03,8.59;10,81.77,294.24,63.93,8.82" xml:id="b1">
+	<analytic>
+		<title level="a" type="main">A Latent Variable Model Approach to PMI-based Word Embeddings</title>
+		<author>
+			<persName coords=""><forename type="first">Sanjeev</forename><surname>Arora</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Yuanzhi</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Yingyu</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Tengyu</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Andrej</forename><surname>Risteski</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/tacl_a_00106</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Transactions of the Association for Computational Linguistics</title>
+		<title level="j" type="abbrev">TACL</title>
+		<idno type="ISSNe">2307-387X</idno>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="385" to="399" />
+			<date type="published" when="2016-12">2016</date>
+			<publisher>MIT Press - Journals</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,70.86,314.32,219.94,8.64;10,81.77,325.28,207.72,8.64;10,81.77,336.06,207.37,8.82;10,81.44,347.02,209.44,8.59;10,81.52,357.98,207.62,8.59;10,81.21,368.94,76.69,8.59" xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Neural machine translation by jointly learning to align and translate</title>
+		<author>
+			<persName coords=""><forename type="first">Dzmitry</forename><surname>Bahdanau</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">3rd International Conference on Learning Representations, ICLR 2015</title>
+		<title level="s">Conference Track Proceedings</title>
+		<meeting><address><addrLine>San Diego, CA, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2015-05-07">2015. May 7-9, 2015</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,70.86,389.03,220.02,8.64;10,81.77,399.81,209.02,8.82;10,81.77,410.77,209.11,8.59;10,81.46,421.73,207.67,8.59;10,81.10,432.68,208.35,8.82;10,81.77,443.82,23.52,8.64" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">NIPS Committees</title>
+		<author>
+			<persName coords=""><forename type="first">Yoshua</forename><surname>Bengio</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Réjean</forename><surname>Ducharme</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Pascal</forename><surname>Vincent</surname></persName>
+		</author>
+		<idno type="DOI">10.7551/mitpress/1120.003.0002</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems 13, Papers from Neural Information Processing Systems (NIPS) 2000</title>
+		<meeting><address><addrLine>Denver, CO, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>The MIT Press</publisher>
+			<date type="published" when="2000">2000</date>
+			<biblScope unit="page" from="xix" to="xx" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,70.86,463.73,220.02,8.64;10,81.46,474.69,207.68,8.64;10,81.77,485.65,209.11,8.64;10,81.77,496.43,207.37,8.82;10,81.16,507.39,209.63,8.59;10,81.77,518.35,208.61,8.59;10,81.77,529.49,209.02,8.64;10,81.77,540.45,71.96,8.64" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Too Much in Common: Shifting of Embeddings in Transformer Language Models and its Implications</title>
+		<author>
+			<persName coords=""><forename type="first">Daniel</forename><surname>Biś</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Maksim</forename><surname>Podkorytov</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Xiuwen</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2021.naacl-main.403</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</title>
+		<meeting>the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="5117" to="5130" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,70.86,560.35,220.02,8.64;10,81.77,571.13,209.03,8.82;10,81.77,582.09,110.89,8.59" xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Multimodal Distributional Semantics</title>
+		<author>
+			<persName coords=""><forename type="first">Elia</forename><surname>Bruni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">K</forename><surname>Tran</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Marco</forename><surname>Baroni</surname></persName>
+		</author>
+		<idno type="DOI">10.1613/jair.4135</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Artificial Intelligence Research</title>
+		<title level="j" type="abbrev">jair</title>
+		<idno type="ISSNe">1076-9757</idno>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="page" from="1" to="47" />
+			<date type="published" when="2014-01-23">2014</date>
+			<publisher>AI Access Foundation</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,70.86,602.17,220.02,8.64;10,81.77,613.13,207.37,8.64;10,81.77,623.91,207.37,8.82;10,81.16,634.87,207.98,8.59;10,81.49,645.83,207.65,8.82;10,81.77,656.97,122.61,8.64" xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Stolen Probability: A Structural Weakness of Neural Language Models</title>
+		<author>
+			<persName coords=""><forename type="first">David</forename><surname>Demeter</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Gregory</forename><surname>Kimmel</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Doug</forename><surname>Downey</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2020.acl-main.198</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics</title>
+		<meeting>the 58th Annual Meeting of the Association for Computational Linguistics</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="2191" to="2197" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,70.86,676.88,219.93,8.64;10,81.77,687.84,209.02,8.64;10,81.77,698.80,207.37,8.64;10,81.46,709.58,207.68,8.59;10,81.35,720.54,207.79,8.59;10,81.77,731.49,209.02,8.59;10,81.77,742.45,208.62,8.82;10,81.77,753.59,207.37,8.64;10,81.77,764.55,46.78,8.64" xml:id="b7">
+	<analytic>
+		<title level="a" type="main">How Contextual are Contextualized Word Representations? Comparing the Geometry of BERT, ELMo, and GPT-2 Embeddings</title>
+		<author>
+			<persName coords=""><forename type="first">Kawin</forename><surname>Ethayarajh</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/d19-1006</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)</title>
+		<meeting>the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)<address><addrLine>Hong Kong, China</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="page" from="55" to="65" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,75.32,219.93,8.64;10,316.48,86.28,207.95,8.64;10,317.05,97.24,207.37,8.64;10,316.56,108.02,209.52,8.59;10,317.05,118.98,209.11,8.59;10,316.80,129.94,92.94,8.82" xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Representation degeneration problem in training natural language generation models</title>
+		<author>
+			<persName coords=""><forename type="first">Jun</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Di</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Xu</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Tao</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Liwei</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Tie-Yan</forename><surname>Liu</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">7th International Conference on Learning Representations, ICLR 2019</title>
+		<meeting><address><addrLine>New Orleans, LA, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019-05-06">2019. May 6-9, 2019</date>
+		</imprint>
+	</monogr>
+	<note>OpenReview.net</note>
+</biblStruct>
+
+<biblStruct coords="10,306.14,153.25,218.28,8.64;10,316.48,164.21,207.94,8.64;10,317.05,174.99,207.37,8.82;10,316.56,185.95,209.61,8.59;10,316.88,196.91,207.54,8.59;10,316.80,207.87,209.27,8.82;10,317.05,218.83,129.26,8.82" xml:id="b9">
+	<analytic>
+		<title level="a" type="main">A Convolutional Encoder Model for Neural Machine Translation</title>
+		<author>
+			<persName coords=""><forename type="first">Jonas</forename><surname>Gehring</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Michael</forename><surname>Auli</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">David</forename><surname>Grangier</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Yann</forename><forename type="middle">N</forename><surname>Dauphin</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/p17-1012</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</title>
+		<title level="s">Proceedings of Machine Learning Research</title>
+		<meeting>the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)<address><addrLine>Sydney, NSW, Australia</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2017-06-11">2017. 6-11 August 2017</date>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="page" from="1243" to="1252" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,448.81,219.01,29.62,8.64" xml:id="b10">
+	<monogr>
+		<title/>
+		<author>
+			<persName coords=""><surname>Pmlr</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,242.15,218.28,8.64;10,316.59,253.11,209.49,8.64;10,317.05,263.89,209.03,8.82;10,317.05,274.85,209.02,8.59;10,317.05,285.81,207.37,8.59;10,316.80,296.77,209.36,8.59;10,316.72,307.73,109.04,8.82" xml:id="b11">
+	<analytic>
+		<title level="a" type="main">LatinX in AI at Neural Information Processing Systems Conference 2018</title>
+		<author>
+			<persName coords=""><forename type="first">Chengyue</forename><surname>Gong</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Di</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Xu</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Tao</forename><surname>Qin</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Liwei</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Tie-Yan</forename><surname>Liu</surname></persName>
+		</author>
+		<idno type="DOI">10.52591/lxai201812030</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems 31: Annual Conference on Neural Information Processing Systems 2018</title>
+		<meeting><address><addrLine>NeurIPS; Montréal, Canada</addrLine></address></meeting>
+		<imprint>
+			<publisher>Journal of LatinX in AI Research</publisher>
+			<date type="published" when="2018-12-03">2018. 2018. December 3-8, 2018</date>
+			<biblScope unit="page" from="1341" to="1352" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,331.04,218.27,8.64;10,317.05,341.82,159.00,8.82" xml:id="b12">
+	<monogr>
+		<title level="m" type="main">Generating Audio Using Recurrent Neural Networks</title>
+		<author>
+			<persName><forename type="first">Andrew</forename><surname>Pfalz</surname></persName>
+		</author>
+		<idno type="DOI">10.31390/gradschool_dissertations.4601</idno>
+		<idno>ArXiv, abs/1308.0850</idno>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<publisher>Louisiana State University Libraries</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,365.14,219.93,8.64;10,317.05,376.10,209.03,8.64;10,317.05,386.88,209.02,8.82;10,317.05,397.84,209.02,8.59;10,316.45,408.80,207.98,8.59;10,316.72,419.76,207.69,8.59;10,317.05,430.72,209.11,8.59;10,316.74,441.68,209.34,8.59;10,316.45,452.63,200.15,8.82" xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Unsupervised Post-Processing of Word Vectors via Conceptor Negation</title>
+		<author>
+			<persName coords=""><forename type="first">Tianlin</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Lyle</forename><surname>Ungar</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">João</forename><surname>Sedoc</surname></persName>
+		</author>
+		<idno type="DOI">10.1609/aaai.v33i01.33016778</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Proceedings of the AAAI Conference on Artificial Intelligence</title>
+		<title level="j" type="abbrev">AAAI</title>
+		<idno type="ISSN">2159-5399</idno>
+		<idno type="ISSNe">2374-3468</idno>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+			<biblScope unit="issue">01</biblScope>
+			<biblScope unit="page" from="6778" to="6785" />
+			<date type="published" when="2019-01-27">2019. 2019. January 27 -February 1, 2019</date>
+			<publisher>Association for the Advancement of Artificial Intelligence (AAAI)</publisher>
+			<pubPlace>EAAI; Honolulu, Hawaii, USA</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,475.95,219.93,8.64;10,317.05,486.91,209.02,8.64;10,317.05,497.69,209.02,8.82;10,317.05,508.65,207.36,8.59;10,316.72,519.61,208.95,8.82;10,317.05,530.75,209.11,8.64" xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Better word representations with recursive neural networks for morphology</title>
+		<author>
+			<persName coords=""><forename type="first">Thang</forename><surname>Luong</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Christopher</forename><surname>Manning</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Seventeenth Conference on Computational Natural Language Learning</title>
+		<meeting>the Seventeenth Conference on Computational Natural Language Learning<address><addrLine>Sofia, Bulgaria</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="104" to="113" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,553.89,218.28,8.64;10,317.05,564.85,207.37,8.64;10,317.05,575.63,207.37,8.82;10,317.05,586.59,209.11,8.59;10,316.74,597.54,207.68,8.59;10,316.50,608.50,147.20,8.82" xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Regularizing and optimizing LSTM language models</title>
+		<author>
+			<persName coords=""><forename type="first">Stephen</forename><surname>Merity</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Nitish</forename><surname>Shirish Keskar</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">6th International Conference on Learning Representations, ICLR 2018</title>
+		<title level="s">Conference Track Proceedings</title>
+		<meeting><address><addrLine>Vancouver, BC, Canada</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2018-04-30">2018. April 30 -May 3, 2018</date>
+		</imprint>
+	</monogr>
+	<note>OpenReview.net</note>
+</biblStruct>
+
+<biblStruct coords="10,306.14,631.82,218.27,8.64;10,317.05,642.78,209.02,8.64;10,317.05,653.56,207.37,8.82;10,316.74,664.52,207.68,8.59;10,316.80,675.48,209.28,8.82;10,317.05,686.62,46.45,8.64" xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Pointer sentinel mixture models</title>
+		<author>
+			<persName coords=""><forename type="first">Stephen</forename><surname>Merity</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Caiming</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">James</forename><surname>Bradbury</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Richard</forename><surname>Socher</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">5th International Conference on Learning Representations, ICLR 2017</title>
+		<title level="s">Conference Track Proceedings. Open-Review</title>
+		<meeting><address><addrLine>Toulon, France</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2017-04-24">2017. April 24-26, 2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,709.75,219.93,8.64;10,317.05,720.71,207.37,8.64;10,317.05,731.49,207.37,8.82;10,316.77,742.45,209.40,8.59;10,316.74,753.41,207.68,8.59;10,316.50,764.37,147.20,8.82" xml:id="b17">
+	<analytic>
+		<title level="a" type="main">All-but-thetop: Simple and effective postprocessing for word representations</title>
+		<author>
+			<persName coords=""><forename type="first">Jiaqi</forename><surname>Mu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Pramod</forename><surname>Viswanath</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">6th International Conference on Learning Representations, ICLR 2018</title>
+		<title level="s">Conference Track Proceedings</title>
+		<meeting><address><addrLine>Vancouver, BC, Canada</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2018-04-30">2018. April 30 -May 3, 2018</date>
+		</imprint>
+	</monogr>
+	<note>OpenReview.net</note>
+</biblStruct>
+
+<biblStruct coords="11,70.86,75.32,218.28,8.64;11,81.77,86.28,207.71,8.64;11,81.77,97.06,207.37,8.82;11,81.27,108.02,209.61,8.59;11,81.60,118.98,209.28,8.59;11,81.33,129.94,209.46,8.82;11,81.77,140.90,176.98,8.82" xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Scaling Neural Machine Translation</title>
+		<author>
+			<persName coords=""><forename type="first">Myle</forename><surname>Ott</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sergey</forename><surname>Edunov</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">David</forename><surname>Grangier</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Michael</forename><surname>Auli</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/w18-6301</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Third Conference on Machine Translation: Research Papers</title>
+		<title level="s">Proceedings of Machine Learning Research</title>
+		<meeting>the Third Conference on Machine Translation: Research Papers<address><addrLine>Stockholmsmässan, Stockholm, Sweden</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2018-07-10">2018. July 10-15, 2018</date>
+			<biblScope unit="volume">80</biblScope>
+			<biblScope unit="page" from="3953" to="3962" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,261.24,141.08,29.62,8.64" xml:id="b19">
+	<monogr>
+		<title/>
+		<author>
+			<persName coords=""><surname>Pmlr</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,70.86,161.47,219.93,8.64;11,81.58,172.43,209.21,8.64;11,81.77,183.21,207.37,8.82;11,81.52,194.17,209.27,8.59;11,81.77,205.13,208.61,8.82;11,81.77,216.27,207.37,8.64;11,81.77,227.23,46.78,8.64" xml:id="b20">
+	<analytic>
+		<title level="a" type="main">BLEU</title>
+		<author>
+			<persName coords=""><forename type="first">Kishore</forename><surname>Papineni</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Salim</forename><surname>Roukos</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Todd</forename><surname>Ward</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Wei-Jing</forename><surname>Zhu</surname></persName>
+		</author>
+		<idno type="DOI">10.3115/1073083.1073135</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 40th Annual Meeting on Association for Computational Linguistics - ACL &apos;02</title>
+		<meeting>the 40th Annual Meeting on Association for Computational Linguistics - ACL &apos;02<address><addrLine>Philadelphia, Pennsylvania, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2002">2002</date>
+			<biblScope unit="page">311</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,70.86,247.63,218.28,8.64;11,81.77,258.59,207.53,8.64;11,81.77,269.55,207.37,8.64;11,81.41,280.51,207.73,8.64;11,81.19,291.47,209.60,8.64;11,81.77,302.42,208.61,8.64;11,81.58,313.38,207.56,8.64;11,81.77,324.34,209.02,8.64;11,81.77,335.12,207.37,8.82;11,81.52,346.08,209.27,8.59;11,81.77,357.04,209.02,8.59;11,81.77,368.00,207.37,8.82;11,81.77,379.14,47.32,8.64" xml:id="b21">
+	<analytic>
+		<title level="a" type="main">Pytorch: An imperative style, high-performance deep learning library</title>
+		<author>
+			<persName coords=""><forename type="first">Adam</forename><surname>Paszke</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Sam</forename><surname>Gross</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Francisco</forename><surname>Massa</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Adam</forename><surname>Lerer</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">James</forename><surname>Bradbury</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Gregory</forename><surname>Chanan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Trevor</forename><surname>Killeen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Zeming</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Natalia</forename><surname>Gimelshein</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Luca</forename><surname>Antiga</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Alban</forename><surname>Desmaison</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Andreas</forename><surname>Köpf</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Edward</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Zachary</forename><surname>Devito</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Martin</forename><surname>Raison</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Alykhan</forename><surname>Tejani</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Sasank</forename><surname>Chilamkurthy</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Benoit</forename><surname>Steiner</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Lu</forename><surname>Fang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Junjie</forename><surname>Bai</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Soumith</forename><surname>Chintala</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems 2019</title>
+		<meeting><address><addrLine>NeurIPS; Vancouver, BC, Canada</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019-12-08">2019. 2019. December 8-14, 2019</date>
+			<biblScope unit="page" from="8024" to="8035" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,70.86,399.54,219.93,8.64;11,81.77,410.32,207.37,8.82;11,81.77,421.28,207.37,8.59;11,81.77,432.24,209.02,8.59;11,81.77,443.20,209.11,8.82;11,81.41,454.34,172.14,8.64" xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Using the Output Embedding to Improve Language Models</title>
+		<author>
+			<persName coords=""><forename type="first">Ofir</forename><surname>Press</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Lior</forename><surname>Wolf</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/e17-2025</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 2, Short Papers</title>
+		<title level="s">Short Papers</title>
+		<meeting>the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 2, Short Papers<address><addrLine>Valencia, Spain</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="157" to="163" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,70.86,474.73,219.53,8.64;11,81.77,485.69,207.37,8.64;11,81.77,496.65,174.60,8.64" xml:id="b23">
+	<monogr>
+		<title level="m" type="main">Language models are unsupervised multitask learners</title>
+		<author>
+			<persName coords=""><forename type="first">Alec</forename><surname>Radford</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Jeff</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Rewon</forename><surname>Child</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">David</forename><surname>Luan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Dario</forename><surname>Amodei</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Ilya</forename><surname>Sutskever</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,70.86,517.05,218.63,8.64;11,81.77,528.01,209.02,8.64;11,81.77,538.79,207.37,8.82;11,81.16,549.75,207.98,8.59;11,81.49,560.71,209.31,8.59;11,81.77,571.67,209.02,8.59;11,81.52,582.63,207.61,8.82;11,81.77,593.77,122.61,8.64" xml:id="b24">
+	<analytic>
+		<title level="a" type="main">A Cluster-based Approach for Improving Isotropy in Contextual Embedding Space</title>
+		<author>
+			<persName coords=""><forename type="first">Sara</forename><surname>Rajaee</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mohammad</forename><forename type="middle">Taher</forename><surname>Pilehvar</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2021.acl-short.73</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 2: Short Papers)</title>
+		<meeting>the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 2: Short Papers)</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="575" to="584" />
+		</imprint>
+	</monogr>
+	<note>Short Papers</note>
+</biblStruct>
+
+<biblStruct coords="11,70.86,614.16,219.93,8.64;11,81.77,624.94,208.61,8.82;11,81.77,636.08,45.11,8.64" xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Contextual correlates of synonymy</title>
+		<author>
+			<persName coords=""><forename type="first">Herbert</forename><surname>Rubenstein</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">John</forename><forename type="middle">B</forename><surname>Goodenough</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/365628.365657</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Communications of the ACM</title>
+		<title level="j" type="abbrev">Commun. ACM</title>
+		<idno type="ISSN">0001-0782</idno>
+		<idno type="ISSNe">1557-7317</idno>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="627" to="633" />
+			<date type="published" when="1965-10">1965</date>
+			<publisher>Association for Computing Machinery (ACM)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,70.86,656.48,220.02,8.64;11,81.77,667.44,207.36,8.64;11,81.77,678.22,207.37,8.82;11,81.35,689.18,209.44,8.59;11,81.77,700.14,208.61,8.82;11,81.77,711.28,209.02,8.64;11,81.77,722.24,32.94,8.64" xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Neural Machine Translation of Rare Words with Subword Units</title>
+		<author>
+			<persName coords=""><forename type="first">Rico</forename><surname>Sennrich</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Barry</forename><surname>Haddow</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Alexandra</forename><surname>Birch</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/p16-1162</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</title>
+		<meeting>the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)<address><addrLine>Berlin, Germany</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="1715" to="1725" />
+		</imprint>
+	</monogr>
+	<note>: Long Papers)</note>
+</biblStruct>
+
+<biblStruct coords="11,70.86,742.63,218.28,8.64;11,81.77,753.59,207.37,8.64;11,81.77,764.55,207.37,8.64;11,316.80,75.14,209.27,8.82;11,317.05,86.10,207.37,8.59;11,316.88,97.06,209.28,8.59;11,316.80,108.02,191.07,8.82" xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Attention is all you need</title>
+		<author>
+			<persName coords=""><forename type="first">Ashish</forename><surname>Vaswani</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Noam</forename><surname>Shazeer</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Niki</forename><surname>Parmar</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Jakob</forename><surname>Uszkoreit</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Llion</forename><surname>Jones</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Aidan</forename><forename type="middle">N</forename><surname>Gomez</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Lukasz</forename><surname>Kaiser</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Illia</forename><surname>Polosukhin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Advances in Neural Information Processing Systems 30: Annual Conference on Neural Information Processing Systems 2017</title>
+		<meeting><address><addrLine>Long Beach, CA, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2017-09">2017. December 4-9, 2017</date>
+			<biblScope unit="page" from="5998" to="6008" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,306.14,128.12,219.93,8.64;11,317.05,139.08,207.37,8.64;11,317.05,149.86,207.37,8.82;11,316.72,160.82,209.35,8.82;11,317.05,171.78,208.86,8.82;11,317.05,182.92,22.42,8.64" xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Improving the Adversarial Robustness of Deep Neural Networks via Efficient Two-Stage Training</title>
+		<author>
+			<persName><forename type="first">Ran</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jingyu</forename><surname>Xiong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Haopeng</forename><surname>Ke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yuheng</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Debby</forename><forename type="middle">D</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/icmlc58545.2023.10327974</idno>
+	</analytic>
+	<monogr>
+		<title level="m">2023 International Conference on Machine Learning and Cybernetics (ICMLC)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">97</biblScope>
+			<biblScope unit="page" from="43" to="49" />
+		</imprint>
+	</monogr>
+	<note>Proceedings of Machine Learning Research</note>
+</biblStruct>
+
+<biblStruct coords="11,341.96,182.92,29.62,8.64" xml:id="b29">
+	<monogr>
+		<title/>
+		<author>
+			<persName coords=""><surname>Pmlr</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,306.14,202.85,219.53,8.64;11,317.05,213.81,209.02,8.64;11,317.05,224.77,209.11,8.64;11,317.05,235.55,209.02,8.82;11,317.05,246.51,207.37,8.59;11,316.80,257.47,121.16,8.82" xml:id="b30">
+	<analytic>
+		<title level="a" type="main">Recent Trends and Challenges with COVID-19 — Africa, April 4, 2020</title>
+		<author>
+			<persName><forename type="first">Xiaochun</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Shuo</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Feng</forename><surname>Tan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">George</forename><surname>F. Gao</surname></persName>
+		</author>
+		<idno type="DOI">10.46234/ccdcw2020.094</idno>
+	</analytic>
+	<monogr>
+		<title level="j">China CDC Weekly</title>
+		<idno type="ISSN">2096-7071</idno>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="issue">21</biblScope>
+			<biblScope unit="page" from="365" to="369" />
+			<date type="published" when="2020-04-26">2020. April 26-30, 2020</date>
+			<publisher>Chinese Center for Disease Control and Prevention</publisher>
+			<pubPlace>Addis Ababa, Ethiopia</pubPlace>
+		</imprint>
+	</monogr>
+	<note>OpenReview.net</note>
+</biblStruct>
+
+<biblStruct coords="11,306.14,277.57,219.93,8.64;11,317.05,288.53,209.03,8.64;11,317.05,299.49,207.37,8.64;11,317.05,310.27,209.02,8.59;11,317.05,321.23,207.37,8.59;11,316.80,332.19,121.16,8.82" xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Neural text generation with unlikelihood training</title>
+		<author>
+			<persName coords=""><forename type="first">Sean</forename><surname>Welleck</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Ilia</forename><surname>Kulikov</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Stephen</forename><surname>Roller</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Emily</forename><surname>Dinan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Kyunghyun</forename><surname>Cho</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Jason</forename><surname>Weston</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">8th International Conference on Learning Representations, ICLR 2020</title>
+		<meeting><address><addrLine>Addis Ababa, Ethiopia</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2020-04-26">2020. April 26-30, 2020</date>
+		</imprint>
+	</monogr>
+	<note>OpenReview.net</note>
+</biblStruct>
+
+<biblStruct coords="11,306.14,352.29,218.28,8.64;11,316.59,363.25,209.49,8.64;11,317.05,374.03,207.37,8.82;11,316.88,384.99,209.19,8.59;11,317.05,395.95,209.03,8.59;11,316.64,406.91,209.44,8.82;11,317.05,418.05,46.45,8.64" xml:id="b32">
+	<analytic>
+		<title level="a" type="main">Breaking the softmax bottleneck: A high-rank RNN language model</title>
+		<author>
+			<persName coords=""><forename type="first">Zhilin</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Zihang</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Ruslan</forename><surname>Salakhutdinov</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">William</forename><forename type="middle">W</forename><surname>Cohen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">6th International Conference on Learning Representations, ICLR 2018</title>
+		<title level="s">Conference Track Proceedings. Open-Review</title>
+		<meeting><address><addrLine>Vancouver, BC, Canada</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2018-04-30">2018. April 30 -May 3, 2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,306.14,437.98,219.53,8.64;11,317.05,448.94,209.03,8.64;11,317.05,459.90,209.02,8.64;11,317.05,470.68,209.02,8.82;11,317.05,481.64,208.62,8.82;11,317.05,492.77,204.24,8.64" xml:id="b33">
+	<analytic>
+		<title level="a" type="main">Revisiting Representation Degeneration Problem in Language Modeling</title>
+		<author>
+			<persName coords=""><forename type="first">Zhong</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Chongming</forename><surname>Gao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Cong</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Rui</forename><surname>Miao</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Qinli</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Junming</forename><surname>Shao</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2020.findings-emnlp.46</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Findings of the Association for Computational Linguistics: EMNLP 2020</title>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="518" to="527" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,306.14,512.70,220.03,8.64;11,317.05,523.66,207.37,8.64;11,316.74,534.44,207.68,8.59;11,316.72,545.40,209.44,8.59;11,316.64,556.36,209.29,8.82;11,317.05,567.50,60.15,8.64" xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Getting in Shape: Word Embedding SubSpaces</title>
+		<author>
+			<persName coords=""><forename type="first">Tianyuan</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">João</forename><surname>Sedoc</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Jordan</forename><surname>Rodu</surname></persName>
+		</author>
+		<idno type="DOI">10.24963/ijcai.2019/761</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Twenty-Eighth International Joint Conference on Artificial Intelligence</title>
+		<meeting>the Twenty-Eighth International Joint Conference on Artificial Intelligence<address><addrLine>Macao, China</addrLine></address></meeting>
+		<imprint>
+			<publisher>International Joint Conferences on Artificial Intelligence Organization</publisher>
+			<date type="published" when="2019-08-10">2019. August 10-16, 2019</date>
+			<biblScope unit="page" from="5478" to="5484" />
+		</imprint>
+	</monogr>
+	<note>ijcai.org</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

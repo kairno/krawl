@@ -3,7 +3,7 @@ from krawl.downloader.paper_downloader import PaperDownloader
 
 def test_download_pdf():
     url = "https://arxiv.org/pdf/2106.14834.pdf"
-    test_dir = os.path.join(os.path.dirname(__file__), "../test_data/")
+    test_dir = "./tests/test_data/pdfs"
     os.makedirs(test_dir, exist_ok=True)
     target_path = os.path.join(test_dir, "arxiv_2106.14834.pdf")
     downloader = PaperDownloader()
@@ -19,7 +19,7 @@ def test_download_pdfs():
         ("https://aclanthology.org/2022.acl-long.3.pdf", "2022.acl-long.3.pdf"),
         ("https://aclanthology.org/2022.acl-long.4.pdf", "2022.acl-long.4.pdf"),
     ]
-    test_dir = os.path.join(os.path.dirname(__file__), "../test_data/")
+    test_dir = "./tests/test_data/pdfs"
     os.makedirs(test_dir, exist_ok=True)
     url_path_list = [(url, os.path.join(test_dir, fname)) for url, fname in test_urls]
     downloader = PaperDownloader()

@@ -1,8 +1,8 @@
 {
     "grobid_server": "http://localhost:8070",
-    "batch_size": 1000,
+    "batch_size": 100,
     "sleep_time": 5,
-    "timeout": 60,
+    "timeout": 6000,
     "coordinates": ["affiliation", "biblStruct", "figure", "formula", "head", "note", "persName", "ref", "s"]
 
 }

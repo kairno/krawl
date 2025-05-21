@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Quantified Reproducibility Assessment of NLP Results</title>
+				<funder>
+					<orgName type="full">ADAPT SFI Centre for Digital Media Technology</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">Science Foundation Ireland</orgName>
+				</funder>
+				<funder ref="#_KFPKUES">
+					<orgName type="full">European Regional Development Fund</orgName>
+					<orgName type="abbreviated">ERDF</orgName>
+				</funder>
+				<funder>
+					<orgName type="full">SFI Research Centres Programme</orgName>
+				</funder>
+				<funder ref="#_TaAEMEq #_6YJaBDd #_7xyKXQh #_qgtmgy3">
+					<orgName type="full">European Commission</orgName>
+				</funder>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName coords="1,123.67,118.52,52.14,10.75"><forename type="first">Anya</forename><surname>Belz</surname></persName>
+							<email>anya.belz@adaptcentre.ie</email>
+							<affiliation key="aff0" coords="1,139.02,132.94,121.04,10.37;1,125.11,146.89,148.85,10.37">
+								<orgName type="institution">ADAPT Research Centre Dublin City University</orgName>
+								<address>
+									<country key="IE">Ireland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,205.03,118.52,70.37,10.75"><forename type="first">Maja</forename><surname>Popović</surname></persName>
+							<email>maja.popovic@adaptcentre.ie</email>
+							<affiliation key="aff0" coords="1,139.02,132.94,121.04,10.37;1,125.11,146.89,148.85,10.37">
+								<orgName type="institution">ADAPT Research Centre Dublin City University</orgName>
+								<address>
+									<country key="IE">Ireland</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName coords="1,366.18,118.52,62.11,10.75"><forename type="first">Simon</forename><surname>Mille</surname></persName>
+							<email>simon.mille@upf.edu</email>
+							<affiliation key="aff1" coords="1,334.80,132.94,124.87,10.37;1,356.39,146.89,81.68,10.37">
+								<orgName type="institution">Universitat Pompeu Fabra</orgName>
+								<address>
+									<settlement>Barcelona</settlement>
+									<country key="ES">Spain</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Quantified Reproducibility Assessment of NLP Results</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">63ADC16594EDA7FDD03448CBC74A3BE9</idno>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2025-05-21T00:57+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=1, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[affiliation, biblStruct, figure, formula, head, note, persName, ref, s], sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>This paper describes and tests a method for carrying out quantified reproducibility assessment (QRA) that is based on concepts and definitions from metrology. QRA produces a single score estimating the degree of reproducibility of a given system and evaluation measure, on the basis of the scores from, and differences between, different reproductions. We test QRA on 18 system and evaluation measure combinations (involving diverse NLP tasks and types of evaluation), for each of which we have the original results and one to seven reproduction results. The proposed QRA method produces degree-of-reproducibility scores that are comparable across multiple reproductions not only of the same, but of different original studies. We find that the proposed method facilitates insights into causes of variation between reproductions, and allows conclusions to be drawn about what changes to system and/or evaluation design might lead to improved reproducibility.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<facsimile>
+		<surface n="1" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="2" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="3" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="4" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="5" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="6" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="7" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="8" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="9" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="10" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="11" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="12" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+		<surface n="13" ulx="0.0" uly="0.0" lrx="595.276" lry="841.89"/>
+	</facsimile>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="1" coords="1,70.86,498.16,82.82,10.75">Introduction</head><p>Reproduction studies are becoming more common in Natural Language Processing (NLP), with the first shared tasks being organised, including RE-PROLANG <ref type="bibr" coords="1,126.45,560.69,93.91,9.46" target="#b5">(Branco et al., 2020)</ref> and ReproGen <ref type="bibr" coords="1,70.50,574.24,83.03,9.46">(Belz et al., 2021b)</ref>. In NLP, reproduction studies generally address the following question: if we create and/or evaluate this system multiple times, will we obtain the same results?</p><p>To answer this question for a given specific system, typically <ref type="bibr" coords="1,133.18,641.99,91.99,9.46" target="#b25">(Wieling et al., 2018;</ref><ref type="bibr" coords="1,227.88,641.99,62.62,9.46;1,70.86,655.54,25.35,9.46" target="#b1">Arhiliuc et al., 2020;</ref><ref type="bibr" coords="1,99.43,655.54,111.19,9.46" target="#b15">Popović and Belz, 2021)</ref> an original study is selected and repeated more or less closely, before comparing the results obtained in the original study with those obtained in the repeat, and deciding whether the two sets of results are similar enough to support the same conclusions.</p><p>This framing, whether the same conclusions can be drawn, involves subjective judgments and different researchers can come to contradictory con-clusions: e.g. the four papers <ref type="bibr" coords="1,432.75,216.44,92.57,9.46" target="#b1">(Arhiliuc et al., 2020;</ref><ref type="bibr" coords="1,306.14,229.99,67.12,9.46" target="#b4">Bestgen, 2020;</ref><ref type="bibr" coords="1,376.39,229.99,117.28,9.46" target="#b6">Caines and Buttery, 2020;</ref><ref type="bibr" coords="1,496.80,229.99,27.81,9.46;1,306.14,243.54,85.46,9.46" target="#b9">Huber and Çöltekin, 2020)</ref> reproducing <ref type="bibr" coords="1,448.81,243.54,75.61,9.46;1,305.78,257.09,29.43,9.46" target="#b22">Vajjala and Rama (2018)</ref> in REPROLANG all report similarly large differences, but only Arhiliuc et al. conclude that reproduction was unsuccessful.</p><p>There is no standard way of going about a reproduction study in NLP, and different reproduction studies of the same original set of results can differ substantially in terms of their similarity in system and/or evaluation design (as is the case with the Vajjala and Rama (2018) reproductions, see Section 4 for details). Other things being equal, a more similar reproduction can be expected to produce more similar results, and such (dis)similarities should be factored into reproduction analysis and conclusions, but NLP lacks a method for doing so.</p><p>Being able to assess reproducibility of results objectively and comparably is important not only to establish that results are valid, but to provide evidence about which methods have better/worse reproducibility and what may need to be changed to improve reproducibility. To do this, assessment has to be done in a way that is also comparable across reproduction studies of different original studies, e.g. to develop common expectations of how similar original and reproduction results should be for different types of system, task and evaluation.</p><p>In this paper, we (i) describe a method for quantified reproducibility assessment (QRA) directly derived from standard concepts and definitions from metrology which addresses the above issues, and (ii) test it on diverse sets of NLP results. Following a review of related research (Section 2), we present the method (Section 3), tests and results (Section 4), discuss method and results (Section 5), and finish with some conclusions (Section 6).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2" coords="1,306.14,727.92,107.03,10.75">Related Research</head><p>The situation memorably caricatured by <ref type="bibr" coords="1,484.64,750.39,39.78,9.46;1,305.78,763.94,29.67,9.46" target="#b13">Pedersen (2008)</ref> still happens all the time: you download some code you read about in a paper and liked the sound of, you run it on the data provided, only to find that the results are not the same as reported in the paper, in fact they are likely to be worse <ref type="bibr" coords="2,70.50,128.90,82.20,9.46">(Belz et al., 2021a)</ref>. When both data and code are provided, the number of potential causes of such differences is limited, and the NLP field has shared increasingly detailed information about system, dependencies and evaluation to chase down sources of differences. Sharing code and data together with detailed information about them is now expected as standard, and checklists and datasheets have been proposed to standardise information sharing <ref type="bibr" coords="2,70.50,250.85,63.64,9.46" target="#b14">(Pineau, 2020;</ref><ref type="bibr" coords="2,136.86,250.85,115.60,9.46" target="#b20">Shimorina and Belz, 2021)</ref>.</p><p>Reproducibility more generally is becoming more of a research focus. There have been several workshops and initiatives on reproducibility, including workshops at ICML 2017 and 2018, the reproducibility challenge at ICLR 2018 and 2019, and at NeurIPS 2019 and 2020, the RE-PROLANG <ref type="bibr" coords="2,123.11,348.64,86.78,9.46" target="#b5">(Branco et al., 2020)</ref> initiative at LREC 2020, and the ReproGen shared task on reproducibility in NLG <ref type="bibr" coords="2,151.77,375.73,81.85,9.46">(Belz et al., 2021b)</ref>.</p><p>Despite this growing body of research, no consensus has emerged about standards, terminology and definitions. Particularly for the two most frequently used terms, reproducibility and replicability, multiple divergent definitions are in use, variously conditioned on same vs. different teams, methods, artifacts, code, and data. For example, for <ref type="bibr" coords="2,70.86,487.07,90.62,9.46" target="#b18">Rougier et al. (2017)</ref>, reproducing a result means running the same code on the same data and obtaining the same result, while replicating the result is writing and running new code based on the information provided by the original publication. For <ref type="bibr" coords="2,70.34,554.82,90.03,9.46" target="#b25">Wieling et al. (2018)</ref>, reproducibility is achieving the same results using the same data and methods.</p><p>According to the ACM's definitions (Association for Computing Machinery, 2020), results have been reproduced if obtained in a different study by a different team using artifacts supplied in part by the original authors, and replicated if obtained in a different study by a different team using artifacts not supplied by the original authors. The ACM originally had these definitions the other way around until asked by ISO to bring them in line with the scientific standard (ibid.).</p><p>Conversely, in Drummond's view 2009 obtaining the same result by re-running an experiment in the same way as the original is replicability, while reproducibility is obtaining it in a different way. <ref type="bibr" coords="2,317.05,74.70,72.69,9.46" target="#b24">Whitaker (2017)</ref>, followed by Schloss (2018), defines four concepts rather than two, basing definitions of reproducibility, replicability, robustness and generalisability on the different possible combinations of same vs. different data and code.</p><p>None of these definitions adopt the general scientific concepts and definitions pertaining to reproducibility, codified in the International Vocabulary of Metrology, VIM (JCGM, 2012). One issue is that they all reduce the in principle open-ended number of dimensions of variation between measurements accounted for by VIM to just two or three (code, data and/or team). Another, that unlike VIM, they don't produce comparable results.</p><p>NLP does not currently have a shared approach to deciding reproducibility, and results from reproductions as currently reported are not comparable across studies and can, as mentioned in the introduction, lead to contradictory conclusions about an original study's reproducibility. There appears to be no work at all in NLP that aims to estimate degree of reproducibility which would allow crossstudy comparisons and conclusions.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3" coords="2,306.14,396.88,187.20,10.75;2,323.65,410.83,58.44,10.75">Metrology-based Reproducibility Assessment</head><p>Metrology is a meta-science: its subject is the standardisation of measurements across all of science to ensure comparability. Computer science has long borrowed terms, most notably reproducibility, from metrology, albeit not adopting the same definitions (as discussed in Section 2 above).</p><p>In this section, we describe quantified reproducibility assessment (QRA), an approach that is directly derived from the concepts and definitions of metrology, adopting the latter exactly as they are, and yields assessments of the degree of similarity between numerical results and between the studies that produced them. We start below with the concepts and definitions that QRA is based on, followed by an overview of the framework (Section 3.2) and steps in applying it in practice (Section 3.3).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.1" coords="2,306.14,673.50,197.29,9.81;2,330.69,687.05,73.15,9.81">VIM Definitions of Repeatability and Reproducibility</head><p>The International Vocabulary of Metrology (VIM) (JCGM, 2012) defines repeatability and reproducibility as follows (defined terms in bold, see VIM for subsidiary defined terms):</p><p>2.21 measurement repeatability (or repeatability, for short) is measurement precision under a set of repeatability conditions of measurement.</p><p>2.20 a repeatability condition of measurement (repeatability condition) is a condition of measurement, out of a set of conditions that includes the same measurement procedure, same operators, same measuring system, same operating conditions and same location, and replicate measurements on the same or similar objects over a short period of time.</p><p>2.25 measurement reproducibility (reproducibility) is measurement precision under reproducibility conditions of measurement.</p><p>2.24 a reproducibility condition of measurement (reproducibility condition) is a condition of measurement, out of a set of conditions that includes different locations, operators, measuring systems, etc. A specification should give the conditions changed and unchanged, to the extent practical.</p><p>In other words, VIM considers repeatability and reproducibility to be properties of measurements (not objects, scores, results or conclusions), and defines them as measurement precision, i.e. both are quantified by calculating the precision of a set of measured quantity values. Both concepts are defined relative to a set of conditions of measurement: the conditions have to be known and specified for assessment of repeatability and reproducibility to be meaningful. In repeatability, conditions are the same, whereas in reproducibility, they differ.</p><p>In an NLP context, objects are systems, and measurements involve applying an evaluation method to a system usually via obtaining a sample of its outputs and applying the method to the sample (further details of how concepts map to NLP are provided in Section 3.3).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.2" coords="3,70.86,611.73,132.60,9.81">Assessment framework</head><p>The VIM definitions translate directly to the following definition of repeatability R 0 (where all conditions of measurement C are the same across measurements): and the M i are repeat measurements for measurand m performed on object O at different times t i under (the same) set of conditions C, producing measured quantity values v i . Below, the coefficient of variation is used as the precision measure, but other measures are possible. Conditions of measurement are attribute/value pairs each consisting of a name and a value (for examples, see following section). Reproducibility R is defined in the same way as R 0 except that condition values (but not names) differ for one or more of the conditions of measurement C i : R(M1, M2, ...Mn) := Precision(v1, v2, ...vn), where Mi : (m, O, ti, Ci) → vi (2)</p><p>Precision is typically reported in terms of some or all of the following: mean, standard deviation with 95% confidence intervals, coefficient of variation, and percentage of measured quantity values within n standard deviations. We opt for the coefficient of variation (CV),<ref type="foot" coords="3,383.11,284.54,3.99,6.91" target="#foot_0">foot_0</ref> because it is a general measure, not in the unit of the measurements (unlike mean and standard deviation), providing a quantification of precision (degree of reproducibility) that is comparable across studies <ref type="bibr" coords="3,404.45,340.79,92.76,9.46">(Ahmed, 1995, p. 57)</ref>. This also holds for percentage within n standard deviations but the latter is a less recognised measure, and likely to be the less intuitive for many.</p><p>In reproduction studies in NLP/ML, sample sizes tend to be very small (a sample size of 8, one original study plus 7 reproductions, as in Table <ref type="table" coords="3,491.04,422.09,5.39,9.46" target="#tab_6">6</ref> is currently unique). We therefore need to use de-biased sample estimators: we use the unbiased sample standard deviation, denoted s * , with confidence intervals calculated using a t-distribution, and standard error (of the unbiased sample standard deviation) approximated on the basis of the standard error of the unbiased sample variance se(s<ref type="foot" coords="3,502.09,514.64,4.23,6.99" target="#foot_1">foot_1</ref> ) as se <ref type="bibr" coords="3,417.82,530.49,31.15,9.46">, 1973)</ref>. Assuming measured quantity values are normally distributed, we calculate the standard error of the sample variance in the usual way: se(s 2 ) = 2σ 4 n-1 . Finally, we also use a small sample correction (indicated by the star) for the coefficient of variation: CV * = (1 + 1 4n )CV <ref type="bibr" coords="3,305.78,616.51,98.79,9.46" target="#b21">(Sokal and Rohlf, 1971</ref>). 2  Before applying CV * to values on scales that do not start at 0 (mostly in human evaluations) we shift values to start at 0 to ensure comparability. <ref type="foot" coords="3,519.94,655.12,3.99,6.91" target="#foot_2">3</ref>This means that to calculate the CV * scores in the tables below, measurements are first shifted.</p><formula xml:id="formula_0" coords="3,315.23,527.85,102.59,15.05">s 2 (s * ) ≈ 1 2σ se(s 2 ) (Rao</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3.3" coords="4,70.86,74.28,162.64,9.81">Application of the framework</head><p>Using the defined VIM terms and the notations from Section 3.2, we can refine the question from the start of this paper as follows: if we perform multiple measurements of object O and measurand m under reproducibility conditions of measurement C i , what is the precision of the measured quantity values we obtain? For NLP, this means calculating the precision of multiple evaluation scores for the same system and evaluation measure.</p><p>Focusing here on reproducibility assessment where we start from an existing set of results (rather than a set of experiments specifically designed to test reproducibility), the steps in performing QRA are as follows:</p><p>1. For a set of n measurements to be assessed, identify the shared object and measurand.</p><p>2. Identify all conditions of measurement C i for which information is available for all measurements, and specify values for each condition, including measurement method and procedure.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3." coords="4,79.39,394.66,206.79,9.81">Gather the n measured quantity values</head><formula xml:id="formula_1" coords="4,92.55,408.21,52.48,10.63">v 1 , v 2 , ...v n .</formula><p>4. Compute precision for v 1 , v 2 , ...v n , giving reproducibility score R.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head coords="4,79.39,455.19,8.18,9.46">5.</head><p>Report resulting R score and associated confidence statistics, alongside the C i .</p><p>In NLP terms, the object is the ready-to-use system (binaries if available; otherwise code, dependencies, parameter values, how the system was compiled and trained) being evaluated (e.g. the NTSdefault system variant in Table <ref type="table" coords="4,203.62,545.91,3.86,9.46" target="#tab_1">1</ref>), the measurand is the quantity intended to be measured (e.g. BLEUstyle modified n-gram precision), and measurement method and procedure capture how to evaluate the system (e.g. obtaining system outputs for a specified set of inputs, and applying preprocessing and a given BLEU implementation to the latter). VIM holds that reproducibility assessment is only meaningful if the reproducibility conditions of measurement are specified for a given test. Conditions of measurement cover every aspect and detail of how a measurement was performed and how the measured quantity value was obtained. The key objective is to capture all respects in which the measurements to be assessed are known to be either the same or different. If QRA is performed for a set of existing results, it is often not possible to discover every aspect and detail of how a measurement was performed, so a reduced set may have to be used (unlike in experiments designed to test reproducibility where such details can be gathered as part of the experimental design).</p><p>The reproducibility and evaluation checklists mentioned in Section 2 <ref type="bibr" coords="4,411.10,156.01,64.49,9.46" target="#b14">(Pineau, 2020;</ref><ref type="bibr" coords="4,478.33,156.01,46.10,9.46;4,306.14,169.56,67.63,9.46" target="#b20">Shimorina and Belz, 2021)</ref> capture properties that are in effect conditions of measurement, and in combination with code, data and other resources serve well as a way of specifying conditions of measurement, if they have been completed by authors. However, at the present time, completed checklists are not normally available. The following is a simple set of conditions of measurement the information required for which is typically available for existing work (we include object and measurand for completeness although strictly they are not conditions, as they must be the same in each measurement in a given QRA test):</p><p>1. Object: the system (variant) being evaluated. <ref type="foot" coords="4,519.94,347.67,3.99,6.91" target="#foot_3">4</ref>E.g. a given MT system.</p><p>2. Measurand: the quantity intended to be evaluated.<ref type="foot" coords="4,354.51,391.31,3.99,6.91" target="#foot_4">foot_4</ref> E.g. BLEU-style n-gram precision or human-assessed Fluency.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="3." coords="4,314.80,423.44,93.47,9.46">Object conditions:</head><p>(a) System code: source code including any parameters. E.g. the complete code implementing an MT system.</p><p>(b) Compile/training information: steps from code plus parameters to fully compiled and trained system, including dependencies and environment. E.g. complete information about how the MT system code was compiled and the system trained.</p><p>4. Measurement method conditions:<ref type="foot" coords="4,474.02,583.42,3.99,6.91" target="#foot_5">foot_5</ref> (a) Method specification: full description of method used for obtaining values quantifying the measurand. E.g. a formal definition of BLEU.</p><p>(b) Implementation: the method implemented in a form that can be applied to the object in order to obtain measured quantity values. E.g. a full implementation of BLEU. 5. Measurement procedure conditions: 7</p><p>(a) Procedure: specification of how system outputs (or other system characteristics) are obtained and the measurement method is applied to them. E.g. running a BLEU tool on system outputs and reference outputs.</p><p>(b) Test set: the data used in obtaining and evaluating system outputs (or other system characteristics). E.g. a test set of source-language texts and reference translations.</p><p>(c) Performed by: who performed the measurement procedure and any additional information about how they did it. E.g. the team applying the BLEU tool, and the run-time environment they used.</p><p>The names of the conditions of measurement used in this paper are boldfaced above. The values for each condition characterise how measurements differ in respect of the condition. In reporting results from QRA tests in the following section, we use paper identifiers as shorthand for each distinct condition value (full details in each case being available from the referenced papers).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4" coords="5,70.86,704.50,72.95,10.75">QRA Tests</head><p>Table 1 provides an overview of the 18 object/ measurand pairs (corresponding to 116 individual mea-7 For definition of 'measurement procedure', see VIM 2.6.</p><p>surements) for which we performed QRA tests in this study. For each object/measurand pair, the columns show, from left to right, information about the system evaluated (object), the evaluation measure applied (measurand), the number of scores (measured quantity values) obtained, the papers in which systems and scores were first reported, and the NLP task and type of evaluation involved.</p><p>There are three sets of related systems: (i) the (single) PASS football report generator (van der Lee et al., 2017), (ii) Vajjala and Rama (2018)'s 11 multilingual essay scoring system variants, and (iii) two variants of <ref type="bibr" coords="5,398.37,500.15,85.20,9.46" target="#b12">Nisioi et al. (2017)</ref>'s neural text simplifier (NTS). PASS is evaluated with three evaluation measures (human-assessed Clarity, Fluency and Stance Identifiability), the essay scoring systems with one (weighted F1), and the NTS systems with two (BLEU and SARI). For PASS we have one reproduction study, for the essay scorers seven, and for the NTS systems, from three to six. The PASS reproduction was carried out as part of ReproGen <ref type="bibr" coords="5,354.82,622.10,83.98,9.46">(Belz et al., 2021b)</ref>, the reproductions of the essay-scoring systems and of one of the NTS systems as part of REPROLANG <ref type="bibr" coords="5,461.24,649.20,64.54,9.46;5,306.14,662.75,23.93,9.46" target="#b5">(Branco et al., 2020)</ref>, and we carried out an additional reproduction study of the NTS systems for this paper. <ref type="foot" coords="5,501.00,674.26,3.99,6.91" target="#foot_6">8</ref>The PASS text generation system is rule-based, the essay classifiers are 'theory-guided and datadriven' hybrids, and the text simplifiers are end-toend neural systems. This gives us a good breadth Table 3: Conditions of measurement for two measurements each for three evaluation measures (measurands) and the PASS system. vdL&amp;al = van der Lee et al. (2017); M&amp;al = Mille et al. (2021).</p><p>of NLP tasks, system types, and evaluation types and measures to test QRA on.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.1" coords="6,70.86,404.21,127.60,9.81">QRA for NTS systems</head><p>The neural text simplification systems reported by <ref type="bibr" coords="6,70.86,437.19,88.58,9.46" target="#b12">Nisioi et al. (2017)</ref> were evaluated with BLEU (n-gram similarity between outputs and multiple reference texts) and SARI (based on word added/retained/deleted in outputs compared to both inputs and reference texts, summing over addition and retention F-scores and deletion Precisions). Table <ref type="table" coords="6,109.35,519.27,5.56,9.46" target="#tab_5">4</ref> shows BLEU and SARI scores for the two system variants from the original paper and the two reproduction studies, alongside the four corresponding CV * values. In their reproduction, Cooper and Shardlow (2020) regenerated test outputs for NTS-w2v_def, but not for NTS_def, which explains the missing scores in Column 4. The different numbers of scores in different rows in Columns 6-9 are due to our own reproduction using Nisioi et al.'s SARI script, but two different BLEU scripts: (i) Nisioi et al.'s script albeit with the tokeniser replaced by our own because the former did not work due to changes in the NLTK library; and (ii) SacreBLEU <ref type="bibr" coords="6,195.68,695.41,69.84,9.46" target="#b26">(Xu et al., 2016)</ref>.</p><p>Table <ref type="table" coords="6,109.76,709.74,5.56,9.46">5</ref> shows the conditions of measurement for each of the 22 individual measurements. The measured quantity values for those measurements where Comp./trained by=Nisioi et al. are identical for the SARI metric (scores highlighted by green/lighter shading and italics), but differ by up to 1.4 points for BLEU (scores highlighted by blue/darker shading). Because Test set=Nisioi et al. in all cases, the differences in these BLEU scores can only be caused by differences in BLEU scripts and how they were run. The corresponding CV * is as big as 0.838 for (just) the four NTS_def BLEU scores, and 1.314 for (just) the three NTS-w2v_def BLEU scores, reflecting known problems with nonstandardised BLEU scripts <ref type="bibr" coords="6,425.83,487.97,51.37,9.46" target="#b16">(Post, 2018)</ref>.</p><p>If we conversely look just at those measurements (identifiable by boldfaced measured quantity values in Table <ref type="table" coords="6,342.58,531.11,4.45,9.46">5</ref>) where the reproducing team regenerated outputs (with the same system code) and evaluation scripts were the same, SARI CV * is 3.11 for the NTS_def variants, and 4.05 for the NTS-w2v_def variants (compared in both cases to 0 (perfect) when the same outputs are used). BLEU CV * is 2.154 for the NTS_def variants (compared to 0.838 for same outputs but different evaluation scripts, as above), and 6.598 for the NTS-w2v_def variants (compared to 1.314 for same outputs but different evaluation scripts). These differences arise simply from running the system in different environments.</p><p>The overall higher (worse) CV * values for NTS-w2v_def variants (compared to NTS_def) are likely to be partly due to the NTS models using one third party tool (openNMT), and the NTS-w2v models using two (openNMT and word2vec), i.e. the latter are more susceptible to changes in dependencies. Table <ref type="table" coords="7,95.50,527.05,3.95,8.64">5</ref>: Conditions of measurement for each measurement carried out for the NTS systems. OTE = outputs vs. targets evaluation, OITE = outputs vs. inputs and targets evaluation. Shaded cells: evaluation of the same system outputs, i.e. the reproductions did not regenerate outputs. Bold: evaluation of (potentially) different system outputs, i.e. the reproductions did regenerate outputs.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.2" coords="7,70.86,596.35,128.00,9.81">QRA for PASS system</head><p>The PASS system, developed by van der Lee et al.</p><p>(2017), generates football match reports from the perspective of each of the competing teams. The original study evaluated the system for Clarity, Fluency and Stance Identifiability in an evaluation with 20 evaluators and a test set of 10 output pairs. The evaluation was repeated with a slightly different evaluation interface and a different cohort of evaluators by <ref type="bibr" coords="7,109.15,723.29,79.08,9.46" target="#b11">Mille et al. (2021)</ref>. Table <ref type="table" coords="7,223.59,723.29,5.56,9.46" target="#tab_3">2</ref> shows the results from the original and reproduction evaluations (columns 3 and 4), where the Clarity and Fluency results are the mean scores from 7-point agreement scales, and Identifiability results are the percentage of times the evaluators correctly guessed the team whose supporters a report was written for. Columns 6-9 show the corresponding sample size (number of reproductions plus original study), mean, standard deviation (stdev), the confidence interval (CI) for the standard deviation, and CV * , all calculated on the shifted scores (see Section 3.2).</p><p>Table <ref type="table" coords="7,343.10,709.74,5.35,9.46">3</ref> shows the values (here, paper identifiers) for the nine conditions of measurement introduced in Section 3.3, for each of the six individual measurements (three evaluation measures times two studies). Note that both object conditions and the test set condition are the same, because Mille et al. used the system outputs shared by van der Lee et al. The values for the Implemented by, Procedure and Performed by conditions reflect the differences in the two evaluations in design, evaluator cohorts, and the teams that performed them.</p><p>The scores vary to different degrees for the three measurands, with CV * lowest (reproducibility best) for Stance Identifiability, and highest (worst) for Fluency. These CV * results are likely to reflect that evaluators agreed more on Clarity than Fluency. Moreover, the binary stance identification assessment has better reproducibility than the other two criteria which are assessed on 7-point rating scales.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="4.3" coords="8,70.86,280.32,203.85,9.81">QRA for essay scoring system variants</head><p>The 11 multilingual essay scoring system variants reported by <ref type="bibr" coords="8,124.88,315.11,111.36,9.46" target="#b22">Vajjala and Rama (2018)</ref> were evaluated by weighted F1 (wF1) score. Table <ref type="table" coords="8,253.04,328.66,5.56,9.46" target="#tab_6">6</ref> shows wF1 scores for the 11 multilingual system variants from each of the five papers, alongside the 11 corresponding CV * values. Table <ref type="table" coords="8,210.90,369.31,5.56,9.46">7</ref> in the appendix shows the corresponding conditions of measurement. The baseline classifier (mult-base) uses document length (number of words) as its only feature. For the other variants, +/-indicates that the multilingual classifier was / was not given information about which language the input was in; the multword variants use word n-grams only; mult-word uses POS (part of speech) tag n-grams only; multdep uses n-grams over dependency relation, dependent POS, and head POS triples; mult-dom uses domain-specific linguistic features including document length, lexical richness and errors; mult-emb uses word and character embeddings. The multbase and mult-dom models are logistic regressors, the others are random forests.</p><p>A very clear picture emerges: system variant pairs that differ only in whether they do or do not use language information have very similar CV scores. For example, mult-POS -(POS n-grams without language information) and mult-POS + (POS n-grams with language information) both have a very good degree of wF1-reproducibility, their CV * being 3.818 and 3.808 respectively; multword -(word n-grams without language information) and mult-word + (word n-grams with language information) have notably higher CV * , around 10. This tendency holds for all such pairs, indicating that using language information makes next to no difference to reproducibility. Moreover, the mult-dom and mult-emb variants all have similar CV * . <ref type="foot" coords="8,519.94,72.66,3.99,6.91" target="#foot_7">9</ref>The indication is that the syntactic information is obtained/used in a way that is particularly reproducible, whereas the domain-specific information and the embeddings are obtained/used in a way that is particularly hard to reproduce. Overall, the random forest models using syntactic features have the best reproducibility; the logistic regressors using domain-specific features have the worst.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="5" coords="8,306.14,208.88,71.75,10.75">Discussion</head><p>Quantified reproducibility assessment (QRA) enables assessment of the degree of reproducibility of evaluation results for any given system and evaluation measure in a way that is scale-invariant<ref type="foot" coords="8,515.95,271.29,7.97,6.91" target="#foot_8">foot_8</ref> and comparable across different QRAs, for reproductions involving either the same or different original studies. Moreover, formally capturing (dis)similarities between systems and evaluation designs enables reproducibility to be assessed relative to such (dis)similarities. In combination, a set of results from QRA tests for the same system and evaluation measure can provide pointers to which aspects of the system and evaluation might be associated with low reproducibility. E.g. for the wF1 evaluations of the essay scoring systems above, it is clear that variations in reproducibility are associated at least in part with the different features used by systems.</p><p>It might be expected that the reproducibility of human-assessed evaluations is generally worse than metric-assessed. Our study revealed a more mixed picture. As expected, the Fluency and Clarity evaluations of the PASS system were among those with highest CV * , and the BLEU and SARI evaluation of the NTS systems and wF1 evaluation of the mult-POS and mult-dep systems were among those with lowest CV * . However, human-assessed Stance Identifiability of PASS was among the most reproducible, and metric-assessed wF1 of mult-base, mult-dom and mult-emb were among the worst.</p><p>In this paper, our focus has been QRA testing of existing research results. However, ideally, QRA would be built into new method development from the outset, where at first reporting, a detailed stan- If this is not possible, post-hoc reproducibility QRA (where there are differences in conditions of measurement values) is performed instead. If this yields high (poor) CV * , one way to proceed is to minimise differences in conditions of measurement between the studies and observe the effect on CV * , changing aspects of system and evaluation design and adding further conditions of measurement if need be. For human evaluation in particular, persistently high CV * would indicate a problem with the method itself.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="6" coords="9,70.86,602.04,75.07,10.75">Conclusion</head><p>We have described an approach to quantified reproducibility assessment (QRA) based on concepts and definitions from metrology, and tested it on 18 system and evaluation measure combinations involving diverse NLP tasks and types of evaluation.</p><p>QRA produces a single score that quantifies the degree of reproducibility of a given system and evaluation measure, on the basis of the scores from, and differences between, multiple reproductions of the same original study. We found that the approach facilitates insights into sources of variation between reproductions, produces results that are comparable across different reproducibility assessments, and provides pointers about what needs to be changed in system and/or evaluation design to improve reproducibility.</p><p>A recent survey <ref type="bibr" coords="9,390.43,387.11,85.46,9.46">(Belz et al., 2021a)</ref> found that just 14% of the 513 original/reproduction score pairs analysed were exactly the same. Judging the remainder simply 'not reproduced' is of limited usefulness, as some are much closer to being the same than others. At the same time, assessments of whether the same conclusions can be drawn on the basis of different scores involve subjective judgments and are prone to disagreement among assessors. Quantifying the closeness of results as in QRA, and, over time, establishing expected levels of closeness, seems a better way forward.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0" coords="3,86.51,690.85,6.97,7.86;3,93.54,688.58,3.65,5.24;3,97.69,690.85,165.34,8.06;3,150.86,703.80,111.68,8.06;3,278.68,697.27,10.46,7.77"><head>R 0 (</head><label>0</label><figDesc>M1, M2, ...Mn) := Precision(v1, v2, ...vn),where Mi : (m, O, ti, C) → vi (1)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1" coords="5,77.96,72.38,439.36,239.10"><head>Table 1 :</head><label>1</label><figDesc>Summary overview of the 18 object/measurand combinations taht were QRA-tested for this paper.</figDesc><table coords="5,77.96,72.38,439.36,217.16"><row><cell>System (Object)</cell><cell>Evaluation measure (Measurand)</cell><cell>N scores</cell><cell>Papers reporting results</cell><cell>NLP task</cell><cell>Evaluation type</cell></row><row><cell></cell><cell>Clarity</cell><cell>2</cell><cell></cell><cell></cell><cell></cell></row><row><cell>PASS</cell><cell>Fluency Identifiability of stance</cell><cell>2 2</cell><cell>van der Lee et al. (2017), Mille et al. (2021)</cell><cell>data-to-text</cell><cell>human, intrinsic</cell></row><row><cell>mult-base</cell><cell>wf1</cell><cell>8</cell><cell></cell><cell></cell><cell></cell></row><row><cell>mult-word -</cell><cell>wF1</cell><cell>8</cell><cell></cell><cell></cell><cell></cell></row><row><cell>mult-word +</cell><cell>wF1</cell><cell>8</cell><cell></cell><cell></cell><cell></cell></row><row><cell>mult-POS -</cell><cell>wF1</cell><cell>8</cell><cell>Vajjala and Rama (2018),</cell><cell></cell><cell></cell></row><row><cell>mult-POS +</cell><cell>wF1</cell><cell>8</cell><cell cols="3">Huber and Çöltekin (2020), multilingual essay metric: intrinsic,</cell></row><row><cell>mult-dep -</cell><cell>wF1</cell><cell>8</cell><cell>Arhiliuc et al. (2020),</cell><cell>scoring as text</cell><cell>evaluated against</cell></row><row><cell>mult-dep +</cell><cell>wF1</cell><cell>8</cell><cell>Bestgen (2020),</cell><cell>classification</cell><cell>single reference</cell></row><row><cell>mult-dom -</cell><cell>wF1</cell><cell>8</cell><cell>Caines and Buttery (2020)</cell><cell></cell><cell></cell></row><row><cell>mult-dom +</cell><cell>wF1</cell><cell>8</cell><cell></cell><cell></cell><cell></cell></row><row><cell>mult-emb -</cell><cell>wF1</cell><cell>8</cell><cell></cell><cell></cell><cell></cell></row><row><cell>mult-emb +</cell><cell>wF1</cell><cell>8</cell><cell></cell><cell></cell><cell></cell></row><row><cell>NTS_default NTS-w2v_default</cell><cell>BLEU SARI BLEU SARI</cell><cell>7 5 6 4</cell><cell cols="2">Nisioi et al. (2017), Cooper &amp; Shardlow (2020), text simplification additional reproduction study for this paper</cell><cell>metric: intrinsic, eval. against input and/or multiple references</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3" coords="6,70.55,73.58,453.88,232.65"><head>Table 2 :</head><label>2</label><figDesc>Precision (CV * ) and component measures (mean, standard deviation, standard deviation, confidence intervals) for measured quantity values obtained in two measurements for each of the three human-assessed evaluation measures for the PASS system. Columns 6-9 calculated on shifted scores (see Section 3.2).</figDesc><table coords="6,76.10,73.58,442.72,232.65"><row><cell></cell><cell></cell><cell></cell><cell cols="2">Measured quantity value</cell><cell></cell><cell>Sample</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell cols="6">Object Measurand van der Lee et al. Mille et al. (2021)</cell><cell>size</cell><cell cols="5">mean stdev stdev 95% CI CV  *  ↓</cell></row><row><cell></cell><cell></cell><cell></cell><cell>(2017)</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell></cell><cell>Clarity</cell><cell></cell><cell>5.64</cell><cell>6.30</cell><cell></cell><cell>2</cell><cell cols="2">4.969 0.583</cell><cell cols="2">[-2.75, 3.92]</cell><cell>13.193</cell></row><row><cell>PASS</cell><cell>Fluency</cell><cell></cell><cell>5.36</cell><cell>6.14</cell><cell></cell><cell>2</cell><cell cols="2">4.75 0.691</cell><cell cols="2">[-3.26, 4.65]</cell><cell>16.372</cell></row><row><cell></cell><cell>Stance id.</cell><cell></cell><cell>91%</cell><cell>97%</cell><cell></cell><cell>2</cell><cell cols="5">93.88 5.096 [-24.05, 34.24] 6.107</cell></row><row><cell cols="2">Object Measurand</cell><cell cols="2">Object conditions</cell><cell cols="2">Measurement method conditions</cell><cell cols="3">Measurement procedure conditions</cell><cell></cell><cell>Measured quantity</cell><cell>CV  *</cell></row><row><cell></cell><cell cols="9">Code by Comp./trained by Method Implem. by Procedure Test set Performed by</cell><cell>value</cell></row><row><cell></cell><cell>Clarity</cell><cell>vdL&amp;al vdL&amp;al</cell><cell>vdL&amp;al vdL&amp;al</cell><cell>vdL&amp;al vdL&amp;al</cell><cell>vdL&amp;al M&amp;al</cell><cell>vdL&amp;al M&amp;al</cell><cell>vdL&amp;al vdL&amp;al</cell><cell cols="2">vdL&amp;al M&amp;al</cell><cell>5.64 6.30</cell><cell>13.193</cell></row><row><cell>PASS</cell><cell>Fluency</cell><cell>vdL&amp;al vdL&amp;al</cell><cell>vdL&amp;al vdL&amp;al</cell><cell>vdL&amp;al vdL&amp;al</cell><cell>vdL&amp;al M&amp;al</cell><cell>vdL&amp;al M&amp;al</cell><cell>vdL&amp;al vdL&amp;al</cell><cell cols="2">vdL&amp;al M&amp;al</cell><cell>5.36 6.14</cell><cell>16.372</cell></row><row><cell></cell><cell>Stance id.</cell><cell>vdL&amp;al vdL&amp;al</cell><cell>vdL&amp;al vdL&amp;al</cell><cell>vdL&amp;al vdL&amp;al</cell><cell>vdL&amp;al M&amp;al</cell><cell>vdL&amp;al M&amp;al</cell><cell>vdL&amp;al vdL&amp;al</cell><cell cols="2">vdL&amp;al M&amp;al</cell><cell>91% 96.75%</cell><cell>6.107</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5" coords="7,70.53,73.25,454.25,439.08"><head>Table 4 :</head><label>4</label><figDesc>Precision (CV * ) and component measures (mean, standard deviation, standard deviation confidence intervals) for measured quantity values obtained in multiple measurements of the two NTS systems. Outputs 1 = test set outputs as generated by Nisioi et al. (2017); outputs 2 = test set outputs regenerated by Cooper and Shardlow (2020); outputs 3 = test set outputs regenerated by the present authors. s1 = SARI script (always the same); b1 = Nisioi et al.'s BLEU script, run by Nisioi et al.; b2 = Nisioi et al.'s BLEU script, run by Cooper &amp; Shardlow; b3 = Nisioi et al.'s BLEU script with different version of NLTK tokeniser (see in text), run by the present authors; b4 = SacreBLEU<ref type="bibr" coords="7,121.49,239.11,63.78,8.64" target="#b26">(Xu et al., 2016)</ref>, run by the present authors.</figDesc><table coords="7,73.99,73.25,448.38,439.08"><row><cell></cell><cell></cell><cell></cell><cell cols="4">Measured quantity value</cell><cell></cell><cell></cell></row><row><cell>Object</cell><cell cols="5">Measurand Nisioi et al. Cooper &amp; Shardlow</cell><cell cols="2">this paper</cell><cell cols="2">Sample mean stdev stdev 95% CI CV  *  ↓</cell></row><row><cell></cell><cell></cell><cell cols="4">outputs 1 outputs 1 outputs 2</cell><cell>outputs 1</cell><cell>outputs 3</cell><cell>size</cell></row><row><cell></cell><cell></cell><cell>s1 / b1</cell><cell>s1 / b2</cell><cell cols="4">s1 / b2 s1 / b3 s1 / b4 s1 / b3 s1 / b4</cell><cell></cell></row><row><cell>NTS_def</cell><cell>BLEU SARI</cell><cell>84.51 30.65</cell><cell>84.50 30.65</cell><cell cols="2">87.46 29.13</cell><cell cols="2">85.60 84.20 86.61 86.20 30.65 29.96</cell><cell>7 5</cell><cell>85.58 1.29 30.21 0.72 [0.095, 1.34] 2.487 [0.45, 2.13] 1.562</cell></row><row><cell>NTS-w2v_def</cell><cell>BLEU SARI</cell><cell>87.50 31.11</cell><cell>--</cell><cell cols="2">80.75 30.28</cell><cell cols="2">89.36 88.10 89.64 88.80 31.11 29.12</cell><cell>6 4</cell><cell>87.36 3.502 [0.92, 6.08] 4.176 30.41 1.02 [-0.11, 2.15] 3.572</cell></row><row><cell>Object</cell><cell>Measurand</cell><cell cols="2">Object conditions</cell><cell></cell><cell cols="2">Measurement method conditions</cell><cell cols="3">Measurement procedure conditions</cell><cell>Measured quantity</cell><cell>CV  *</cell></row><row><cell></cell><cell></cell><cell cols="7">Code by Comp./trained by Method Implem. by Procedure Test set</cell><cell>Performed by</cell><cell>value</cell></row><row><cell></cell><cell></cell><cell>Nisioi et al.</cell><cell cols="2">Nisioi et al.</cell><cell cols="2">bleu(o,t) Nisioi et al.</cell><cell>OTE</cell><cell>Nisioi et al.</cell><cell>Nisioi et al.</cell><cell>84.51</cell></row><row><cell></cell><cell></cell><cell>Nisioi et al.</cell><cell cols="2">Nisioi et al.</cell><cell cols="2">bleu(o,t) Nisioi et al.</cell><cell>OTE</cell><cell cols="2">Nisioi et al. Coop. &amp; Shard.</cell><cell>84.50</cell></row><row><cell></cell><cell></cell><cell>Nisioi et al.</cell><cell cols="2">Nisioi et al.</cell><cell cols="2">bleu(o,t) ≈Nisioi et al.</cell><cell>OTE</cell><cell>Nisioi et al.</cell><cell>this paper</cell><cell>85.60</cell></row><row><cell></cell><cell>BLEU</cell><cell>Nisioi et al.</cell><cell cols="2">Nisioi et al.</cell><cell cols="2">bleu(o,t) SacreBLEU</cell><cell>OTE</cell><cell>Nisioi et al.</cell><cell>this paper</cell><cell>84.20</cell><cell>1.562</cell></row><row><cell></cell><cell></cell><cell cols="5">Nisioi et al. Coop. &amp; Shard. bleu(o,t) Nisioi et al.</cell><cell>OTE</cell><cell cols="2">Nisioi et al. Coop. &amp; Shard.</cell><cell>87.46</cell></row><row><cell>NTS_def</cell><cell></cell><cell>Nisioi et al. Nisioi et al.</cell><cell cols="2">this paper this paper</cell><cell cols="2">bleu(o,t) ≈Nisioi et al. bleu(o,t) SacreBLEU</cell><cell>OTE OTE</cell><cell>Nisioi et al. Nisioi et al.</cell><cell>this paper this paper</cell><cell>86.61 86.20</cell></row><row><cell></cell><cell></cell><cell>Nisioi et al.</cell><cell cols="2">Nisioi et al.</cell><cell cols="2">sari(o,s,t) Nisioi et al.</cell><cell>OITE</cell><cell>Nisioi et al.</cell><cell>Nisioi et al.</cell><cell>30.65</cell></row><row><cell></cell><cell></cell><cell>Nisioi et al.</cell><cell cols="2">Nisioi et al.</cell><cell cols="2">sari(o,s,t) Nisioi et al.</cell><cell>OITE</cell><cell cols="2">Nisioi et al. Coop. &amp; Shard.</cell><cell>30.65</cell></row><row><cell></cell><cell>SARI</cell><cell>Nisioi et al.</cell><cell cols="2">Nisioi et al.</cell><cell cols="2">sari(o,s,t) Nisioi et al.</cell><cell>OITE</cell><cell>Nisioi et al.</cell><cell>this paper</cell><cell>30.65</cell><cell>2.487</cell></row><row><cell></cell><cell></cell><cell cols="5">Nisioi et al. Coop. &amp; Shard. sari(o,s,t) Nisioi et al.</cell><cell>OITE</cell><cell cols="2">Nisioi et al. Coop. &amp; Shard.</cell><cell>29.13</cell></row><row><cell></cell><cell></cell><cell>Nisioi et al.</cell><cell cols="2">this paper</cell><cell cols="2">sari(o,s,t) Nisioi et al.</cell><cell>OITE</cell><cell>Nisioi et al.</cell><cell>this paper</cell><cell>29.96</cell></row><row><cell></cell><cell></cell><cell>Nisioi et al.</cell><cell cols="2">Nisioi et al.</cell><cell cols="2">bleu(o,t) Nisioi et al.</cell><cell>OTE</cell><cell>Nisioi et al.</cell><cell>Nisioi et al.</cell><cell>87.50</cell></row><row><cell></cell><cell></cell><cell>Nisioi et al.</cell><cell cols="2">Nisioi et al.</cell><cell cols="2">bleu(o,t) ≈Nisioi et al.</cell><cell>OTE</cell><cell>Nisioi et al.</cell><cell>this paper</cell><cell>89.36</cell></row><row><cell></cell><cell>BLEU</cell><cell cols="5">Nisioi et al. Nisioi et al. Coop. &amp; Shard. bleu(o,t) Nisioi et al. Nisioi et al. bleu(o,t) SacreBLEU</cell><cell>OTE OTE</cell><cell cols="2">Nisioi et al. Nisioi et al. Coop. &amp; Shard. this paper</cell><cell>88.10 80.75</cell><cell>4.176</cell></row><row><cell>NTS-w2v_def</cell><cell></cell><cell>Nisioi et al. Nisioi et al.</cell><cell cols="2">this paper this paper</cell><cell cols="2">bleu(o,t) ≈Nisioi et al. bleu(o,t) SacreBLEU</cell><cell>OTE OTE</cell><cell>Nisioi et al. Nisioi et al.</cell><cell>this paper this paper</cell><cell>89.64 88.80</cell></row><row><cell></cell><cell></cell><cell>Nisioi et al.</cell><cell cols="2">Nisioi et al.</cell><cell cols="2">sari(o,s,t) Nisioi et al.</cell><cell>OITE</cell><cell>Nisioi et al.</cell><cell>Nisioi et al.</cell><cell>31.11</cell></row><row><cell></cell><cell>SARI</cell><cell cols="5">Nisioi et al. Nisioi et al. Coop. &amp; Shard. sari(o,s,t) Nisioi et al. Nisioi et al. sari(o,s,t) Nisioi et al.</cell><cell>OITE OITE</cell><cell cols="2">Nisioi et al. Nisioi et al. Coop. &amp; Shard. this paper</cell><cell>31.11 30.28</cell><cell>3.572</cell></row><row><cell></cell><cell></cell><cell>Nisioi et al.</cell><cell cols="2">this paper</cell><cell cols="2">sari(o,s,t) Nisioi et al.</cell><cell>OITE</cell><cell>Nisioi et al.</cell><cell>this paper</cell><cell>29.12</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_6" coords="9,70.46,73.25,453.96,361.01"><head>Table 6 :</head><label>6</label><figDesc>Precision (CV * ) and component measures (mean, standard deviation, standard deviation confidence intervals) for measured quantity values obtained in multiple measurements of the essay scoring systems. Seed i = different approaches to random seeding and cross-validation; ei = different compile/run-time environments; ii = different test data sets and/or cross-validation folds.dardised set of conditions of measurement is specified, and repeatability tests (where all conditions are identical except for the team conducting the tests, see Section 3.2) are performed to determine baseline reproducibility. Such repeatability QRA would provide quality assurance for new methods as well as important pointers for future reproductions regarding what degree of reproducibility to expect for given (types of) methods.</figDesc><table coords="9,74.41,73.25,446.47,158.69"><row><cell></cell><cell></cell><cell></cell><cell></cell><cell cols="3">Measured quantity value</cell><cell></cell><cell></cell><cell></cell></row><row><cell></cell><cell></cell><cell cols="3">Vajjala Huber &amp; Arhiliuc</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>Object</cell><cell cols="3">Meas-&amp; Rama Coltekin</cell><cell>et al.</cell><cell>Bestgen</cell><cell cols="5">Caines &amp; Buttery Sample mean stdev stdev 95% CI CV  *  ↓</cell></row><row><cell></cell><cell cols="2">urand seed 1</cell><cell cols="2">seed 2 seed ?</cell><cell>seed 1</cell><cell cols="2">seed 2 seed 1 seed ?</cell><cell>size</cell><cell></cell></row><row><cell></cell><cell></cell><cell>e1 / i1</cell><cell>e2 / i2</cell><cell cols="3">e3 / i1 e4 / i1 e5 / i1 e5 / i3 e6 / i1</cell><cell>e7 / i4</cell><cell></cell><cell></cell></row><row><cell>mult-base</cell><cell>wF1</cell><cell>0.428</cell><cell>0.493</cell><cell cols="3">0.426 0.574 0.579 0.590 0.574</cell><cell>0.600</cell><cell>8</cell><cell>0.533 0.08</cell><cell>[0.03, 0.12] 14.633</cell></row><row><cell cols="2">mult-word -wF1</cell><cell>0.721</cell><cell>0.603</cell><cell cols="3">0.605 0.606 0.720 0.732 0.606</cell><cell>0.740</cell><cell>8</cell><cell>0.667 0.07</cell><cell>[0.03, 0.11] 10.609</cell></row><row><cell cols="2">mult-word + wF1</cell><cell>0.719</cell><cell>0.604</cell><cell cols="3">0.607 0.607 0.723 0.733 0.607</cell><cell>0.736</cell><cell>8</cell><cell>0.667 0.07</cell><cell>[0.03, 0.11] 10.440</cell></row><row><cell>mult-POS -</cell><cell>wF1</cell><cell>0.726</cell><cell>0.681</cell><cell cols="3">0.680 0.680 0.722 0.728 0.680</cell><cell>0.732</cell><cell>8</cell><cell>0.704 0.03</cell><cell>[0.01, 0.04]</cell><cell>3.818</cell></row><row><cell>mult-POS +</cell><cell>wF1</cell><cell>0.724</cell><cell>0.680</cell><cell cols="3">0.680 0.681 0.725 0.729 0.681</cell><cell>0.731</cell><cell>8</cell><cell>0.704 0.03</cell><cell>[0.01, 0.04]</cell><cell>3.808</cell></row><row><cell>mult-dep -</cell><cell>wF1</cell><cell>0.703</cell><cell>0.660</cell><cell cols="3">0.650 0.651 0.699 0.711 0.651</cell><cell>0.710</cell><cell>8</cell><cell>0.679 0.03</cell><cell>[0.01, 0.05]</cell><cell>4.500</cell></row><row><cell>mult-dep +</cell><cell>wF1</cell><cell>0.693</cell><cell>0.661</cell><cell cols="3">0.652 0.653 0.699 0.712 0.653</cell><cell>0.716</cell><cell>8</cell><cell>0.68 0.03</cell><cell>[0.01, 0.05]</cell><cell>4.387</cell></row><row><cell>mult-dom -</cell><cell>wF1</cell><cell>0.449</cell><cell>0.600</cell><cell cols="3">0.433 0.597 0.635 0.646 0.597</cell><cell>0.698</cell><cell>8</cell><cell>0.582 0.1</cell><cell>[0.04, 0.15] 17.147</cell></row><row><cell>mult-dom +</cell><cell>wF1</cell><cell>0.471</cell><cell>0.647</cell><cell cols="3">0.447 0.647 0.696 0.711 0.647</cell><cell>0.726</cell><cell>8</cell><cell>0.624 0.11</cell><cell>[0.05, 0.18] 18.248</cell></row><row><cell>mult-emb -</cell><cell>wF1</cell><cell>0.693</cell><cell>0.658</cell><cell cols="3">0.683 0.668 0.692 0.689 0.659</cell><cell>0.391</cell><cell>8</cell><cell>0.642 0.11</cell><cell>[0.04, 0.17] 17.033</cell></row><row><cell>mult-emb +</cell><cell>wF1</cell><cell>0.689</cell><cell>0.662</cell><cell cols="3">0.681 0.659 0.681 0.684 0.657</cell><cell>0.401</cell><cell>8</cell><cell>0.639 0.1</cell><cell>[0.04, 0.16] 16.226</cell></row></table></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="1" xml:id="foot_0" coords="3,322.28,703.65,202.14,7.77;3,306.14,713.61,218.28,7.77;3,306.14,723.57,170.16,7.77"><p>The coefficient of variation (CV), also known as relative standard deviation (RSD) is defined as the standard deviation over the mean, often expressed as a percentage.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="2" xml:id="foot_1" coords="3,322.28,734.42,205.90,7.77;3,306.14,745.23,113.48,6.31"><p>Code and data are available here: https://github. com/asbelz/coeff-var.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="3" xml:id="foot_2" coords="3,322.28,755.24,50.43,7.77;3,372.71,753.18,3.82,5.24;3,379.14,755.24,145.28,7.77;3,306.14,765.20,74.48,7.77"><p>Otherwise CV * reflects differences solely due to different lower ends of scales.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="4" xml:id="foot_3" coords="4,322.28,733.54,202.13,7.77;4,306.14,743.50,66.99,7.77"><p>VIM doesn't define 'object' but refers to it as that which is being measured.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="5" xml:id="foot_4" coords="4,322.28,754.35,154.77,7.77"><p>For definition of 'measurand' see VIM 2.3.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="6" xml:id="foot_5" coords="4,322.28,765.20,195.12,7.77"><p>For definition of 'measurement method', see VIM 2.5.</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="8" xml:id="foot_6" coords="5,322.28,755.24,202.36,7.77;5,306.14,765.20,206.44,7.77"><p>Authors of original studies gave permission for their work to be reproduced<ref type="bibr" coords="5,368.64,765.20,73.47,7.77" target="#b5">(Branco et al., 2020;</ref> Belz et al., 2021b).</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="9" xml:id="foot_7" coords="8,322.28,704.53,47.53,7.77;8,369.82,702.48,3.82,5.24;8,376.37,704.53,148.05,7.77;8,306.14,714.50,219.77,7.77;8,306.14,724.46,219.40,7.77;8,306.14,734.42,218.88,7.77;8,306.14,744.39,204.20,7.77"><p>The high CV * for the baseline system may be due to an issue wiith the evaluation code (macro-F1 instead of weighted-F1), as reported by Bestgen (Section 3.2, first paragraph), Caines and Buttery (Section 2.5, one before last paragraph) and Huber and Çöltekin (Section 3.2, second paragraph).</p></note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" n="10" xml:id="foot_8" coords="8,322.28,755.24,203.26,7.77;8,306.14,765.20,12.46,7.77;8,318.60,763.15,3.82,5.24;8,325.16,765.20,60.01,7.77"><p>If evaluation scores are multiplied by a common factor, CV * does not change.</p></note>
+		</body>
+		<back>
+
+			<div type="acknowledgement">
+<div><head coords="9,306.14,569.01,98.84,10.75">Acknowledgements</head><p>We are grateful to the anonymous reviewers and area chairs for their exceptionally detailed and helpful feedback.</p><p><rs type="person">Popović</rs>'s work on this s study was funded by the <rs type="funder">ADAPT SFI Centre for Digital Media Technology</rs> which is funded by <rs type="funder">Science Foundation Ireland</rs> through the <rs type="funder">SFI Research Centres Programme</rs>, and co-funded under the <rs type="funder">European Regional Development Fund (ERDF)</rs> through Grant <rs type="grantNumber">13/RC/2106</rs>. Mille's work was supported by the <rs type="funder">European Commission</rs> under the <rs type="programName">H2020 program</rs> contract numbers <rs type="grantNumber">786731</rs>, <rs type="grantNumber">825079</rs>, <rs type="grantNumber">870930</rs> and <rs type="grantNumber">952133</rs>.</p></div>
+			</div>
+			<listOrg type="funding">
+				<org type="funding" xml:id="_KFPKUES">
+					<idno type="grant-number">13/RC/2106</idno>
+				</org>
+				<org type="funding" xml:id="_TaAEMEq">
+					<idno type="grant-number">786731</idno>
+					<orgName type="program" subtype="full">H2020 program</orgName>
+				</org>
+				<org type="funding" xml:id="_6YJaBDd">
+					<idno type="grant-number">825079</idno>
+				</org>
+				<org type="funding" xml:id="_7xyKXQh">
+					<idno type="grant-number">870930</idno>
+				</org>
+				<org type="funding" xml:id="_qgtmgy3">
+					<idno type="grant-number">952133</idno>
+				</org>
+			</listOrg>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head coords="12,70.86,73.56,317.95,10.75">A Conditions of Measurement for the Essay Scoring Systems</head><p>.</p></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct coords="10,70.86,94.96,219.93,8.64;10,81.77,105.75,207.37,8.81;10,81.52,116.71,131.45,8.81" xml:id="b0">
+	<analytic>
+		<title level="a" type="main">A pooling methodology for coefficient of variation</title>
+		<author>
+			<persName coords=""><forename type="first">Ahmed</forename><surname>Se</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Sankhyā: The Indian Journal of Statistics, Series B</title>
+		<imprint>
+			<biblScope unit="page" from="57" to="75" />
+			<date type="published" when="1995">1995</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,70.86,140.13,219.93,8.64;10,81.77,151.09,207.37,8.64;10,81.46,161.88,207.68,8.58;10,81.46,172.84,208.92,8.81;10,81.77,183.97,207.51,8.64;10,70.86,207.23,218.27,8.64;10,81.77,218.19,207.37,8.64;10,81.77,229.15,37.36,8.64" xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Language proficiency scoring</title>
+		<author>
+			<persName coords=""><forename type="first">Cristina</forename><surname>Arhiliuc</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Jelena</forename><surname>Mitrović</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Michael</forename><surname>Granitzer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of The 12th Language Resources and Evaluation Conference</title>
+		<meeting>The 12th Language Resources and Evaluation Conference<address><addrLine>Marseille, France</addrLine></address></meeting>
+		<imprint>
+			<publisher>European Language Resources Association. Association for Computing Machinery</publisher>
+			<date type="published" when="2020-08-24">2020. 2020. August 24, 2020</date>
+			<biblScope unit="page" from="5624" to="5630" />
+		</imprint>
+	</monogr>
+	<note>Artifact review and badging Version 1.1</note>
+</biblStruct>
+
+<biblStruct coords="10,70.86,252.40,219.53,8.64;10,81.77,263.36,209.02,8.64;10,81.77,274.32,209.11,8.64;10,81.77,285.11,209.02,8.81;10,81.77,296.07,207.37,8.58;10,81.49,307.03,170.52,8.81" xml:id="b2">
+	<analytic>
+		<title level="a" type="main">A Systematic Review of Reproducibility Research in Natural Language Processing</title>
+		<author>
+			<persName coords=""><forename type="first">Anya</forename><surname>Belz</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Shubham</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Anastasia</forename><surname>Shimorina</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Ehud</forename><surname>Reiter</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2021.eacl-main.29</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume</title>
+		<meeting>the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="381" to="393" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,70.86,330.45,219.53,8.64;10,81.77,341.41,207.62,8.64;10,81.77,352.37,208.75,8.64;10,81.77,363.16,209.02,8.81;10,81.77,374.12,167.11,8.58" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">The ReproGen Shared Task on Reproducibility of Human Evaluations in NLG: Overview and Results</title>
+		<author>
+			<persName coords=""><forename type="first">Anya</forename><surname>Belz</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Anastasia</forename><surname>Shimorina</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Shubham</forename><surname>Agarwal</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Ehud</forename><surname>Reiter</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2021.inlg-1.24</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 14th International Conference on Natural Language Generation</title>
+		<meeting>the 14th International Conference on Natural Language Generation</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="249" to="258" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,70.86,397.55,219.93,8.64;10,81.77,408.50,207.37,8.64;10,81.46,419.29,207.68,8.58;10,81.46,430.25,208.92,8.81;10,81.77,441.38,207.51,8.64" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Reproducing monolingual, multilingual and cross-lingual CEFR predictions</title>
+		<author>
+			<persName coords=""><forename type="first">Yves</forename><surname>Bestgen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of The 12th Language Resources and Evaluation Conference</title>
+		<meeting>The 12th Language Resources and Evaluation Conference<address><addrLine>Marseille, France</addrLine></address></meeting>
+		<imprint>
+			<publisher>European Language Resources Association</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="5595" to="5602" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,70.86,464.64,219.93,8.64;10,81.77,475.60,207.36,8.64;10,81.77,486.56,207.72,8.64;10,81.77,497.52,209.03,8.64;10,81.77,508.48,207.37,8.64;10,81.77,519.44,207.37,8.64;10,81.46,530.23,207.68,8.58;10,81.46,541.18,208.92,8.81;10,81.77,552.31,207.51,8.64" xml:id="b5">
+	<analytic>
+		<title level="a" type="main">A shared task of a new, collaborative type to foster reproducibility: A first exercise in the area of language science and technology with REPROLANG</title>
+		<author>
+			<persName coords=""><forename type="first">António</forename><surname>Branco</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Nicoletta</forename><surname>Calzolari</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Piek</forename><surname>Vossen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Gertjan</forename><surname>Van Noord</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Dieter</forename><surname>Van Uytvanck</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">João</forename><surname>Silva</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Luís</forename><surname>Gomes</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">André</forename><surname>Moreira</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Willem</forename><surname>Elbers</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of The 12th Language Resources and Evaluation Conference</title>
+		<meeting>The 12th Language Resources and Evaluation Conference<address><addrLine>Marseille, France</addrLine></address></meeting>
+		<imprint>
+			<publisher>European Language Resources Association</publisher>
+			<date type="published" when="2020">2020. 2020</date>
+			<biblScope unit="page" from="5539" to="5545" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,70.86,575.57,218.28,8.64;10,81.77,586.53,209.02,8.64;10,81.77,597.49,209.11,8.64;10,81.77,608.28,207.36,8.81;10,81.46,619.24,208.92,8.81;10,81.77,630.37,207.51,8.64" xml:id="b6">
+	<analytic>
+		<title level="a" type="main">REPROLANG 2020: Automatic proficiency scoring of Czech, English, German, Italian, and Spanish learner essays</title>
+		<author>
+			<persName coords=""><forename type="first">Andrew</forename><surname>Caines</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Paula</forename><surname>Buttery</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of The 12th Language Resources and Evaluation Conference</title>
+		<meeting>The 12th Language Resources and Evaluation Conference<address><addrLine>Marseille, France</addrLine></address></meeting>
+		<imprint>
+			<publisher>European Language Resources Association</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="5614" to="5623" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,70.86,653.62,219.93,8.64;10,81.77,664.58,209.02,8.64;10,81.77,675.37,207.37,8.81;10,81.46,686.33,209.17,8.81;10,81.77,697.46,209.02,8.64;10,81.77,708.42,81.91,8.64" xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Studying Common Ground Instantiation Using Audio, Video and Brain Behaviours: The BrainKT Corpus</title>
+		<author>
+			<persName><forename type="first">Eliot</forename><surname>Maës</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Leonor</forename><surname>Becerra-Bonache</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thierry</forename><surname>Legou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Philippe</forename><surname>Blache</surname></persName>
+		</author>
+		<idno type="DOI">10.26615/978-954-452-092-2_075</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Conference Recent Advances in Natural Language Processing - Large Language Models for Natural Language Processings</title>
+		<meeting>the Conference Recent Advances in Natural Language Processing - Large Language Models for Natural Language Processings<address><addrLine>Marseille, France</addrLine></address></meeting>
+		<imprint>
+			<publisher>INCOMA Ltd., Shoumen, BULGARIA</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="691" to="702" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,70.86,731.67,219.93,8.64;10,81.77,742.63,207.37,8.64;10,81.30,753.59,209.49,8.64;10,81.77,764.55,84.32,8.64" xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Workshop summary: The fourth workshop on evaluation methods for machine learning</title>
+		<author>
+			<persName coords=""><forename type="first">Chris</forename><surname>Drummond</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Nathalie</forename><surname>Japkowicz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">William</forename><surname>Klement</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Sofus</forename><surname>Macskassy</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/1553374.1553546</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 26th Annual International Conference on Machine Learning</title>
+		<meeting>the 26th Annual International Conference on Machine Learning</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2009-06-14">2009</date>
+			<biblScope unit="page" from="1" to="1" />
+		</imprint>
+	</monogr>
+	<note>Presented at 4th</note>
+</biblStruct>
+
+<biblStruct coords="10,306.14,75.32,218.28,8.64;10,317.05,86.28,209.02,8.64;10,317.05,97.07,207.37,8.81;10,317.05,108.03,209.03,8.81;10,317.05,119.16,209.03,8.64;10,317.05,130.12,29.61,8.64" xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Reproduction and replication: A case study with automatic essay scoring</title>
+		<author>
+			<persName coords=""><forename type="first">Eva</forename><surname>Huber</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Çagrı</forename><surname>Çöltekin</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of The 12th Language Resources and Evaluation Conference</title>
+		<meeting>The 12th Language Resources and Evaluation Conference<address><addrLine>, France</addrLine></address></meeting>
+		<imprint>
+			<publisher>European Language Resources Association</publisher>
+			<date type="published" when="2020">2020. Marseille</date>
+			<biblScope unit="page" from="5603" to="5613" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,149.19,219.66,8.64;10,317.05,160.15,207.37,8.64;10,316.72,171.11,208.94,8.64;10,317.05,183.01,203.25,7.01;10,317.05,193.97,193.78,7.01" xml:id="b10">
+	<analytic>
+		<title level="a" type="main">International vocabulary of metrology: Basic and general concepts and associated terms (VIM)</title>
+		<author>
+			<persName coords=""><surname>Jcgm</surname></persName>
+		</author>
+		<ptr target="https://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2012.pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">Joint Committee for Guides in Metrology</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,212.11,218.28,8.64;10,317.05,223.07,207.37,8.64;10,317.05,234.03,207.37,8.64;10,317.05,244.82,209.02,8.81;10,317.05,255.78,209.02,8.58;10,317.05,266.74,72.23,8.58" xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Another PASS: A Reproduction Study of the Human Evaluation of a Football Report Generation System</title>
+		<author>
+			<persName coords=""><forename type="first">Simon</forename><surname>Mille</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Thiago</forename><surname>Castro Ferreira</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Anya</forename><surname>Belz</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Brian</forename><surname>Davis</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2021.inlg-1.30</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 14th International Conference on Natural Language Generation</title>
+		<meeting>the 14th International Conference on Natural Language Generation<address><addrLine>INLG</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2021">2021. 2021</date>
+			<biblScope unit="page" from="286" to="292" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,285.99,219.53,8.64;10,317.05,296.95,209.03,8.64;10,317.05,307.74,209.02,8.81;10,317.05,318.69,207.37,8.58;10,316.77,329.65,208.89,8.81;10,316.69,340.78,207.73,8.64;10,317.05,351.74,46.78,8.64" xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Exploring Neural Text Simplification Models</title>
+		<author>
+			<persName coords=""><forename type="first">Sergiu</forename><surname>Nisioi</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Sanja</forename><surname>Štajner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Simone</forename><forename type="middle">Paolo</forename><surname>Ponzetto</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Liviu</forename><forename type="middle">P</forename><surname>Dinu</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/p17-2014</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)</title>
+		<meeting>the 55th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)<address><addrLine>Vancouver, Canada</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="85" to="91" />
+		</imprint>
+	</monogr>
+	<note>Short Papers</note>
+</biblStruct>
+
+<biblStruct coords="10,306.14,370.82,220.02,8.64;10,316.72,381.61,172.71,8.81" xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Empiricism Is Not a Matter of Faith</title>
+		<author>
+			<persName coords=""><forename type="first">Ted</forename><surname>Pedersen</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/coli.2008.34.3.465</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Computational Linguistics</title>
+		<title level="j" type="abbrev">Computational Linguistics</title>
+		<idno type="ISSN">0891-2017</idno>
+		<idno type="ISSNe">1530-9312</idno>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="465" to="470" />
+			<date type="published" when="2008-09">2008</date>
+			<publisher>MIT Press - Journals</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,400.86,219.93,8.64;10,317.05,411.82,62.88,8.64" xml:id="b14">
+	<monogr>
+		<title level="m" type="main">AMPGAN v2: Machine Learning-Guided Design of Antimicrobial Peptides</title>
+		<author>
+			<persName coords=""><forename type="first">Joelle</forename><surname>Pineau</surname></persName>
+		</author>
+		<idno type="DOI">10.1021/acs.jcim.0c01441.s001</idno>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<publisher>American Chemical Society (ACS)</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,383.92,411.82,3.99,8.64;10,306.14,430.89,218.28,8.64;10,317.05,441.85,207.37,8.64;10,317.05,452.64,207.37,8.81;10,316.72,463.60,207.70,8.81;10,317.05,474.73,207.54,8.64;10,317.05,485.69,108.50,8.64" xml:id="b15">
+	<analytic>
+		<title level="a" type="main">A Reproduction Study of an Annotation-based Human Evaluation of MT Outputs</title>
+		<author>
+			<persName coords=""><forename type="first">Maja</forename><surname>Popović</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Anya</forename><surname>Belz</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2021.inlg-1.31</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 14th International Conference on Natural Language Generation</title>
+		<meeting>the 14th International Conference on Natural Language Generation<address><addrLine>Aberdeen, Scotland, UK</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="293" to="300" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,504.77,218.28,8.64;10,317.05,515.56,119.25,8.81" xml:id="b16">
+	<analytic>
+		<title level="a" type="main">A Call for Clarity in Reporting BLEU Scores</title>
+		<author>
+			<persName coords=""><forename type="first">Matt</forename><surname>Post</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/w18-6319</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Third Conference on Machine Translation: Research Papers</title>
+		<meeting>the Third Conference on Machine Translation: Research Papers</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2018">2018. 2018</date>
+			<biblScope unit="page">186</biblScope>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,534.64,218.28,8.81;10,317.05,545.60,149.53,8.81" xml:id="b17">
+	<monogr>
+		<title level="m" type="main">Linear statistical inference and its applications</title>
+		<author>
+			<persName coords=""><forename type="first">Radhakrishna</forename><surname>Calyampudi</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><surname>Rao</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1973">1973</date>
+			<publisher>Wiley</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,564.85,219.93,8.64;10,317.05,575.81,207.94,8.64;10,317.05,586.76,207.37,8.64;10,317.05,597.72,209.02,8.64;10,317.05,608.68,209.11,8.64;10,316.74,619.47,132.29,8.81" xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Sustainable computational science: the ReScience initiative</title>
+		<author>
+			<persName coords=""><forename type="first">Nicolas</forename><forename type="middle">P</forename><surname>Rougier</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Konrad</forename><surname>Hinsen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Frédéric</forename><surname>Alexandre</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Thomas</forename><surname>Arildsen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Lorena</forename><forename type="middle">A</forename><surname>Barba</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Fabien</forename><forename type="middle">C Y</forename><surname>Benureau</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Titus</forename><surname>Brown</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pierre</forename><surname>De Buyl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Ozan</forename><surname>Caglayan</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Andrew</forename><forename type="middle">P</forename><surname>Davison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marc-André</forename><surname>Delsuc</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Georgios</forename><surname>Detorakis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Alexandra</forename><forename type="middle">K</forename><surname>Diem</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Damien</forename><surname>Drix</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pierre</forename><surname>Enel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Benoît</forename><surname>Girard</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Olivia</forename><surname>Guest</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Matt</forename><forename type="middle">G</forename><surname>Hall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Rafael</forename><forename type="middle">N</forename><surname>Henriques</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Xavier</forename><surname>Hinaut</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kamil</forename><forename type="middle">S</forename><surname>Jaron</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Mehdi</forename><surname>Khamassi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Almar</forename><surname>Klein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tiina</forename><surname>Manninen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Pietro</forename><surname>Marchesi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Daniel</forename><surname>Mcglinn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Christoph</forename><surname>Metzner</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Owen</forename><surname>Petchey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Hans</forename><forename type="middle">Ekkehard</forename><surname>Plesser</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Timothée</forename><surname>Poisot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Karthik</forename><surname>Ram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Yoav</forename><surname>Ram</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Etienne</forename><surname>Roesch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Cyrille</forename><surname>Rossant</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Vahid</forename><surname>Rostami</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Aaron</forename><surname>Shifman</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jemma</forename><surname>Stachelek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Marcel</forename><surname>Stimberg</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Frank</forename><surname>Stollmeier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Federico</forename><surname>Vaggi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Guillaume</forename><surname>Viejo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Julien</forename><surname>Vitay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anya</forename><forename type="middle">E</forename><surname>Vostinar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Roman</forename><surname>Yurchak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Tiziano</forename><surname>Zito</surname></persName>
+		</author>
+		<idno type="DOI">10.7717/peerj-cs.142</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PeerJ Computer Science</title>
+		<idno type="ISSNe">2376-5992</idno>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">e142</biblScope>
+			<date type="published" when="2017-12-18">2017</date>
+			<publisher>PeerJ</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,638.72,218.28,8.64;10,317.05,649.68,208.61,8.64;10,317.05,660.47,208.62,8.81;10,317.05,671.60,19.09,8.64" xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Identifying and overcoming threats to reproducibility, replicability, robustness, and generalizability in microbiome research</title>
+		<author>
+			<persName coords=""><forename type="first">D</forename><surname>Patrick</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><surname>Schloss</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">MBio</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="10,306.14,690.68,218.28,8.64;10,317.05,701.64,209.02,8.64;10,317.05,712.43,207.37,8.81;10,317.05,723.39,97.60,8.58" xml:id="b20">
+	<analytic>
+		<title level="a" type="main">The Human Evaluation Datasheet: A Template for Recording Details of Human Evaluation Experiments in NLP</title>
+		<author>
+			<persName coords=""><forename type="first">Anastasia</forename><surname>Shimorina</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Anya</forename><surname>Belz</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/2022.humeval-1.6</idno>
+		<idno>arXiv:3910940</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2nd Workshop on Human Evaluation of NLP Systems (HumEval)</title>
+		<meeting>the 2nd Workshop on Human Evaluation of NLP Systems (HumEval)</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="54" to="75" />
+		</imprint>
+	</monogr>
+	<note type="report_type">arXiv preprint</note>
+</biblStruct>
+
+<biblStruct coords="10,306.14,742.46,219.93,8.81;10,317.05,753.42,209.11,8.58;10,316.59,764.55,56.44,8.64" xml:id="b21">
+	<monogr>
+		<title level="m" type="main">Biometry: The Principles and Practice of Statistics in Biological Research</title>
+		<author>
+			<persName coords=""><forename type="first">R</forename><forename type="middle">R</forename><surname>Sokal</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">F</forename><forename type="middle">J</forename><surname>Rohlf</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1971">1971</date>
+			<publisher>WH Freeman</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,70.86,75.32,218.28,8.64;11,81.41,86.11,207.73,8.81;11,81.77,97.07,207.37,8.58;11,81.44,108.03,207.69,8.81;11,81.02,119.16,208.29,8.64;11,81.77,130.12,108.50,8.64" xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Experiments with Universal CEFR Classification</title>
+		<author>
+			<persName coords=""><forename type="first">Sowmya</forename><surname>Vajjala</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Taraka</forename><surname>Rama</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/w18-0515</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Thirteenth Workshop on Innovative Use of NLP for Building Educational Applications</title>
+		<meeting>the Thirteenth Workshop on Innovative Use of NLP for Building Educational Applications<address><addrLine>New Orleans, Louisiana</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="147" to="153" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,70.86,150.04,220.02,8.64;11,81.77,161.00,208.62,8.64;11,81.77,171.79,207.37,8.81;11,81.77,182.75,209.02,8.58;11,81.77,193.71,134.41,8.81" xml:id="b23">
+	<analytic>
+		<title level="a" type="main">PASS: A Dutch data-to-text system for soccer, targeted towards specific audiences</title>
+		<author>
+			<persName coords=""><forename type="first">Chris</forename><surname>Van Der Lee</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Emiel</forename><surname>Krahmer</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Sander</forename><surname>Wubben</surname></persName>
+		</author>
+		<idno type="DOI">10.18653/v1/w17-3513</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 10th International Conference on Natural Language Generation</title>
+		<meeting>the 10th International Conference on Natural Language Generation</meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="page" from="95" to="104" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,70.86,213.81,218.62,8.64;11,81.77,224.77,40.93,8.64;11,140.88,225.70,149.45,7.01;11,80.57,236.66,203.25,7.01;11,81.77,247.62,20.42,7.01" xml:id="b24">
+	<monogr>
+		<author>
+			<persName coords=""><forename type="first">Kirstie</forename><surname>Whitaker</surname></persName>
+		</author>
+		<ptr target="https://www.cs.mcgill.ca/~jpineau/ReproducibilityChecklist.pdf" />
+		<title level="m">The MT Reproducibility Checklist</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,70.86,266.61,220.02,8.64;11,81.77,277.57,208.75,8.64;11,81.41,288.36,208.97,8.81;11,81.42,299.49,61.71,8.64" xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Reproducibility in Computational Linguistics: Are We Willing to Share?</title>
+		<author>
+			<persName coords=""><forename type="first">Martijn</forename><surname>Wieling</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Josine</forename><surname>Rawee</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Gertjan</forename><surname>Van Noord</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/coli_a_00330</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Computational Linguistics</title>
+		<title level="j" type="abbrev">Computational Linguistics</title>
+		<idno type="ISSN">0891-2017</idno>
+		<idno type="ISSNe">1530-9312</idno>
+		<imprint>
+			<biblScope unit="volume">44</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="641" to="649" />
+			<date type="published" when="2018-12">2018</date>
+			<publisher>MIT Press - Journals</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct coords="11,70.86,319.42,219.52,8.64;11,81.77,330.38,209.02,8.64;11,81.77,341.34,209.11,8.64;11,81.21,352.13,207.92,8.58;11,81.49,363.09,93.83,8.81" xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Optimizing Statistical Machine Translation for Text Simplification</title>
+		<author>
+			<persName coords=""><forename type="first">Wei</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Courtney</forename><surname>Napoles</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Ellie</forename><surname>Pavlick</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Quanze</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName coords=""><forename type="first">Chris</forename><surname>Callison-Burch</surname></persName>
+		</author>
+		<idno type="DOI">10.1162/tacl_a_00107</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Transactions of the Association for Computational Linguistics</title>
+		<title level="j" type="abbrev">TACL</title>
+		<idno type="ISSNe">2307-387X</idno>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="page" from="401" to="415" />
+			<date type="published" when="2016-12">2016</date>
+			<publisher>MIT Press - Journals</publisher>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

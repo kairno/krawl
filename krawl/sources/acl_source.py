@@ -53,15 +53,33 @@ class ACLSource(BaseSource):
             for paper in volume.papers():
                 papers.append(self._to_paper_metadata(paper, event_id=event_id))
         return papers
+    
+    def get_event_ids(self, filter_by_str=["tacl", "acl", "naacl", "emnlp"]):
+        self.anthology.load_all() 
+        self.anthology.events.load() 
+        event_ids = list(self.anthology.events.keys())
+        if filter_by_str:
+            event_ids = [event_id for event_id in event_ids if any(event_id.split('-')[0] == filter_str for filter_str in filter_by_str)]
+        return event_ids
 
 if __name__ == "__main__":
 
     # RUN: python -m krawl.sources.acl_source
 
     source = ACLSource()
-    event_id = "acl-2022"
-    print(f"Fetching papers for event_id: {event_id}\n")
-    papers = source.fetch_papers(event_id=event_id)
-    print(f"Total papers found: {len(papers)}\n")
-    for i, paper in enumerate(papers[:5]):
-        print(f"Paper {i+1}: {paper}")
+    # event_id = "acl-2022"
+    # print(f"Fetching papers for event_id: {event_id}\n")
+    # papers = source.fetch_papers(event_id=event_id)
+    # print(f"Total papers found: {len(papers)}\n")
+    # for i, paper in enumerate(papers[:5]):
+    #     print(f"Paper {i+1}: {paper}")
+
+    # # Export metadata to JSON
+    # output_filename = "./tests/test_data/metadata/acl_anthology.json"
+    # source.export_metadata_to_json(papers, output_filename)
+    # print(f"Metadata exported to {output_filename}")
+
+    event_ids = source.get_event_ids()
+    # Sort by year (second part of event_id after '-') in descending order
+    event_ids.sort(key=lambda x: int(x.split('-')[1]), reverse=True)
+    print(event_ids)
