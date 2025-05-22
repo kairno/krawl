@@ -9,6 +9,7 @@ from typing import List
 from krawl.sources.paper_metadata import PaperMetadata
 
 class BaseSource:
+    
     def fetch_papers(self):
         raise NotImplementedError 
     

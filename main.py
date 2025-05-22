@@ -7,36 +7,36 @@ from krawl.parser.nougat_parser import NougatPaperParser
 
 def main(event_id: str):
 
-    metadata_path = f"./data/metadata/{event_id}.json"
-    pdf_dir       = f"./data/pdfs/{event_id}"
-    parses_dir    = f"./data/parses/{event_id}"
+    metadata_path = f"./data/metadata/acl-anthology/{event_id}.json"
+    pdf_dir       = f"./data/pdfs/acl-anthology/{event_id}"
+    parses_dir    = f"./data/parses/acl-anthology/{event_id}"
 
-    # # Metadata
-    # if not os.path.exists(metadata_path):
-    #     source = ACLSource()
-    #     papers = source.fetch_papers(event_id=event_id)
-    #     source.export_metadata_to_json(papers, metadata_path)
+    # Metadata
+    if not os.path.exists(metadata_path):
+        source = ACLSource()
+        papers = source.fetch_papers(event_id=event_id)
+        source.export_metadata_to_json(papers, metadata_path)
 
-    # # Download PDFs
-    # downloader = PaperDownloader()
-    # pdf_urls = pd.read_json(metadata_path)['pdf_url'].tolist()
-    # pdf_urls = [(url, os.path.join(pdf_dir, os.path.basename(url))) for url in pdf_urls if url is not None]
-    # downloader.download_pdfs(pdf_urls)
+    # Download PDFs
+    downloader = PaperDownloader()
+    pdf_urls = pd.read_json(metadata_path)['pdf_url'].tolist()
+    pdf_urls = [(url, os.path.join(pdf_dir, os.path.basename(url))) for url in pdf_urls if url is not None]
+    downloader.download_pdfs(pdf_urls)
 
-    # Parse PDFs
-    parser = NougatPaperParser(
-        input_pdf_dir=pdf_dir,
-        output_mmd_dir=parses_dir,
-        force_process=False,
-        nougat_cli_batch_size=None,
-        nougat_full_precision=False,
-        nougat_no_markdown=False,
-        nougat_no_skipping=True,
-        nougat_model_tag="0.1.0-small" 
-    )
-    parser.run()
-    summary = parser.summary()
-    print(summary)
+    # # Parse PDFs
+    # parser = NougatPaperParser(
+    #     input_pdf_dir=pdf_dir,
+    #     output_mmd_dir=parses_dir,
+    #     force_process=False,
+    #     nougat_cli_batch_size=None,
+    #     nougat_full_precision=False,
+    #     nougat_no_markdown=False,
+    #     nougat_no_skipping=True,
+    #     nougat_model_tag="0.1.0-small" 
+    # )
+    # parser.run()
+    # summary = parser.summary()
+    # print(summary)
 
 if __name__ == "__main__":
 
