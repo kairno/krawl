@@ -1,11 +1,11 @@
 import os
-from krawl.parser.paper_parser import PaperParser
+from krawl.parser.grobid_parser import GROBIDPaperParser
 
 def test_extract_tei_text():
     input_pdf_dir_path = "./tests/test_data/pdfs"
     output_dir_path = "./tests/test_data/parses"
 
-    parser = PaperParser(
+    parser = GROBIDPaperParser(
         input_pdf_dir=input_pdf_dir_path,
         output_dir=output_dir_path,
         consolidate_citations=True,

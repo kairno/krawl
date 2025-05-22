@@ -54,12 +54,12 @@ class ACLSource(BaseSource):
                 papers.append(self._to_paper_metadata(paper, event_id=event_id))
         return papers
     
-    def get_event_ids(self, filter_by_str=["tacl", "acl", "naacl", "emnlp"]):
+    def get_event_ids(self, filter_by_event_ids=None):
         self.anthology.load_all() 
         self.anthology.events.load() 
         event_ids = list(self.anthology.events.keys())
-        if filter_by_str:
-            event_ids = [event_id for event_id in event_ids if any(event_id.split('-')[0] == filter_str for filter_str in filter_by_str)]
+        if filter_by_event_ids:
+            event_ids = [event_id for event_id in event_ids if any(event_id.split('-')[0] == filter_str for filter_str in filter_by_event_ids)]
         return event_ids
 
 if __name__ == "__main__":

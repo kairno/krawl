@@ -1,0 +1,717 @@
+On the matrices in B-spline collocation methods for Riesz fractional equations and their spectral properties
+
+M. Mazza\({}^{1,}\)
+
+Corresponding author
+
+M. Donatelli\({}^{2}\)
+
+C. Manni\({}^{3}\)
+
+H. Speleers\({}^{3}\)
+
+###### Abstract
+
+In this work, we focus on a fractional differential equation in Riesz form discretized by a polynomial B-spline collocation method. For an arbitrary polynomial degree \(p\), we show that the resulting coefficient matrices possess a Toeplitz-like structure. We investigate their spectral properties via their symbol and we prove that, like for second order differential problems, also in this case the given matrices are ill-conditioned both in the low and high frequencies for large \(p\). More precisely, in the fractional scenario the symbol has a single zero at \(0\) of order \(\alpha\), with \(\alpha\) the fractional derivative order that ranges from \(1\) to \(2\), and it presents an exponential decay to zero at \(\pi\) for increasing \(p\) that becomes faster as \(\alpha\) approaches \(1\). This translates in a mitigated conditioning in the low frequencies and in a deterioration in the high frequencies when compared to second order problems. Furthermore, the derivation of the symbol reveals another similarity of our problem with a classical diffusion problem. Since the entries of the coefficient matrices are defined as evaluations of fractional derivatives of the B-spline basis at the collocation points, we are able to express the central entries of the coefficient matrix as inner products of two fractional derivatives of cardinal B-splines. Finally, we perform a numerical study of the approximation behavior of polynomial B-spline collocation. This study suggests that, in line with non-fractional diffusion problems, the approximation order for smooth solutions in the fractional case is \(p+2-\alpha\) for even \(p\), and \(p+1-\alpha\) for odd \(p\).
+
+1
+Footnote 1: Department of Humanities and Innovation, University of Insubria, via Valleggio 11, 22100 Como, Italy (mariaroas.maza@uninsubria.it)
+
+2
+Footnote 2: Department of Science and High Technology, University of Insubria, via Valleggio 11, 22100 Como, Italy (marco.donatelli@uninsubria.it)
+
+3
+Footnote 3: Department of Mathematics, University of Rome Tor Vergata, Via della Ricerca Scientifica 1, 00133 Rome, Italy ([manni,speleers)@mat.uniroma2.it]
+
+**Key words:** Spectral distribution, B-spline collocation, Isogeometric analysis, Fractional operators, Toeplitz matrices
+
+**MSC 2010:** 15A12, 15A18, 41A15, 65M70, 26A33, 15B05
+
+## 1 Introduction
+
+Fractional diffusion equations (FDEs) generalize classical partial differential equations (PDEs). Their recent success is due to the non-local behavior of fractional operators resulting in an appropriate modeling of anomalous diffusion phenomena that appear in several applicative fields, like imaging or electrophysiology [2, 6]. In particular, a standard diffusion equation can be "fractionalized", either by replacing the derivative in time with a fractional one whose fractional order ranges from \(0\) to \(1\), or by introducing a fractional derivative in space with order between \(1\) and \(2\). The two approaches can also be combined and lead to similar computational issues.
+
+The improved physical description of the considered phenomenon obtained by "fractionalizing" the derivatives, however, translates in a more challenging numerical treatment of the corresponding discretized problems. Indeed, the evaluation/approximation of a fractional operator is numerically more expensive (and often less stable). Moreover, even when standard local discretization methods are adopted, the non-locality of the fractional operators causes absence of sparsity in the discretization matrices. This makes FDEs computationally more demanding than PDEs.
+
+Various numerical discretization methods for FDE problems (e.g., finite differences, finite volumes, finite elements, spectral methods) can be found in the literature. We refer the reader to [14, 19, 21, 24, 26, 37, 39, 40] and references therein. In the case of regular spatial domain subdivisions, the discretization matrices inherit a Toeplitz-like structure from the space-invariant property of the underlying operators that can be exploited for the design of ad hoc iterative schemes of multigrid and preconditioned Krylov type (see, e.g., [12, 13, 20, 27, 29, 30]). In the context of finite difference/volume discretizations, we mention the structure preserving preconditioning and the algebraic multigrid methods presented in [12, 13]. Both strategies are based on the spectral analysis of the coefficient matrices via their symbol, a function which provides an approximation of their eigenvalues/singular values.
+
+A similar symbol-based approach has also been successfully employed in the context of isogeometric analysis (IgA) for the discretization of integer order differential problems; see, e.g., [9, 11, 25]. In these papers, the spectral information provided by the symbol has been leveraged for the design of effective preconditioners and fast multigrid/multi-iterative solvers whose convergence speed is independent of the fineness parameters and the approximation parameters.
+
+The present work aims at uncovering the structure and studying the symbol of the discretization matrices obtained by IgA collocation for FDE problems. As a first step towards the spectral treatment of general differential problems involving fractional diffusion operators, we consider here the following fractional diffusion boundary value problem with absorbing boundary conditions:
+
+\[\begin{cases}\frac{\mathrm{d}^{\alpha}u(x)}{\mathrm{d}|x|^{\alpha}}=s(x),&x \in\Omega,\\ u(x)=0,&x\in\mathbb{R}\backslash\Omega,\end{cases} \tag{1}\]
+
+where \(\Omega:=(0,1)\), \(\alpha\in(1,2)\), and
+
+\[\frac{\mathrm{d}^{\alpha}u(x)}{\mathrm{d}|x|^{\alpha}}:=\frac{1}{2\cos(\pi \alpha/2)}\left({}^{RL}_{\ 0}D^{\alpha}_{x}u(x)+{}^{RL}_{\ x}D^{\alpha}_{1}u(x)\right)\]
+
+is the so-called Riesz fractional operator, while \({}^{RL}_{\ 0}D^{\alpha}_{x}u(x)\), \({}^{RL}_{\ x}D^{\alpha}_{1}u(x)\) are the left and right Riemann-Liouville fractional derivatives of \(u\) (see Section 2.1 for their definition). More precisely, we are interested in a polynomial B-spline collocation-based discretization of (1) where the so-called Greville abscissae are chosen as collocation points.
+
+Collocation methods based on polynomial splines were applied to fractional problems for the first time in [4] and further developed in [31]. Polynomial B-spline bases have been used for solving time-fractional problems in [33] and (left-sided) space-fractional problems in [34]. Among non-polynomial spline collocation methods for fractional problems, we mention the work [32] in which the authors explore the application of fractional B-splines.
+
+Our choice of classical polynomial B-splines is motivated by the fact that, contrarily to their fractional counterpart, they have compact support and naturally fulfill boundary and/or initial conditions. Furthermore, they possess good approximation properties. Seminal results concerning the structure of the quadratic spline collocation matrices can be found in [22]. Therein, the authors recognize the Toeplitz-like structure of the coefficient matrices and use a classical circulant preconditioner to solve the corresponding linear systems by means of Krylov methods.
+
+To the best of our knowledge, this is the first time that the structure and the spectral properties of polynomial B-spline collocation matrices are investigated for an arbitrary polynomial degree \(p\). We show that the coefficient matrices retain the Toeplitz-like structure and we study their spectral properties via their symbol. It turns out that the symbol:
+
+* has a single zero at \(0\) of order \(\alpha\);
+* presents an exponential decay to zero at \(\pi\) for increasing \(p\), a so-called numerical zero, that becomes faster as \(\alpha\) approaches \(1\);
+* is bounded in the proximity of \(\pi\).
+
+This translates in a mitigated conditioning in the low frequencies and in a deterioration in the high frequencies when compared to second order problems (see [10]). The symbol, and so the (asymptotic)spectral properties of the involved matrices, do not change if reaction and/or advection terms are added to (1).
+
+As a side result of the symbol computation, we propose a new way of expressing both a left and a right fractional derivative of a cardinal B-spline as inner products of two fractional derivatives of cardinal B-splines.
+
+Furthermore, we provide a numerical study of the approximation behavior of polynomial B-spline collocation for an arbitrary degree \(p\). It turns out that the approximation order for smooth solutions is \(p+2-\alpha\) for even \(p\), and \(p+1-\alpha\) for odd \(p\). This is again in agreement with the approximation results known for standard (non-fractional) diffusion problems [1]. We refer the reader to [7, 18, 24] for a smoothness analysis of the solution in (weighted) Sobolev spaces.
+
+The paper is organized as follows. Section 2 is devoted to notations, definitions, and preliminary results. In Section 3 we present a new way of writing the fractional derivative of a cardinal B-spline. In Section 4 we describe the IgA collocation approximation of the problem reported in (1), while in Sections 5 and 6 we perform a detailed spectral analysis of the resulting coefficient matrices. We validate our theoretical spectral findings with a selection of numerical experiments in Section 7 and we do a numerical study of the approximation order of the polynomial B-spline collocation method as well. We end with some concluding remarks in Section 8.
+
+## 2 Preliminaries
+
+In this section we collect some preliminary tools on fractional derivatives, spectral analysis and IgA discretizations. Firstly, we give two definitions of fractional derivatives (Section 2.1). Secondly, after introducing the definition of spectral distribution of general matrix-sequences, we summarize the essentials of Toeplitz sequences (Section 2.2). Finally, we recall the definition of B-splines and cardinal B-splines (Section 2.3).
+
+### Fractional derivatives
+
+A common definition of fractional derivatives is given by the Riemann-Liouville formula. For a given function \(u\) with absolutely continuous \((m-1)\)-th derivative on \([a,b]\), the left and right Riemann-Liouville fractional derivatives of order \(\alpha\) are defined by
+
+\[{}^{RL}_{\ a}D^{\alpha}_{x}u(x) :=\frac{1}{\Gamma(m-\alpha)}\frac{\mathrm{d}^{m}}{\mathrm{d}x^{ m}}\int_{a}^{x}(x-y)^{m-\alpha-1}u(y)\,\mathrm{d}y,\] \[{}^{RL}_{\ x}D^{\alpha}_{b}u(x) :=\frac{(-1)^{m}}{\Gamma(m-\alpha)}\frac{\mathrm{d}^{m}}{\mathrm{ d}x^{m}}\int_{x}^{b}(y-x)^{m-\alpha-1}u(y)\,\mathrm{d}y,\]
+
+with \(m\) the integer such that \(m-1\leq\alpha<m\) and \(\Gamma\) the Euler gamma function. Note that the left fractional derivative of the function \(u\) computed at \(x\) depends on all function values to the left of \(x\), while the right fractional derivative depends on the ones to the right.
+
+Another common definition of fractional derivative was proposed by Caputo:
+
+\[{}^{C}_{\ a}D^{\alpha}_{x}u(x) :=\frac{1}{\Gamma(m-\alpha)}\int_{a}^{x}(x-y)^{m-\alpha-1}u^{(m) }(y)\,\mathrm{d}y, \tag{2}\] \[{}^{C}_{\ x}D^{\alpha}_{b}u(x) :=\frac{(-1)^{m}}{\Gamma(m-\alpha)}\int_{x}^{b}(y-x)^{m-\alpha-1} u^{(m)}(y)\,\mathrm{d}y.\]
+
+Note that (2) requires the \(m\)-th derivative of \(u\) to be absolutely integrable. Higher regularity of the solution is typically imposed in time rather than in space. As a consequence, the Caputo formulation is mainly used for fractional derivatives in time, while Riemann-Liouville's is preferred for fractional derivatives in space. The use of Caputo's derivative provides some advantages in the treatment of boundary conditions when applying the Laplace transform method (see [35, Chapter 2.8]).
+
+The Riemann-Liouville derivatives are related to the Caputo ones as follows
+
+\[\begin{split}{}^{RL}_{\ \ a}D^{\alpha}_{x}u(x)&=\,^{C}_{\ \ a}D^{\alpha}_{x}u(x)+\sum_{k=0}^{m-1}\frac{(x-a)^{k-\alpha}}{\Gamma(k-\alpha+1 )}u^{(k)}(a^{+}),\\ {}^{RL}_{\ \ x}D^{\alpha}_{b}u(x)&=\,^{C}_{\ \ x}D^{ \alpha}_{b}u(x)+\sum_{k=0}^{m-1}\frac{(-1)^{k}(b-x)^{k-\alpha}}{\Gamma(k-\alpha +1)}u^{(k)}(b^{-}),\end{split} \tag{3}\]
+
+and the two coincide if \(u\) satisfies homogeneous conditions, i.e., \(u^{(k)}(a^{+})=u^{(k)}(b^{-})=0\) for \(k=0,\ldots,m-1\).
+
+**Remark 2.1**.: _Throughout the paper, whenever we write \({}^{RL}_{\ \ a}D^{\alpha}_{x}u(\xi)\) or \({}^{RL}_{\ \ x}D^{\alpha}_{b}u(\xi)\) for a fixed \(\xi\) we mean \({}^{RL}_{\ \ a}D^{\alpha}_{x}u(x)\) or \({}^{RL}_{\ \ x}D^{\alpha}_{b}u(x)\), where \(x=\xi\), respectively._
+
+### Spectral tools
+
+We begin with the formal definition of spectral distribution in the sense of the eigenvalues for a general matrix-sequence.
+
+**Definition 2.2**.: _Let \(f:G\to\mathbb{C}\) be a measurable function, defined on a measurable set \(G\subset\mathbb{R}^{k}\) with \(k\geq 1\) and Lebesgue measure \(0<\mu_{k}(G)<\infty\). Let \(\mathcal{C}_{0}(\mathbb{C})\) be the set of continuous functions with compact support over \(\mathbb{C}\), and let \(A_{n}\) be a matrix of size \(d_{n}\) with eigenvalues \(\lambda_{j}(A_{n})\), \(j=1,\ldots,d_{n}\). The matrix-sequence \(\{A_{n}\}_{n}\) (with \(d_{n}<d_{n+1}\)) is distributed as the pair \((f,G)\) in the sense of the eigenvalues, denoted by_
+
+\[\{A_{n}\}_{n}\sim_{\lambda}(f,G),\]
+
+_if the following limit relation holds for all \(F\in\mathcal{C}_{0}(\mathbb{C})\):_
+
+\[\lim_{n\to\infty}\frac{1}{d_{n}}\sum_{j=1}^{d_{n}}F(\lambda_{j}(A_{n}))=\frac {1}{\mu_{k}(G)}\int_{G}F(f(t))\,\mathrm{d}t. \tag{4}\]
+
+_We say that \(f\) is the (spectral) symbol of the matrix-sequence \(\{A_{n}\}_{n}\)._
+
+**Remark 2.3**.: _Throughout the paper, when it is not of crucial importance to know what is the domain of \(f\), we replace the notation \(\{A_{n}\}_{n}\sim_{\lambda}(f,G)\) with \(\{A_{n}\}_{n}\sim_{\lambda}f\)._
+
+**Remark 2.4**.: _When \(f\) is continuous, an informal interpretation of the limit relation (4) is that when the matrix-size is sufficiently large, the eigenvalues of \(A_{n}\) can be approximated by a sampling of \(f\) on a uniform equispaced grid of the domain \(G\)._
+
+The following result allows us to determine the spectral distribution of a Hermitian matrix-sequence plus a correction (see [3]).
+
+**Theorem 2.5**.: _Let \(\{X_{n}\}_{n}\) and \(\{Y_{n}\}_{n}\) be two matrix-sequences, with \(X_{n},Y_{n}\in\mathbb{C}^{d_{n}\times d_{n}}\), and assume that_
+
+1. \(X_{n}\) _is Hermitian for all_ \(n\) _and_ \(\{X_{n}\}_{n}\sim_{\lambda}f\)_;_
+2. \(\|Y_{n}\|_{F}=o(\sqrt{d_{n}})\) _as_ \(n\to\infty\)_, with_ \(\|\cdot\|_{F}\) _the Frobenius norm._
+
+_Then, \(\{X_{n}+Y_{n}\}_{n}\sim_{\lambda}f\)._
+
+For a given matrix \(X\in\mathbb{C}^{m\times m}\), let us denote by \(\|X\|_{1,*}\) the trace norm defined by \(\|X\|_{1,*}:=\sum_{j=1}^{m}\sigma_{j}(X)\), where \(\sigma_{j}(X)\) are the \(m\) singular values of \(X\).
+
+**Corollary 2.6**.: _Let \(\{X_{n}\}_{n}\) and \(\{Y_{n}\}_{n}\) be two matrix-sequences, with \(X_{n},Y_{n}\in\mathbb{C}^{d_{n}\times d_{n}}\), and assume that (a) in Theorem 2.5 is satisfied. Moreover, assume that any of the following two conditions is met:_
+
+* \(\|Y_{n}\|_{1,*}=o(\sqrt{d_{n}})\)* \(\|Y_{n}\|_{2}=o(1)\), _with_ \(\|\cdot\|_{2}\) _the spectral norm._
+
+_Then, \(\{X_{n}+Y_{n}\}_{n}\sim_{\lambda}f\)._
+
+**Remark 2.7**.: _In [3] the authors conjecture that Theorem 2.5 is also valid when (b) is replaced by the weaker condition \(\|Y_{n}\|_{1,*}=o(d_{n})\)._
+
+We now recall the definition of Toeplitz sequences generated by univariate functions in \(L^{1}([-\pi,\pi])\).
+
+**Definition 2.8**.: _Let \(f\in L^{1}([-\pi,\pi])\) and let \(f_{k}\) be its Fourier coefficients,_
+
+\[f_{k}:=\frac{1}{2\pi}\int_{-\pi}^{\pi}f(\theta)\mathrm{e}^{-i(k\theta)}\, \mathrm{d}\theta,\quad k\in\mathbb{Z}. \tag{5}\]
+
+_The \(n\)-th Toeplitz matrix associated with \(f\) is the \(n\times n\) matrix defined by_
+
+\[T_{n}(f):=\begin{bmatrix}f_{0}&f_{-1}&\cdots&\cdots&f_{-(n-1)}\\ f_{1}&\ddots&\ddots&&\vdots\\ \vdots&\ddots&\ddots&\ddots&&\vdots\\ \vdots&&\ddots&\ddots&f_{-1}\\ f_{n-1}&\cdots&\cdots&f_{1}&f_{0}\end{bmatrix}\in\mathbb{C}^{n\times n}. \tag{6}\]
+
+_The matrix-sequence \(\{T_{n}(f)\}_{n}\) is called the Toeplitz sequence generated by \(f\)._
+
+For real-valued Toeplitz matrix-sequences, the following theorem holds (see, e.g., [17]).
+
+**Theorem 2.9**.: _Let \(f\in L^{1}([\pi,\pi])\) be a real-valued function. Then,_
+
+\[\{T_{n}(f)\}_{n}\sim_{\lambda}(f,[-\pi,\pi]).\]
+
+### B-splines and cardinal B-splines
+
+For \(p\geq 0\) and \(n\geq 1\), consider the following uniform knot sequence
+
+\[\xi_{1}=\cdots=\xi_{p+1}:=0<\xi_{p+2}<\cdots<\xi_{p+n}<1=:\xi_{p+n+1}=\cdots= \xi_{2p+n+1},\]
+
+where
+
+\[\xi_{i+p+1}:=\frac{i}{n},\quad i=0,\ldots,n.\]
+
+This knot sequence allows us to define \(n+p\) B-splines of degree \(p\).
+
+**Definition 2.10**.: _The B-splines of degree \(p\) over a uniform mesh of \([0,1]\), consisting of \(n\) intervals, are denoted by_
+
+\[N_{i}^{p}:[0,1]\to\mathbb{R},\quad i=1,\ldots,n+p,\]
+
+_and defined recursively as follows: for \(1\leq i\leq n+2p\),_
+
+\[N_{i}^{0}(x):=\begin{cases}1,&x\in[\xi_{i},\xi_{i+1}),\\ 0,&\text{otherwise};\end{cases}\]
+
+_for \(1\leq k\leq p\) and \(1\leq i\leq n+2p-k\),_
+
+\[N_{i}^{k}(x):=\frac{x-\xi_{i}}{\xi_{i+k}-\xi_{i}}N_{i}^{k-1}(x)+\frac{\xi_{i+ k+1}-x}{\xi_{i+k+1}-\xi_{i+1}}N_{i+1}^{k-1}(x),\]
+
+_where a fraction with zero denominator is assumed to be zero._
+
+It is well known that the B-splines \(N_{i}^{p}\), \(i=1,\ldots,n+p\), are linearly independent and they enjoy the following list of properties (see, e.g., [5, 23]).
+
+* Local support: \[\operatorname{supp}(N_{i}^{p})=[\xi_{i},\xi_{i+p+1}],\quad i=1,\ldots,n+p;\] (7)
+* Smoothness: \[N_{i}^{p}\in\mathcal{C}^{p-1}(0,1),\quad i=1,\ldots,n+p;\]
+* Differentiation: \[\left(N_{i}^{p}(x)\right)^{\prime}=p\left(\frac{N_{i}^{p-1}(x)}{\xi_{i+p}- \xi_{i}}-\frac{N_{i+1}^{p-1}(x)}{\xi_{i+p+1}-\xi_{i+1}}\right),\quad i=1, \ldots,n+p,\quad p\geq 1;\] (8)
+* Non-negative partition of unity: \[N_{i}^{p}(x)\geq 0,\quad i=1,\ldots,n+p,\qquad\sum_{i=1}^{n+p}N_{i}^{p}(x)=1;\]
+* Vanishing at the boundary: \[N_{i}^{p}(0)=N_{i}^{p}(1)=0,\quad i=2,\ldots,n+p-1;\] (9)
+* Bound for the second derivatives: \[|(N_{i}^{p}(x))^{\prime\prime}|\leq 4p(p-1)n^{2},\quad x\in(0,1).\] (10)
+
+We also add a property concerning fractional derivatives, which follows from (3) and (8)-(9).
+
+* The Riemann-Liouville and the Caputo derivatives of interior B-splines coincide: \[\begin{smallmatrix}R\hskip-5.690551ptD_{x}^{\alpha}N_{i}^{p}=\hskip-5.690551ptC _{0}^{\alpha}N_{i}^{p}\\ \hskip-5.690551ptR\hskip-5.690551ptD_{x}^{\alpha}D_{1}^{\alpha}N_{i}^{p}= \hskip-5.690551ptC_{x}^{\alpha}N_{i}^{p}\end{smallmatrix},\quad i=m+1,\ldots,n +p-m.\] (11)
+
+From now onwards, we will denote the left and right Riemann-Liouville derivatives simply by \({}_{0}D_{x}^{\alpha}\) and \({}_{x}D_{1}^{\alpha}\). In view of the last B-spline property, these also stand for the left and right Caputo derivatives in case of interior B-splines.
+
+The B-splines \(N_{i}^{p}\), \(i=p+1,\ldots,n\), are uniformly shifted and scaled versions of a single shape function, the so-called cardinal B-spline \(\phi_{p}:\mathbb{R}\rightarrow\mathbb{R}\),
+
+\[\phi_{0}(t):=\begin{cases}1,&t\in[0,1),\\ 0,&\text{otherwise},\end{cases} \tag{12}\]
+
+and
+
+\[\phi_{p}(t):=\frac{t}{p}\phi_{p-1}(t)+\frac{p+1-t}{p}\phi_{p-1}(t-1),\quad p \geq 1. \tag{13}\]
+
+More precisely, we have
+
+\[N_{i}^{p}(x)=\phi_{p}(nx-i+p+1),\quad i=p+1,\ldots,n,\]
+
+and
+
+\[\left(N_{i}^{p}(x)\right)^{\prime}=n\phi_{p}^{\prime}(nx-i+p+1),\quad i=p+1, \ldots,n.\]
+
+The cardinal B-spline \(\phi_{p}\) belongs to \(\mathcal{C}^{p-1}(\mathbb{R})\) and is supported on the interval \([0,p+1]\). It is a symmetric function with respect to \(\frac{p+1}{2}\), the midpoint of its support. The left Caputo derivative of \(\phi_{p}\) has the following explicit expression (see [33]):
+
+\[{}_{0}D_{t}^{\alpha}\phi_{p}(t)=\frac{1}{\Gamma(p-\alpha+1)}\sum_{j=0}^{p+1}(- 1)^{j}\binom{p+1}{j}(t-j)_{+}^{p-\alpha},\quad 0\leq\alpha<p, \tag{14}\]
+
+where \((\cdot)_{+}^{q}\) is the truncated power function of degree \(q\). Note that the function in (14) is a fractional spline, i.e., a spline with fractional degree [38]. For other common properties of cardinal B-splines, we refer the reader to [15, Section 3.1].
+
+Fractional derivatives of cardinal B-splines
+
+The aim of this section is to write the fractional derivative of a cardinal B-spline as the inner product of fractional derivatives of cardinal B-splines (see Theorem 3.3). This result will be used in Section 5 to derive an explicit expression of the symbol of the coefficient matrices of interest.
+
+All the results in this section refer to fractional derivatives on the half-axes. More precisely, for a given compactly supported function \(u\) with absolutely continuous \((m-1)\)-th derivative on \(\mathbb{R}\), we consider
+
+\[\begin{split}{}_{-\infty}D^{\alpha}_{x}u(x)&:=\frac{ 1}{\Gamma(m-\alpha)}\frac{\mathrm{d}^{m}}{\mathrm{d}x^{m}}\int_{-\infty}^{x}( x-y)^{m-\alpha-1}u(y)\,\mathrm{d}y,\\ {}_{x}D^{\alpha}_{+\infty}u(x)&:=\frac{(-1)^{m}}{ \Gamma(m-\alpha)}\frac{\mathrm{d}^{m}}{\mathrm{d}x^{m}}\int_{x}^{+\infty}(y-x )^{m-\alpha-1}u(y)\,\mathrm{d}y,\end{split} \tag{15}\]
+
+with \(m\) the integer such that \(m-1\leq\alpha<m\). For functions \(u\) that are solutions of problem (1) and \(m=2\), these derivatives reduce to \({}_{0}D^{\alpha}_{x}u(x)\) and \({}_{x}D^{\alpha}_{1}u(x)\) since the adopted boundary conditions ensure \(u\) to be identically zero on \(\mathbb{R}\backslash(0,1)\).
+
+Let \(\widehat{f}\) denote the Fourier transform of \(f\in L_{2}(\mathbb{R})\), i.e.,
+
+\[\widehat{f}(\theta):=\int_{\mathbb{R}}f(x)\mathrm{e}^{-\imath\,\theta x}\, \mathrm{d}x.\]
+
+We start with a lemma addressing the Fourier transform of the derivatives in (15) for cardinal B-splines.
+
+**Lemma 3.1**.: _Let \(\phi_{p}\) be the cardinal B-spline as defined in (12)-(13). Then, for \(0\leq\alpha<p\) we have_
+
+\[\widehat{-\infty D^{\alpha}_{x}}\phi_{p}(\theta)=(\imath\theta)^{\alpha} \left(\frac{1-\mathrm{e}^{-\imath\theta}}{\imath\theta}\right)^{p+1}, \tag{16}\]
+
+_and_
+
+\[\widehat{{}_{x}D^{\alpha}_{+\infty}\phi_{p}}(\theta)=(-\imath\theta)^{\alpha} \left(\frac{1-\mathrm{e}^{-\imath\theta}}{\imath\theta}\right)^{p+1}. \tag{17}\]
+
+Proof.: From [35] we know that
+
+\[\widehat{-\infty D^{\alpha}_{x}}f(\theta)=(\imath\theta)^{\alpha}\widehat{f}( \theta),\quad\widehat{{}_{x}D^{\alpha}_{+\infty}f}(\theta)=(-\imath\theta)^{ \alpha}\widehat{f}(\theta),\]
+
+and from [8, 23],
+
+\[\widehat{\phi_{p}}(\theta)=\left(\frac{1-\mathrm{e}^{-\imath\theta}}{\imath \theta}\right)^{p+1}.\]
+
+Combining these results immediately gives (16) and (17). 
+
+In the following \(\alpha_{1},\alpha_{2}\) stand for real numbers.
+
+**Lemma 3.2**.: _Let \(\overline{z}\) denote the conjugate of the complex number \(z\). Then, for any real number \(\theta\) we have_
+
+\[(\imath\theta)^{\alpha_{1}}\overline{(-\imath\theta)^{\alpha_{2}}}=(\imath \theta)^{\alpha_{1}+\alpha_{2}}.\]
+
+Proof.: Let us consider the polar form of the complex number \((\imath\theta)^{\alpha}\), i.e.,
+
+\[(\imath\theta)^{\alpha}=|\theta|^{\alpha}\mathrm{e}^{\imath\,\overline{z} \operatorname{sign}(\theta)\alpha}.\]
+
+Hence,
+
+\[(\imath\theta)^{\alpha_{1}}\overline{(-\imath\theta)^{\alpha_{2}}}=|\theta|^{ \alpha_{1}}\mathrm{e}^{\imath\,\overline{z}\operatorname{sign}(\theta)\alpha _{1}}|\theta|^{\alpha_{2}}\mathrm{e}^{\imath\,\overline{z}\operatorname{sign}( \theta)\alpha_{2}}=|\theta|^{\alpha_{1}+\alpha_{2}}\mathrm{e}^{\imath\, \overline{z}\operatorname{sign}(\theta)(\alpha_{1}+\alpha_{2})},\]
+
+which completes the proof.
+
+We are now ready for the main result of this section.
+
+**Theorem 3.3**.: _Let \(\phi_{p}\) be the cardinal B-spline as defined in (12)-(13). Then, for \(0\leq\alpha_{1}<p_{1}\) and \(0\leq\alpha_{2}<p_{2}\) we have_
+
+\[\int_{\mathbb{R}}{}_{-\infty}\!D_{x}^{\alpha_{1}}\phi_{p_{1}}(x)\, _{x}\!D_{+\infty}^{\alpha_{2}}\phi_{p_{2}}(x+k)\,\mathrm{d}x={}_{-\infty}\!D_{ x}^{\alpha_{1}+\alpha_{2}}\phi_{p_{1}+p_{2}+1}(p_{2}+1-k), \tag{18}\] \[\int_{\mathbb{R}}{}_{x}\!D_{+\infty}^{\alpha_{1}}\phi_{p_{1}}(x)\, _{-\infty}\!D_{x}^{\alpha_{2}}\phi_{p_{2}}(x+k)\,\mathrm{d}x={}_{x}\!D_{+ \infty}^{\alpha_{1}+\alpha_{2}}\phi_{p_{1}+p_{2}+1}(p_{2}+1-k). \tag{19}\]
+
+Proof.: We first recall the Parseval identity for Fourier transforms, i.e.,
+
+\[\int_{\mathbb{R}}\varphi(x)\overline{\psi(x)}\,\mathrm{d}x=\frac{1}{2\pi}\int _{\mathbb{R}}\widehat{\varphi}(\theta)\overline{\widehat{\psi}(\theta)}\, \mathrm{d}\theta,\quad\varphi,\,\psi\in L_{2}(\mathbb{R}),\]
+
+and the translation property of the Fourier transform, i.e.,
+
+\[\widehat{\psi(\cdot+k)}(\theta)=\widehat{\psi(\theta)}\,\mathrm{e}^{\mathrm{ i}k\theta},\quad\psi\in L_{1}(\mathbb{R}),\ k\in\mathbb{R}.\]
+
+Starting from the above equalities, and using Lemmas 3.1 and 3.2, we get
+
+\[\int_{\mathbb{R}}{}_{-\infty}\!D_{x}^{\alpha_{1}}\phi_{p_{1}}(x) \,_{x}\!D_{+\infty}^{\alpha_{2}}\phi_{p_{2}}(x+k)\,\mathrm{d}x\] \[\quad=\frac{1}{2\pi}\int_{\mathbb{R}}{}_{-\infty}\!\widehat{ \mathcal{D}_{x}^{\alpha_{1}}}\!\widehat{\phi}_{p_{1}}(\theta)\,_{x}\!\widehat {\overline{D_{+\infty}^{\alpha_{2}}}\!\widehat{\phi}_{p_{2}}(\theta)\mathrm{e} ^{\mathrm{i}k\theta}}\,\mathrm{d}\theta\] \[\quad=\frac{1}{2\pi}\int_{\mathbb{R}}(\theta)^{\alpha_{1}+\alpha_ {2}}\left(\frac{1-\mathrm{e}^{-\mathrm{i}\theta}}{\mathrm{i}\theta}\right)^{p _{1}+1}\left(\frac{\mathrm{e}^{\mathrm{i}\theta}-1}{\mathrm{i}\theta}\right)^ {p_{2}+1}\mathrm{e}^{-\mathrm{i}k\theta}\,\mathrm{d}\theta\] \[\quad=\frac{1}{2\pi}\int_{\mathbb{R}}(\theta)^{\alpha_{1}+\alpha_ {2}}\left(\frac{1-\mathrm{e}^{-\mathrm{i}\theta}}{\mathrm{i}\theta}\right)^{ p_{1}+p_{2}+2}\mathrm{e}^{\mathrm{i}(p_{2}+1-k)\theta}\,\mathrm{d}\theta.\]
+
+By taking the inverse Fourier transform of the right-hand side we arrive at (18). The proof of (19) is analogous. 
+
+**Remark 3.4**.: _Theorem 3.3 is a generalization of a known explicit formula for inner products of integer derivatives of cardinal B-splines (see [15, 23] and also [36])._
+
+## 4 IgA collocation discretization of the fractional Riesz operator
+
+From now onwards, we assume that \(\alpha\) is fixed in the open interval \((1,2)\). Let \(\mathcal{W}\) be a finite dimensional vector space of sufficiently smooth functions defined on the closure of \(\Omega\) and vanishing at its boundary, and let \(N:=\dim(\mathcal{W})\). Applying the collocation method to (1) means looking for a function \(u_{\mathcal{W}}\in\mathcal{W}\) such that
+
+\[\frac{\mathrm{d}^{\alpha}u_{\mathcal{W}}(x_{i})}{\mathrm{d}|x|^{\alpha}}=s(x_{ i}),\quad i=1,\ldots,N, \tag{20}\]
+
+with \(x_{i}\in\Omega\), the so-called collocation points. Given a basis \(\{\varphi_{j}:j=1,\ldots,N\}\) of \(\mathcal{W}\), problem (20) can be rewritten in matrix form as follows:
+
+\[A_{\mathrm{col}}\mathbf{u}=\mathbf{b}_{\mathrm{col}},\]
+
+with
+
+\[A_{\mathrm{col}}:=\left[\frac{1}{2\cos(\pi\alpha/2)}({}_{0}D_{x}^{\alpha}+{}_{ x}D_{1}^{\alpha})\varphi_{j}(x_{i})\right]_{i,j=1}^{N},\quad\mathbf{b}_{\mathrm{ col}}:=[s(x_{i})]_{i=1}^{N},\]
+
+and \(\mathbf{u}:=[u_{1},\ldots,u_{N}]^{T}\) such that \(u_{\mathcal{W}}(x)=\sum_{j=1}^{N}u_{j}\varphi_{j}(x)\). In this paper, we choose \(\mathcal{W}\) as the space of splines of degree \(p\geq 2\) that vanish at the boundary, and the collocation points as the Greville abscissae. More precisely, we take * the approximation space as the space spanned by the B-splines of degree \(p\geq 2\) that are zero at the boundary (see (9)), i.e., \[\mathbb{S}_{n}^{p}:=\text{span}\{N_{i}^{p}:i=2,\ldots,n+p-1\};\] (21)
+* the collocation points as the Greville abscissae corresponding to the B-splines in (21), i.e., \[\eta_{i}:=\frac{\xi_{i+1}+\cdots+\xi_{i+p}}{p},\quad i=2,\ldots,n+p-1.\]
+
+Thus (20) translates in the following linear system
+
+\[A_{n}^{p,\alpha}\mathbf{u}_{n}=\mathbf{b}_{n},\]
+
+where
+
+\[A_{n}^{p,\alpha}:=\frac{1}{2\cos(\pi\alpha/2)}(A_{n}^{L}+A_{n}^{R}),\quad \mathbf{b}_{n}:=[\text{s}(\eta_{i+1})]_{i=1}^{n+p-2},\]
+
+with
+
+\[A_{n}^{L}:=\left[{}_{0}D_{x}^{\alpha}N_{j+1}^{p}(\eta_{i+1})\right]_{i,j=1}^{n +p-2},\quad A_{n}^{R}:=\left[{}_{x}D_{1}^{\alpha}N_{j+1}^{p}(\eta_{i+1}) \right]_{i,j=1}^{n+p-2}, \tag{22}\]
+
+and \(\mathbf{u}_{n}:=[u_{1},\ldots,u_{n+p-2}]^{T}\), the vector of the coefficients of \(u\) with respect to the B-spline basis functions in the space \(\mathbb{S}_{n}^{p}\).
+
+In order to assemble the matrices \(A_{n}^{L}\) and \(A_{n}^{R}\), we need to compute the left and right fractional derivatives of any B-spline. By using (14), for the B-splines \(N_{i}^{p}\) corresponding to the indexes \(i=p+1,\ldots,n\), we have
+
+\[{}_{0}D_{x}^{\alpha}N_{i}^{p}(x) =n^{\alpha}\,{}_{0}D_{nx}^{\alpha}\phi_{p}(nx-i+p+1)\] \[=\frac{n^{\alpha}}{\Gamma(p-\alpha+1)}\sum_{j=0}^{p+1}(-1)^{j} \binom{p+1}{j}\left(nx-i+p+1-j\right)_{+}^{p-\alpha}.\]
+
+Thanks to this relation, and recalling that the Greville abscissae for \(i=p+1,\ldots,n\) reduce to
+
+\[\eta_{i}=\frac{i}{n}-\frac{p+1}{2n},\quad i=p+1,\ldots,n,\]
+
+or equivalently,
+
+\[n\eta_{i}+p+1=i+\frac{p+1}{2},\quad i=p+1,\ldots,n,\]
+
+we can immediately recognize that the central part of the matrix \(A_{n}^{L}\) corresponding to the indexes \(p+1,\ldots,n\) has a Toeplitz structure. In other words, we have
+
+\[A_{n}^{L}=n^{\alpha}(T_{n}^{L}+R_{n}^{L}),\]
+
+where
+
+\[T_{n}^{L}:=\left[{}_{0}D_{nx}^{\alpha}\phi_{p}\left(\frac{p+1}{2}+i-j\right) \right]_{i,j=1}^{n+p-2},\]
+
+and \(R_{n}^{L}\) is a matrix whose rank is bounded by \(4(p-1)\). A similar reasoning can be applied to the matrix \(A_{n}^{R}\), and we have
+
+\[A_{n}^{R}=n^{\alpha}(T_{n}^{R}+R_{n}^{R}),\]
+
+where
+
+\[T_{n}^{R}:=\left[{}_{nx}D_{n}^{\alpha}\phi_{p}\left(\frac{p+1}{2}+i-j\right) \right]_{i,j=1}^{n+p-2},\]
+
+and \(R_{n}^{R}\) is a matrix whose rank is bounded by \(4(p-1)\). As a consequence, the coefficient matrix \(A_{n}^{p,\alpha}\) inherits the Toeplitz plus rank correction structure and can be written as follows:
+
+\[A_{n}^{p,\alpha}=\frac{1}{2\cos(\pi\alpha/2)}(A_{n}^{L}+A_{n}^{R})=n^{\alpha}( T_{n}^{p,\alpha}+R_{n}^{p,\alpha}), \tag{23}\]with
+
+\[T_{n}^{p,\alpha}:=\frac{1}{2\cos(\pi\alpha/2)}(T_{n}^{L}+T_{n}^{R}),\quad R_{n}^{p, \alpha}:=\frac{1}{2\cos(\pi\alpha/2)}(R_{n}^{L}+R_{n}^{R}). \tag{24}\]
+
+In Section 6 we will show that the symbol of \(\{n^{-\alpha}A_{n}^{p,\alpha}\}_{n}\) coincides with the symbol of \(\{T_{n}^{p,\alpha}\}_{n}\), denoted by \(f^{p,\alpha}\), but first we discuss some properties of this function in the next section.
+
+## 5 Properties of the function \(f^{p,\alpha}\)
+
+We start with a theorem that provides an explicit expression of the generating function \(f^{p,\alpha}\) of the Toeplitz matrix \(T_{n}^{p,\alpha}\), and whose proof uses the results obtained in Section 3.
+
+**Theorem 5.1**.: _Let \(T_{n}^{p,\alpha}\) be defined as in (24). Then, \(T_{n}^{p,\alpha}=T_{n+p-2}(f^{p,\alpha})\) with_
+
+\[f^{p,\alpha}(\theta)=\sum_{l\in\mathbb{Z}}|\theta+2l\pi|^{\alpha}\left(\frac{ \sin(\theta/2+l\pi)}{\theta/2+l\pi}\right)^{p+1}. \tag{25}\]
+
+Proof.: From its construction it is clear that \(T_{n}^{p,\alpha}\) is a Toeplitz matrix of dimension \(n+p-2\). According to the definition in (6), the entries \(f_{k}\) of this matrix are given by
+
+\[f_{k}=\frac{1}{2\cos(\pi\alpha/2)}\left({}_{-\infty}D_{x}^{\alpha}\phi_{p} \left(\frac{p+1}{2}-k\right)+{}_{x}D_{+\infty}^{\alpha}\phi_{p}\left(\frac{p+ 1}{2}-k\right)\right).\]
+
+We differentiate the cases of odd and even degree \(p\). We start by proving the expression (25) of the generating function \(f^{p,\alpha}\) for \(p=2q+1\). Using Theorem 3.3 (and its proof) with \(\alpha=\alpha_{1}+\alpha_{2}\) and \(q=p_{1}=p_{2}\), we have
+
+\[2\cos(\pi\alpha/2)f_{k} ={}_{-\infty}D_{x}^{\alpha}\phi_{2q+1}\left(q+1-k\right)+{}_{x}D _{+\infty}^{\alpha}\phi_{2q+1}\left(q+1-k\right)\] \[=\frac{1}{2\pi}\int_{\mathbb{R}}\left[(\mathrm{i}\theta)^{\alpha }+(-\mathrm{i}\theta)^{\alpha}\right]\left(\frac{1-\mathrm{e}^{-\mathrm{i} \theta}}{\mathrm{i}\theta}\right)^{q+1}\left(\frac{\mathrm{e}^{\mathrm{i} \theta}-1}{\mathrm{i}\theta}\right)^{q+1}\mathrm{e}^{-\mathrm{i}k\theta}\, \mathrm{d}\theta\] \[=\frac{1}{2\pi}\int_{\mathbb{R}}2|\theta|^{\alpha}\cos(\pi\alpha /2)\left|\frac{1-\mathrm{e}^{-\mathrm{i}\theta}}{\theta}\right|^{2q+2}\mathrm{ e}^{-\mathrm{i}k\theta}\,\mathrm{d}\theta.\]
+
+Set
+
+\[w(\theta):=|\theta|^{\alpha}\left|\frac{1-\mathrm{e}^{-\mathrm{i}\theta}}{ \theta}\right|^{2q+2}=|\theta|^{\alpha}\left(\frac{\sin(\theta/2)}{\theta/2} \right)^{2q+2}.\]
+
+Then,
+
+\[f_{k} =\frac{1}{2\pi}\int_{\mathbb{R}}w(\theta)\mathrm{e}^{-\mathrm{i} k\theta}\,\mathrm{d}\theta=\sum_{l\in\mathbb{Z}}\frac{1}{2\pi}\int_{(2l-1)\pi}^{(2l+1) \pi}w(\theta)\mathrm{e}^{-\mathrm{i}k\theta}\,\mathrm{d}\theta\] \[=\sum_{l\in\mathbb{Z}}\frac{1}{2\pi}\int_{-\pi}^{\pi}w(\theta+2l \pi)\mathrm{e}^{-\mathrm{i}k\theta}\,\mathrm{d}\theta=\frac{1}{2\pi}\int_{- \pi}^{\pi}\left[\sum_{l\in\mathbb{Z}}w(\theta+2l\pi)\right]\mathrm{e}^{- \mathrm{i}k\theta}\,\mathrm{d}\theta.\]
+
+The expression (25) of the generating function \(f^{p,\alpha}\) follows from (5) for \(p=2q+1\).
+
+Now we consider even degree \(p=2q\). Using again Theorem 3.3 (and its proof) with \(\alpha=\alpha_{1}+\alpha_{2}\) and \(q=p_{1}+1=p_{2}\), we have
+
+\[2\cos(\pi\alpha/2)f_{k} ={}_{-\infty}D_{x}^{\alpha}\phi_{2q}\left(q+1-k-1/2\right)+{}_{x}D _{+\infty}^{\alpha}\phi_{2q}\left(q+1-k-1/2\right)\] \[=\frac{1}{2\pi}\int_{\mathbb{R}}\left[(\mathrm{i}\theta)^{\alpha }+(-\mathrm{i}\theta)^{\alpha}\right]\left(\frac{1-\mathrm{e}^{-\mathrm{i} \theta}}{\mathrm{i}\theta}\right)^{q}\left(\frac{\mathrm{e}^{\mathrm{i} \theta}-1}{\mathrm{i}\theta}\right)^{q+1}\mathrm{e}^{-\mathrm{i}(k+1/2)\theta }\,\mathrm{d}\theta\] \[=\frac{1}{2\pi}\int_{\mathbb{R}}2|\theta|^{\alpha}\cos(\pi\alpha /2)\left|\frac{1-\mathrm{e}^{-\mathrm{i}\theta}}{\theta}\right|^{2q}\left( \frac{\mathrm{e}^{\mathrm{i}\theta/2}-\mathrm{e}^{-\mathrm{i}\theta/2}}{ \mathrm{i}\theta}\right)\mathrm{e}^{-\mathrm{i}k\theta}\,\mathrm{d}\theta.\]Here,
+
+\[w(\theta):=|\theta|^{\alpha}\left|\frac{1-\mathrm{e}^{-\imath\theta}}{\theta} \right|^{2q}\left(\frac{\mathrm{e}^{\imath\theta/2}-\mathrm{e}^{-\imath\theta/ 2}}{\imath\theta}\right)=|\theta|^{\alpha}\left(\frac{\sin(\theta/2)}{\theta/ 2}\right)^{2q+1}.\]
+
+Following then a similar argument as in the odd degree case, we arrive at the expression (25) of the generating function \(f^{p,\alpha}\) for \(p=2q\). 
+
+**Remark 5.2**.: _The proof of Theorem 5.1 remains valid for \(\alpha\in[0,1)\cup(1,2]\)._
+
+Starting from (25) and applying the same line of arguments as in the proofs of [10, Lemmas 3.4 and 3.6], we obtain the following results for \(f^{p,\alpha}(\theta)\).
+
+**Theorem 5.3**.: _Let \(f^{p,\alpha}\) be as in (25). Then, \(f^{p,\alpha}(\theta)=f^{p,\alpha}(-\theta)\), and for \(p>\alpha\),_
+
+\[|\theta|^{\alpha}\left(\frac{\sin(\theta/2)}{\theta/2}\right)^{p+1}\leq f^{p, \alpha}(\theta)\leq|\theta|^{\alpha}\left(\frac{\sin(\theta/2)}{\theta/2} \right)^{p+1}+C_{p,\alpha}\left(\sin(\theta/2)\right)^{p+1}, \tag{26}\]
+
+_where \(C_{p,\alpha}\) is a constant depending on \(p\) and \(\alpha\) and \(\theta\in[0,\pi]\). Moreover,_
+
+\[\frac{f^{p,\alpha}(\pi)}{\max_{\theta}f^{p,\alpha}(\theta)}\leq\frac{f^{p, \alpha}(\pi)}{f^{p,\alpha}(\pi/2)}\leq 2^{\frac{2\alpha+1-p}{2}}. \tag{27}\]
+
+From the bounds in (26) we can immediately deduce the vanishing properties of \(f^{p,\alpha}\).
+
+**Corollary 5.4**.: _Let \(f^{p,\alpha}\) be as in (25). Then, \(f^{p,\alpha}\) is non-negative for \(\theta\in[-\pi,\pi]\), and it only vanishes at \(\theta=0\) where it has a zero of order \(\alpha\)._
+
+Let \(\tilde{f}^{p,\alpha}:=f^{p,\alpha}/\max_{\theta}f^{p,\alpha}(\theta)\) be the normalized version of \(f^{p,\alpha}\). The inequality in (27) shows that \(\tilde{f}^{p,\alpha}(\theta)\) converges exponentially to zero at \(\theta=\pm\pi\) for increasing \(p\). Hence, we say that \(f^{p,\alpha}\) has a numerical zero at \(\pm\pi\) for large \(p\).
+
+**Remark 5.5**.: _The upper bound in (27) depends not only on \(p\) but also on \(\alpha\). In this view, the decay at \(\pm\pi\) of \(\tilde{f}^{p,\alpha}\) is expected to become faster as \(\alpha\) approaches 1._
+
+In the following propositions we bound \(f^{p,\alpha}(\theta)\) in terms of \(f^{p,0}(\theta)\) and \(f^{p,2}(\theta)\) for high enough value of \(|\theta|\).
+
+**Proposition 5.6**.: _For \(p\) odd, we have_
+
+\[f^{p,0}(\theta)\leq f^{p,\alpha}(\theta)\leq f^{p,2}(\theta),\quad|\theta| \in[1,\pi]. \tag{28}\]
+
+Proof.: Since
+
+\[1=|\theta+2l\pi|^{0}\leq|\theta+2l\pi|^{\alpha}\leq|\theta+2l\pi|^{2},\quad l \in\mathbb{Z},\quad|\theta|\geq 1,\]
+
+and
+
+\[\left(\frac{\sin(\theta/2+l\pi)}{\theta/2+l\pi}\right)^{2q+2}\geq 0,\quad l\in \mathbb{Z},\]
+
+it is clear from the definition of \(f^{p,\alpha}\) in (25) that (28) holds for \(p=2q+1\). 
+
+**Proposition 5.7**.: _For \(p\) even and \(p>\alpha\), we have_
+
+\[f^{p,0}(\theta)\leq f^{p,\alpha}(\theta),\quad|\theta|\in[a,\pi], \tag{29}\]
+
+_where_
+
+\[a:=\left(\frac{\pi^{4}}{48}\right)^{1/\alpha}.\]Proof.: Let \(p=2q>\alpha\). It is easy to check that
+
+\[f^{p,\alpha}(\theta)=|\theta|^{\alpha}\left(\frac{\sin(\theta/2)}{\theta/2} \right)^{p+1}+\left(2\sin(\theta/2)\right)^{p+1}r^{p,\alpha}(\theta),\]
+
+where
+
+\[r^{p,\alpha}(\theta):=\sum_{k=1}^{\infty}(-1)^{k}\left[\frac{1}{(2k\pi+\theta) ^{p+1-\alpha}}-\frac{1}{(2k\pi-\theta)^{p+1-\alpha}}\right].\]
+
+With the same line of arguments as in the proof of [10, Lemma A.2] we deduce that \(r^{p,\alpha}(\theta)\) is a strictly increasing function, which implies that \(r^{p,\alpha}(\pi)\geq r^{p,\alpha}(\theta)>r^{p,\alpha}(0)=0\) for \(\theta\in(0,\pi]\). Moreover, from the same lemma we know
+
+\[r^{p,0}(\theta)\leq\left(\frac{\pi^{4}}{48}-1\right)\frac{1}{\pi^{p+1}},\quad \theta\in[0,\pi].\]
+
+From the above bounds we get
+
+\[f^{p,\alpha}(\theta)-f^{p,0}(\theta) =\left(|\theta|^{\alpha}-1\right)\left(\frac{\sin(\theta/2)}{ \theta/2}\right)^{p+1}+\left(2\sin(\theta/2)\right)^{p+1}\left(r^{p,\alpha}( \theta)-r^{p,0}(\theta)\right)\] \[\geq\left(2\sin(\theta/2)\right)^{p+1}\left[\frac{|\theta|^{ \alpha}-1}{\theta^{p+1}}-\left(\frac{\pi^{4}}{48}-1\right)\frac{1}{\pi^{p+1}}\right]\] \[\geq\left(\frac{2\sin(\theta/2)}{\pi}\right)^{p+1}\left[|\theta| ^{\alpha}-1-\left(\frac{\pi^{4}}{48}-1\right)\right],\]
+
+for \(\theta\in[1,\pi]\). Hence,
+
+\[f^{p,\alpha}(\theta)-f^{p,0}(\theta)\geq 0,\quad\theta\geq\left(\frac{\pi^{4}}{48} \right)^{1/\alpha},\]
+
+which concludes the proof. 
+
+In our final proposition we explicitly state that \(f^{p,\alpha}\) is the symbol of the matrix-sequence \(\{T_{n}^{p,\alpha}\}_{n}\).
+
+**Proposition 5.8**.: _The Toeplitz matrix \(T_{n}^{p,\alpha}\) defined in (24) is symmetric and_
+
+\[\{T_{n}^{p,\alpha}\}_{n}\sim_{\lambda}(f^{p,\alpha},[-\pi,\pi]), \tag{30}\]
+
+_where \(f^{p,\alpha}\) is given in (25)._
+
+Proof.: From Theorem 5.3 we know that \(f^{p,\alpha}\) is an even real-valued function, so the matrix \(T_{n}^{p,\alpha}=T_{n+p-2}(f^{p,\alpha})\) is symmetric. The spectral distribution of \(\{T_{n}^{p,\alpha}\}_{n}=\{T_{n+p-2}(f^{p,\alpha})\}_{n}\) follows from Theorem 2.9. 
+
+We end this section by summarizing all the discussed properties of the symbol \(f^{p,\alpha}\) and highlighting what is their role in the design of an ad hoc solver for a linear system associated with \(T_{n}^{p,\alpha}\) (see Remark 5.9). We have shown that \(f^{p,\alpha}\) is equipped with the following three properties:
+
+* it has a single zero at \(0\) of order \(\alpha\) (Corollary 5.4);
+* it presents an exponential decay to zero at \(\pi\) for increasing \(p\) that becomes faster as \(\alpha\) approaches \(1\) (Theorem 5.3 and Remark 5.5);
+* it is bounded in the proximity of \(\pi\) by \(f^{p,0}\) (Propositions 5.6 and 5.7).
+
+Properties (a)-(b) give us a clear picture of what are the conditioning peculiarities of the matrix \(T_{n}^{p,\alpha}\). Specifically, they say that \(T_{n}^{p,\alpha}\) is poorly conditioned both in the low frequencies (with a conditioning that grows as \(n^{\alpha}\)) and in the high frequencies (with a deterioration that is driven both by \(p\) and \(\alpha\)). Moreover, property (c) "isolates" the source of ill-conditioning in the high frequencies induced by \(p\), meaning the symbol behaves like \(f^{p,0}\) in the proximity of \(\pi\), with \(f^{p,0}\) a positive function well-separated from zero.
+
+**Remark 5.9**.: _Based on what has been done in [9, 11, 12, 13], all this knowledge can be used for the design of an ad hoc solver for a linear system associated with \(T_{n}^{p,\alpha}\). For instance, from (a) we can infer that a multigrid method with a standard choice of both prolongator and restrictor is able to cope with the standard ill-conditioning in the low frequency subspace, while from (c) we get hints on how to define a smoother that works in the subspace of high frequencies where there exists the ill-conditioning induced by \(p\)._
+
+## 6 Spectral symbol of \(\{n^{-\alpha}A_{n}^{p,\alpha}\}_{n}\)
+
+This section is devoted to the computation of the symbol of the matrix-sequence \(\{n^{-\alpha}A_{n}^{p,\alpha}\}_{n}\). As we have already anticipated, it turns out that the symbol of \(\{n^{-\alpha}A_{n}^{p,\alpha}\}_{n}\) coincides with the symbol of the Toeplitz part \(\{T_{n}^{p,\alpha}\}_{n}\). The spectral distribution of \(\{n^{-\alpha}A_{n}^{p,\alpha}\}_{n}\) is given in Theorem 6.5. Its proof uses Corollary 2.6 and needs several preliminary results.
+
+For a given matrix \(X:=[x_{ij}]_{i,j=1}^{m}\in\mathbb{C}^{m\times m}\), we denote by \(\|X\|_{1}:=\max_{j=1,\ldots,m}\sum_{i=1}^{m}|x_{ij}|\) and \(\|X\|_{\infty}:=\max_{i=1,\ldots,m}\sum_{j=1}^{m}|x_{ij}|\), the induced \(1\)- and infinity-norm, respectively.
+
+**Lemma 6.1**.: _Let \(A_{n}^{L}\) be defined as in (22). For \(i,j=2,\ldots,n+p-1\) we have_
+
+\[|(A_{n}^{L})_{i-1,j-1}|\leq\begin{cases}0,&\eta_{i}\leq\xi_{j},\\ c_{p,\alpha}^{L}\,n^{\alpha},&\xi_{j}<\eta_{i}\leq\xi_{j+p+1}+\frac{1}{n},\\ c_{p,\alpha}^{L}\,(\eta_{i}-\xi_{j+p+1})^{-\alpha},&\xi_{j+p+1}+\frac{1}{n}< \eta_{i},\end{cases} \tag{31}\]
+
+_where \(c_{p,\alpha}^{L}\) is a constant depending on \(p\) and \(\alpha\)._
+
+Proof.: From the properties of fractional derivatives (2)-(3) and the B-spline properties (7)-(11) it follows that for \(j=2\),
+
+\[(A_{n}^{L})_{i-1,1}=\frac{1}{\Gamma(2-\alpha)}\int_{0}^{\min{(\eta_{i},\xi_{p +3})}}(\eta_{i}-y)^{1-\alpha}(N_{2}^{p})^{\prime\prime}(y)\,\mathrm{d}y+ \frac{pn}{\Gamma(2-\alpha)}(\eta_{i})^{1-\alpha}, \tag{32}\]
+
+and for \(j=3,\ldots,n+p-1\),
+
+\[(A_{n}^{L})_{i-1,j-1}=\begin{cases}0,&\eta_{i}\leq\xi_{j},\\ \frac{1}{\Gamma(2-\alpha)}\int_{\xi_{j}}^{\min{(\eta_{i},\xi_{j+p+1})}}( \eta_{i}-y)^{1-\alpha}(N_{j}^{p})^{\prime\prime}(y)\,\mathrm{d}y,&\text{ otherwise}.\end{cases} \tag{33}\]
+
+We remark that \(\eta_{i}\in(0,1)\), \(\eta_{i}<\eta_{i+1}\), and \(\xi_{j+p+1}-\xi_{j}\leq\frac{p+1}{n}\). In the following, we address the three different cases in (31) separately.
+
+If \(\eta_{i}\leq\xi_{j}\), then it is clear that \((A_{n}^{L})_{i-1,j-1}=0\) for \(j=3,\ldots,n+p-1\). Note that \(j=2\) is not involved in this case for any \(i\) because \(\xi_{2}=0<\eta_{i}\).
+
+If \(\xi_{j}<\eta_{i}\leq\xi_{j+p+1}+\frac{1}{n}\), then
+
+\[(\eta_{i}-y)\leq\frac{p+2}{n},\quad y\in[\xi_{j},\min{(\eta_{i},\xi_{j+p+1})}].\]
+
+Using (10), from (33) we get for \(j=3,\ldots,n+p-1\),
+
+\[|(A_{n}^{L})_{i-1,j-1}| \leq\frac{4p(p-1)n^{2}}{\Gamma(2-\alpha)}\int_{\xi_{j}}^{\min{(\eta _{i},\xi_{j+p+1})}}(\eta_{i}-y)^{1-\alpha}\,\mathrm{d}y\] \[\leq\frac{4p(p-1)n^{2}}{\Gamma(3-\alpha)}\left(\frac{p+2}{n} \right)^{2-\alpha}.\]
+
+When \(j=2\) we have \(\xi_{2}=0\) and \(\frac{1}{pn}=\eta_{2}\leq\eta_{i}\leq\xi_{p+3}+\frac{1}{n}\leq\frac{3}{n}\). Then, we find in a similar way that for \(j=2\),
+
+\[|(A_{n}^{L})_{i-1,1}|\leq\frac{4p(p-1)n^{2}}{\Gamma(3-\alpha)}\left(\frac{3}{n} \right)^{2-\alpha}+\frac{pn}{\Gamma(2-\alpha)}\left(\frac{1}{pn}\right)^{1- \alpha}.\]We now look at the case \(\xi_{j+p+1}+\frac{1}{n}<\eta_{i}\). This case can only happen for \(2\leq j<n\) because when \(j\geq n\) we have \(\xi_{j+p+1}=1>\eta_{i}\). Given \(y\in[\xi_{j},\xi_{j+p+1}]\), we consider the Taylor expansion of \((\eta_{i}-y)^{1-\alpha}\) at \(\xi_{j}\), producing
+
+\[(\eta_{i}-y)^{1-\alpha}=(\eta_{i}-\xi_{j})^{1-\alpha}-(1-\alpha)(\eta_{i}-\omega _{i,j}(y))^{-\alpha}(y-\xi_{j}), \tag{34}\]
+
+for some \(\omega_{i,j}(y)\in(\xi_{j},\xi_{j+p+1})\). Substituting (34) in (33) results in
+
+\[|(A^{L}_{n})_{i-1,j-1}| \leq\frac{1}{\Gamma(2-\alpha)}\left|(\eta_{i}-\xi_{j})^{1-\alpha} \int_{\xi_{j}}^{\xi_{j+p+1}}(N^{p}_{j})^{\prime\prime}(y)\,\mathrm{d}y\right|\] \[\quad+\frac{\alpha-1}{\Gamma(2-\alpha)}\int_{\xi_{j}}^{\xi_{j+p+1 }}(\eta_{i}-\omega_{i,j}(y))^{-\alpha}(y-\xi_{j})|(N^{p}_{j})^{\prime\prime}(y )|\,\mathrm{d}y.\]
+
+Observe that \((N^{p}_{j})^{\prime}(\xi_{j})=(N^{p}_{j})^{\prime}(\xi_{j+p+1})=0\) for \(3\leq j\leq n+p-2\), and \((\eta_{i}-\omega_{i,j}(y))>(\eta_{i}-\xi_{j+p+1})\). Then, recalling the bound in (10), we obtain for \(j=3,\ldots,n-1\),
+
+\[|(A^{L}_{n})_{i-1,j-1}| \leq\frac{1}{\Gamma(2-\alpha)}\left|(\eta_{i}-\xi_{j})^{1-\alpha} ((N^{p}_{j})^{\prime}(\xi_{j+p+1})-(N^{p}_{j})^{\prime}(\xi_{j}))\right|\] \[\quad+\frac{\alpha-1}{\Gamma(2-\alpha)}4p(p-1)n^{2}\int_{\xi_{j}} ^{\xi_{j+p+1}}(y-\xi_{j})\,\mathrm{d}y\,(\eta_{i}-\xi_{j+p+1})^{-\alpha}\] \[\leq\frac{\alpha-1}{\Gamma(2-\alpha)}2p(p-1)n^{2}\left(\frac{p+1} {n}\right)^{2}(\eta_{i}-\xi_{j+p+1})^{-\alpha}.\]
+
+Substituting (34) in (32) and observing that \((N^{p}_{2})^{\prime}(0)=np\), \((N^{p}_{2})^{\prime}(\xi_{p+3})=0\), we find with a similar argument that for \(j=2\),
+
+\[|(A^{L}_{n})_{i-1,1}| \leq\frac{1}{\Gamma(2-\alpha)}\left|(\eta_{i})^{1-\alpha}((N^{p}_{ 2})^{\prime}(\xi_{p+3})-(N^{p}_{2})^{\prime}(0))+np(\eta_{i})^{1-\alpha}\right|\] \[\quad+\frac{\alpha-1}{\Gamma(2-\alpha)}4p(p-1)n^{2}\int_{0}^{\xi_ {p+3}}y\,\mathrm{d}y\,(\eta_{i}-\xi_{j+3})^{-\alpha}\] \[\leq\frac{\alpha-1}{\Gamma(2-\alpha)}2p(p-1)n^{2}\left(\frac{2}{n }\right)^{2}(\eta_{i}-\xi_{j+3})^{-\alpha}.\]
+
+This concludes the proof. 
+
+**Lemma 6.2**.: _Let \(A^{L}_{n}\) be defined as in (22). We have_
+
+\[\|n^{-\alpha}A^{L}_{n}\|_{q}\leq C^{L}_{p,\alpha},\quad q\in\{1,2,\infty\},\]
+
+_where \(C^{L}_{p,\alpha}\) is a constant depending on \(p\) and \(\alpha\)._
+
+Proof.: We first consider the infinity-norm
+
+\[\|n^{-\alpha}A^{L}_{n}\|_{\infty}=n^{-\alpha}\max_{i=2\ldots,n+p-1}\sum_{j=2} ^{n+p-1}|(A^{L}_{n})_{i-1,j-1}|.\]
+
+The entries \(|(A^{L}_{n})_{i-1,j-1}|\), \(i,j=2,\ldots n+p-1\), can be bounded thanks to the results of Lemma 6.1. We observe that for any fixed \(i\),
+
+* the number of indices in \(\{j:\xi_{j}<\eta_{i}\leq\xi_{j+p+1}+\frac{1}{n}\}\) is bounded by \(p+2\);
+* for \(j=n,\ldots,n+p-1\) we have \(\xi_{j+p+1}=1\), thus either \(\eta_{i}\leq\xi_{j}\) or \(\xi_{j}<\eta_{i}\leq\xi_{j+p+1}+\frac{1}{n}\);
+* if \(\eta_{i}>\xi_{j+p+1}+\frac{1}{n}\), then \(2\leq j\leq n-1\) and \[\eta_{i}-\xi_{j+p+1}=\eta_{i}-\frac{j}{n}\geq\frac{\ell_{i,j}}{n},\]where \(\ell_{i,j}:=\lfloor n\eta_{i}-j\rfloor\). Note that \(\ell_{i,j}\geq 1\) and \(\ell_{i,j}=\ell_{i,j+1}+1\), so \[\sum_{j:\,\eta_{i}>\xi_{j+p+1}+\frac{1}{n}}(\ell_{i,j})^{-\alpha}\leq\sum_{\ell =1}^{\infty}\ell^{-\alpha}=\zeta(\alpha),\] with \(\zeta(\alpha)\) the Riemann zeta function evaluated at \(\alpha\). The series \(\sum_{\ell=1}^{\infty}\ell^{-\alpha}\) is convergent for \(\alpha\in(1,2)\). As a consequence, taking into account Lemma 6.1, for any fixed \(i\) we have \[n^{-\alpha}\sum_{j=2}^{n+p-1}|(A_{n}^{L})_{i-1,j-1}|\] \[\qquad\leq n^{-\alpha}\left[\sum_{j:\,\xi_{j}<\eta_{i}\leq\xi_{j +p+1}+\frac{1}{n}}|(A_{n}^{L})_{i-1,j-1}|+\sum_{j:\,\eta_{i}>\xi_{j+p+1}+\frac {1}{n}}|(A_{n}^{L})_{i-1,j-1}|\right]\] \[\qquad\leq n^{-\alpha}\,c_{p,\alpha}^{L}\left[(p+2)n^{\alpha}+ \sum_{j:\,\eta_{i}>\xi_{j+p+1}+\frac{1}{n}}\left(\frac{\ell_{i,j}}{n}\right)^{ -\alpha}\right]\] \[\qquad\leq c_{p,\alpha}^{L}\left[p+2+\zeta(\alpha)\right].\]
+
+The bound for the \(1\)-norm
+
+\[\|n^{-\alpha}A_{n}^{L}\|_{1}=n^{-\alpha}\max_{j=2,..,n+p-1}\,\sum_{i=2}^{n+p-1 }|(A_{n}^{L})_{i-1,j-1}|\]
+
+can be shown with a similar line of arguments, by observing that for any fixed \(j\),
+
+* the number of indices in \(\{i:\xi_{j}<\eta_{i}\leq\xi_{j+p+1}+\frac{1}{n}\}\) is bounded by \(2p\);
+* if \(\eta_{i}>\xi_{j+p+1}+\frac{1}{n}\), then \[\eta_{i}-\xi_{j+p+1}\geq\frac{\ell_{i,j}}{n},\] where \(\ell_{i,j}:=\lfloor n(\eta_{i}-\xi_{j+p+1})\rfloor\). Note that \(\ell_{i,j}\geq 1\) for all \(i\) and \(\ell_{i+1,j}=\ell_{i,j}+1\) for \(p+1\leq i\leq n-1\), so \[\sum_{i:\,\eta_{i}>\xi_{j+p+1}+\frac{1}{n}}(\ell_{i,j})^{-\alpha}\leq 2(p-1) +\sum_{\ell=1}^{\infty}\ell^{-\alpha}=2(p-1)+\zeta(\alpha).\]
+
+Finally, the bound for the spectral norm follows from the inequality
+
+\[\|n^{-\alpha}A_{n}^{L}\|_{2}\leq\sqrt{\|n^{-\alpha}A_{n}^{L}\|_{\infty}\|n^{- \alpha}A_{n}^{L}\|_{1}}\]
+
+and the above results for the infinity-norm and \(1\)-norm. 
+
+A similar reasoning to the one adopted in the previous lemmas brings us to the following result.
+
+**Lemma 6.3**.: _Let \(A_{n}^{R}\) be defined as in (22). We have_
+
+\[\|n^{-\alpha}A_{n}^{R}\|_{q}\leq C_{p,\alpha}^{R},\quad q\in\{1,2,\infty\},\]
+
+_where \(C_{p,\alpha}^{R}\) is a constant depending on \(p\) and \(\alpha\)._
+
+**Lemma 6.4**.: _Let \(R_{n}^{p,\alpha}\) be defined as in (24). We have_
+
+\[\|R_{n}^{p,\alpha}\|_{2},\,\|R_{n}^{p,\alpha}\|_{1,*}\leq\widetilde{C}_{p, \alpha},\]
+
+_where \(\widetilde{C}_{p,\alpha}\) is a constant depending on \(p\) and \(\alpha\)._Proof.: The relation in (23) implies
+
+\[\|R_{n}^{p,\alpha}\|_{2}=\|n^{-\alpha}A_{n}^{p,\alpha}-T_{n}^{p,\alpha}\|_{2}\leq \|n^{-\alpha}A_{n}^{p,\alpha}\|_{2}+\|T_{n}^{p,\alpha}\|_{2},\]
+
+and we recall from Section 5 that
+
+\[\|T_{n}^{p,\alpha}\|_{2}=\|T_{n+p-2}(f^{p,\alpha})\|_{2}\leq\|f^{p,\alpha}\|_{ \infty}<+\infty.\]
+
+Then, by Lemmas 6.2 and 6.3, we arrive at
+
+\[\|R_{n}^{p,\alpha}\|_{2}\leq\frac{1}{2\cos(\pi\alpha/2)}(C_{p,\alpha}^{L}+C_{p,\alpha}^{R})+\|f^{p,\alpha}\|_{\infty}.\]
+
+In addition, \(\|R_{n}^{p,\alpha}\|_{1,*}\leq\mathrm{rank}(R_{n}^{p,\alpha})\|R_{n}^{p,\alpha }\|_{2}\) and \(\mathrm{rank}(R_{n}^{p,\alpha})\leq 4(p-1)\). This completes the proof. 
+
+We are now in a position to discuss the spectral distribution of \(\{n^{-\alpha}A_{n}^{p,\alpha}\}_{n}\).
+
+**Theorem 6.5**.: _Given \(\{n^{-\alpha}A_{n}^{p,\alpha}\}_{n}\) with \(A_{n}^{p,\alpha}\) as in (23), we have_
+
+\[\{n^{-\alpha}A_{n}^{p,\alpha}\}_{n}\sim_{\lambda}(f^{p,\alpha},[-\pi,\pi]), \tag{35}\]
+
+_where \(f^{p,\alpha}\) is given in (25)._
+
+Proof.: We prove this result by applying Corollary 2.6 with \(X_{n}=T_{n}^{p,\alpha}\) and \(Y_{n}=R_{n}^{p,\alpha}\). We first note that, because of Proposition 5.8, condition (a) of Theorem 2.5 is satisfied. The other conditions in Corollary 2.6 hold by Lemma 6.4, which proves the result (35). 
+
+**Remark 6.6**.: _Thanks to Theorem 6.5, the matrices \(n^{-\alpha}A_{n}^{p,\alpha}\) and \(T_{n}^{p,\alpha}\) are asymptotically spectrally equivalent, possibly up to few outliers. As a consequence, the arguments given in Remark 5.9 apply unchanged when the aim is solving a linear system whose coefficient matrix is \(n^{-\alpha}A_{n}^{p,\alpha}\) instead of \(T_{n}^{p,\alpha}\)._
+
+**Remark 6.7**.: _Let \(A_{n}^{p,\alpha,\gamma,\rho}\) be the coefficient matrix corresponding to the B-spline collocation discretization of the advection-diffusion-reaction problem_
+
+\[\begin{cases}\frac{\mathrm{d}^{\alpha}u(x)}{\mathrm{d}|x|^{\alpha}}+\gamma u ^{\prime}(x)+\rho u(x)=s(x),&x\in\Omega,\\ u(x)=0,&x\in\mathbb{R}\backslash\Omega,\end{cases}\]
+
+_with \(\rho>0\) and \(\gamma\in\mathbb{R}\). From Theorem 6.5, in combination with Theorem 2.5 and [10, Lemma 4.1], we immediately deduce that_
+
+\[\{n^{-\alpha}A_{n}^{p,\alpha,\gamma,\rho}\}_{n}\sim_{\lambda}(f^{p,\alpha},[- \pi,\pi]).\]
+
+## 7 Numerical experiments
+
+In the following, we verify the spectral results obtained in Sections 5 and 6 through several numerical experiments. We also provide a numerical study of the approximation behavior of the proposed polynomial B-spline collocation method for an arbitrary degree \(p\).
+
+Let us start by illustrating that
+
+* the symbol \(f^{p,\alpha}\) has a single zero at \(0\) of order \(\alpha\) and it presents an exponential decay to zero at \(\pi\) for increasing \(p\);
+* the symbol \(f^{p,\alpha}\) satisfies the bounds in (28) for odd \(p\), and the bound in (29) for even \(p\);
+* relations (30) and (35) hold.
+
+Note that it suffices to consider the interval \([0,\pi]\) due to the symmetry of \(f^{p,\alpha}\); **see Theorem 5.3**.**
+
+Figure 1 shows that, independently of \(p\), the symbol \(f^{p,\alpha}\) has a single zero at \(0\) and the order of such zero increases up to \(2\) as \(\alpha\) tends to \(2\). On the other hand, \(f^{p,\alpha}\) presents a decay at \(\pi\) as \(p\) increases. We observe that such decay becomes faster when \(\alpha\) decreases to \(1\), in accordance with Remark 5.5.
+
+In Figure 2 we show that, fixing \(\alpha=1.3\), the bounds in (28) hold for \(p=3\), and the one in (29) holds for \(p=4\). Observe that, despite relation (29) is theoretically proven to be true for all \(\theta\in[a,\pi]\), \(a=\left(\frac{\pi^{4}}{48}\right)^{1/\alpha}\), it actually also holds for all \(\theta\in[1,a]\), i.e., for all values on the left of the black vertical line \(\theta=a\) shown in Figure 2(b).
+
+In order to numerically verify that relations (30) and (35) hold, for fixed \(n\), \(p\), we define the following equispaced grid on \([0,\pi]\):
+
+\[\Gamma:=\left\{\theta_{k}:=\frac{k\pi}{n+p-2}:k=1,\ldots,n+p-2\right\}.\]
+
+Then, we compare the sampling of \(f^{p,\alpha}\) on \(\Gamma\) with the eigenvalues of both \(T_{n}^{p,\alpha}\) and \(n^{-\alpha}A_{n}^{p,\alpha}\). Both eigenvalues and sampling values have been ordered in ascending way. In all the numerical experiments, the entries of the coefficient matrix \(A_{n}^{p,\alpha}\) have been computed using the Gauss-Jacobi-type quadrature rules introduced in [28]. In Figure 3 we fix \(p=3\), \(n=63\) and vary \(\alpha\in\{1.2,1.8\}\). For both \(T_{n}^{p,\alpha}\) and \(n^{-\alpha}A_{n}^{p,\alpha}\) we experience a very good matching, which is in accordance with Proposition 5.8 and Theorem 6.5. However, we observe that in the case of \(n^{-\alpha}A_{n}^{p,\alpha}\) there are few large eigenvalues that do not behave like the symbol; these are the outliers and their number is independent of \(n\). As a further confirmation of Proposition 5.8 and Theorem 6.5, we obtained similar results also for \(p=4\), \(n=62\), and \(\alpha\in\{1.2,1.8\}\); see Figure 4.
+
+Figure 1: Plot of \(f^{p,\alpha}\) for \(p=3,5,8\) and \(\alpha=1.2,1.5,1.8,2\).
+
+Figure 2: (a) Check of the bound in (28) which is valid for odd \(p\), and (b) check of the bound in (29) which is valid for even \(p\). In both cases \(\alpha\) has been fixed to \(1.3\).
+
+We end this section by checking how the approximation order of the considered polynomial B-spline collocation method behaves with respect to \(p\) for smooth solutions of problem (1). More precisely, in Tables 1-2 we fix the source function \(s(x)\) such that the exact solution of (1) is given by
+
+* \(u(x)=x^{3}(1-x)^{3}\), and
+* \(u(x)=\sin(\pi x^{2})\),
+
+respectively. Then, by doubling \(n\) repeatedly, we show the infinity-norm of the corresponding errors and the convergence orders for varying \(p\) and \(\alpha\). The infinity-norm of the error is computed by taking the maximum value of the error sampled in \(1024\) points uniformly distributed over \([0,1]\). In the case of standard (non-fractional) diffusion problems, we know that the approximation order for smooth solutions is \(p\) for even \(p\), and \(p-1\) for odd \(p\); see [1]. In the fractional case, we observe a dependency of the approximation order on \(\alpha\) that seems to vary as \(p+2-\alpha\) for even \(p\), and as \(p+1-\alpha\) for odd \(p\).
+
+## 8 Conclusion and future perspective
+
+We focused on a fractional differential equation in Riesz form discretized by a polynomial B-spline collocation method and we showed that, for an arbitrary degree \(p\), the resulting coefficient matrices possess a Toeplitz-like structure. We computed the corresponding spectral symbol and we proved that it has a single zero at \(0\) of order \(\alpha\), with \(\alpha\) the fractional derivative order that ranges from \(1\) to \(2\), and it presentsan exponential decay to zero at \(\pi\) for increasing \(p\) that becomes faster as \(\alpha\) approaches \(1\). This translates in a mitigated conditioning in the low frequencies and in a deterioration in the high frequencies when compared to second order problems. Moreover, we showed that the behavior of the symbol at \(\pi\) is well captured by the symbol corresponding to \(\alpha=0\) which is a trigonometric polynomial bounded in the neighborhood of \(\pi\).
+
+As a side result of the symbol computation, we ended up with a new way to express the central entries of the coefficient matrix as inner products of two fractional derivatives of cardinal B-splines.
+
+In addition, we performed a numerical study of the approximation behavior of polynomial B-spline collocation. This study suggests that the approximation order for smooth solutions in the fractional case is \(p+2-\alpha\) for even \(p\), and \(p+1-\alpha\) for odd \(p\), which is in line with approximation results known for standard (non-fractional) diffusion problems [1].
+
+The investigation presented here is intended as a first step towards the use of collocation methods based on high-order polynomial B-splines for FDE problems. In particular, (locally) non-uniform knot sequences could be considered to improve accuracy for non-smooth solutions. In this perspective, B-spline collocation methods provide a robust, problem-independent tool to face FDE problems. This robustness makes them an appealing alternative to state-of-the-art methods, such as the elegant collocation/Galerkin spectral methods for approximating the solution of (1) obtained by exploiting the connection between Jacobi polynomials and pseudo eigenfunctions of the Riesz fractional operator; see [24, 40] and references therein.
+
+The spectral analysis in the present work will provide a strong guidance for forthcoming research.
+
+Indeed, the result in Theorem 6.5 is a key ingredient for studying the symbol of matrices arising from B-spline collocation methods for more general FDE problems. In particular, additional reaction and advection terms do not modify the symbol of the corresponding matrices; see Remark 6.7. Furthermore, FDE problems involving non-constant coefficients can be addressed by applying the framework of GLT (Generalized locally Toeplitz) sequences [16].
+
+Following the results in [9, 11, 12, 13], all the information provided by the symbol can be leveraged for the design of effective preconditioners and fast multigrid/multi-iterative solvers whose convergence speed is independent of the fineness parameters and the approximation parameters as well as of the fractional derivative order; see also Remarks 5.9 and 6.6.
+
+## Acknowledgements
+
+All authors are members of the INDAM research group GNCS. The first author was partly supported by the GNCS-INDAM Young Researcher Project 2020 titled "Numerical methods for image restoration and cultural heritage deterioration". The last two authors are partially supported by the Beyond Borders Program of the University of Rome Tor Vergata through the project ASTRID (CUP E84I19002250005) and by the MIUR Excellence Department Project awarded to the Department of Mathematics, University of Rome Tor Vergata (CUP E83C18000100006).
+
+## References
+
+* [1]F. Auricchio, L. Beirao da Veiga, T.J.R. Hughes, A. Reali, G. Sangalli. _Isogeometric collocation methods_. Math. Models Methods Appl. Sci. **20**, 2075-2107 (2010).
+* [2]J. Bai, X. Feng. _Fractional-order anisotropic diffusion for image denoising_. IEEE Trans. Image Process. **16**, 2492-2502 (2007).
+* [3]G. Barbarino, S. Serra-Capizzano. _Non-Hermitian perturbations of Hermitian matrix-sequences and applications to the spectral analysis of the numerical approximation of partial differential equations_. Numer. Linear Algebra Appl. **27**, e2286 (2020).
+* [4]L. Blank. _Numerical treatment of differential equations of fractional order_. Nonlinear World **4**, 473-492 (1997).
+
+\begin{table}
+\begin{tabular}{|c||c|c|c|c|c|c|c|} \hline  & & \multicolumn{2}{c|}{\(p=2\)} & \multicolumn{2}{c|}{\(p=3\)} & \multicolumn{2}{c|}{\(p=4\)} & \multicolumn{2}{c|}{\(p=5\)} \\ \cline{3-8} \(\alpha\) & \(n\) & Error & Order & Error & Order & Error & Order & Error & Order \\ \hline \hline  & & & & & & & & \\ \cline{3-8}  & 4 & 1.3146e-03 & & 1.1197e-03 & & 2.6802e-04 & & 4.8556e-05 & \\  & 8 & 1.5675e-04 & 3.07 & 9.8810e-05 & 3.50 & 1.0317e-05 & 4.70 & 3.4230e-06 & 3.83 \\
+1.2 & 16 & 2.4941e-05 & 2.65 & 1.5622e-05 & 2.66 & 4.1887e-07 & 4.62 & 1.3835e-07 & 4.63 \\
+32 & 3.5227e-08 & 2.82 & 2.4433e-06 & 2.68 & 1.6226e-08 & 4.69 & 5.1403e-09 & 4.75 \\
+64 & 5.0507e-07 & 2.80 & 3.6711e-07 & 2.73 & 5.9986e-10 & 4.76 & 2.1670e-10 & 4.57 \\  & & & \(\approx\)2.8 & & \(\approx\)2.8 & & \(\approx\)4.8 & & \(\approx\)4.8 \\ \hline  & 4 & 1.6170e-03 & & 1.8701e-03 & & 3.4358e-04 & & 8.0567e-05 & \\  & 8 & 1.7117e-04 & 3.24 & 2.0365e-04 & 3.20 & 1.9552e-05 & 4.14 & 7.4745e-06 & 3.43 \\
+1.5 & 16 & 3.7119e-05 & 2.43 & 2.5380e-05 & 2.84 & 1.0245e-06 & 4.25 & 3.7577e-07 & 4.31 \\
+32 & 5.8828e-06 & 2.43 & 5.7869e-06 & 2.30 & 4.9498e-08 & 4.37 & 1.7183e-08 & 4.45 \\  & 64 & 1.0458e-06 & 2.49 & 1.0661e-06 & 2.44 & 2.2995e-09 & 4.43 & 8.0703e-10 & 4.41 \\  & & \(\approx\)2.5 & & \(\approx\)2.5 & & \(\approx\)4.5 & & \(\approx\)4.5 \\ \hline  & & & & & & & & \\ \cline{3-8}  & 4 & 1.9908e-03 & & 3.1774e-03 & & 4.3396e-04 & & 1.3425e-04 & \\  & 8 & 2.5091e-04 & 2.99 & 4.4181e-04 & 2.85 & 3.6073e-05 & 3.59 & 1.5905e-05 & 3.08 \\
+1.8 & 16 & 4.2953e-05 & 2.55 & 6.8611e-05 & 2.69 & 2.4045e-06 & 3.91 & 9.8386e-07 & 4.01 \\  & 32 & 9.3400e-06 & 2.20 & 1.3336e-05 & 2.36 & 1.4401e-07 & 4.06 & 5.5249e-08 & 4.15 \\
+64 & 2.0702e-06 & 2.17 & 3.0292e-06 & 2.14 & 8.2251e-09 & 4.13 & 3.0499e-09 & 4.18 \\  & & \(\approx\)2.2 & & \(\approx\)2.2 & & \(\approx\)4.2 & & \(\approx\)4.2 \\ \hline \hline \end{tabular}
+\end{table}
+Table 1: Errors and convergence orders of the proposed B-spline collocation method for problem (1) when \(u(x)=x^{3}(1-x)^{3}\).
+
+* [5]C. de Boor. _A Practical Guide to Splines_. Springer-Verlag, New York (2001).
+* [6]A. Bueno-Orovio, D. Kay, V. Grau, B. Rodriguez, K. Burrage. _Fractional diffusion models of cardiac electrical propagation: role of structural heterogeneity in dispersion of repolarization_. J. Royal Soc. Interface **11**, 20140352 (2014).
+* [7]M. Cai, C. Li. _Regularity of the solution to Riesz-type fractional differential equation_. Integral Transf. Spec. Funct. **30**, 711-742 (2019).
+* [8]C.K. Chui. _An Introduction to Wavelets_. Academic Press (1992).
+* [9]M. Donatelli, C. Garoni, C. Manni, S. Serra-Capizzano, H. Speleers. _Robust and optimal multi-iterative techniques for IgA collocation linear systems_. Comput. Methods Appl. Mech. Engrg. **284**, 1120-1146 (2015).
+* [10]M. Donatelli, C. Garoni, C. Manni, S. Serra-Capizzano, H. Speleers. _Spectral analysis and spectral symbol of matrices in isogeometric collocation methods._ Math. Comput. **85**, 1639-1680 (2016).
+* [11]M. Donatelli, C. Garoni, C. Manni, S. Serra-Capizzano, H. Speleers. _Symbol-based multigrid methods for Galerkin B-spline isogeometric analysis_. SIAM J. Numer. Anal. **55**, 31-62 (2017).
+* [12]M. Donatelli, M. Mazza, S. Serra-Capizzano. _Spectral analysis and structure preserving preconditioners for fractional diffusion equations_. J. Comput. Phys. **307**, 262-279 (2016).
+* [13]M. Donatelli, M. Mazza, S. Serra-Capizzano. _Spectral analysis and multigrid methods for finite volume approximations of space-fractional diffusion equations_. SIAM J. Sci. Comput. **40**, A4007-A4039 (2018).
+* [14]V.J. Ervin, J.P. Roop. _Variational formulation for the stationary fractional advection dispersion equation_. Numer. Methods Partial Differ. Equ. **22**, 558-576 (2006).
+* [15]C. Garoni, C. Manni, F. Pelosi, S. Serra-Capizzano, H. Speleers. _On the spectrum of stiffness matrices arising from isogeometric analysis_. Numer. Math. **127**, 751-799 (2014).
+* [16]C. Garoni, S. Serra-Capizzano. _Generalized Locally Toeplitz Sequences: Theory and Applications_. Vol. I. Springer, Cham (2017).
+
+\begin{table}
+\begin{tabular}{|c||c|c|c|c|c c|c c|} \hline  & & \multicolumn{2}{c|}{\(p=2\)} & \multicolumn{2}{c|}{\(p=3\)} & \multicolumn{2}{c|}{\(p=4\)} & \multicolumn{2}{c|}{\(p=5\)} \\ \cline{3-10} \(\alpha\) & \(n\) & Error & Order & Error & Order & Error & Order & Error & Order \\ \hline \hline  & & 4 & 4.0099e-02 & & 1.5948e-02 & & 6.1393e-03 & & 1.9341e-03 & \\  & 8 & 8.4523e-03 & 2.25 & 4.6043e-03 & 1.79 & 2.5317e-04 & 4.60 & 1.0271e-04 & 4.23 \\
+1.2 & 16 & 1.1497e-03 & 2.88 & 7.8372e-04 & 2.55 & 7.9503e-06 & 4.99 & 2.5175e-06 & 5.35 \\
+1.2 & 32 & 1.6423e-04 & 2.81 & 1.1786e-04 & 2.73 & 2.5619e-07 & 4.96 & 1.7641e-08 & 5.14 \\  & 64 & 2.3468e-05 & 2.81 & 1.17096e-05 & 2.79 & 9.5594e-09 & 4.74 & 1.0289e-08 & 2.80 \\  & & \(\approx\)2.8 & & \(\approx\)2.8 & & \(\approx\)4.8 & & \(\approx\)4.8 \\ \hline  & 4 & 4.2457e-02 & & 2.4735e-02 & & 7.7604e-03 & & 2.6753e-03 & \\  & 8 & 1.0378e-02 & 2.03 & 7.9809e-03 & 1.63 & 4.3612e-04 & 4.15 & 1.9027e-04 & 3.81 \\
+1.5 & 16 & 1.7932e-03 & 2.53 & 1.7304e-03 & 2.21 & 1.7374e-05 & 4.65 & 6.3744e-06 & 4.90 \\  & 32 & 3.1466e-04 & 2.51 & 3.1905e-04 & 2.44 & 7.0999e-07 & 4.61 & 2.2599e-07 & 4.82 \\  & 64 & 5.5887e-05 & 2.49 & 5.7202e-05 & 2.48 & 2.9859e-08 & 4.57 & 7.5065e-09 & 4.91 \\  & \(\approx\)2.5 & & \(\approx\)2.5 & & \(\approx\)4.5 & & \(\approx\)4.5 & & \(\approx\)4.5 \\ \hline  & & & & & & & & & \\ \cline{3-10}  & 4 & 4.2801e-02 & & 3.8129e-02 & & 9.6792e-03 & & 3.8393e-03 & \\  & 8 & 1.2259e-02 & 1.80 & 1.4094e-02 & 1.44 & 7.5244e-04 & 3.69 & 3.6381e-04 & 3.40 \\
+1.8 & 16 & 2.7540e-03 & 2.15 & 3.8466e-03 & 1.87 & 3.9382e-05 & 4.26 & 1.6023e-05 & 4.50 \\  & 32 & 6.0215e-04 & 2.19 & 8.8181e-04 & 2.13 & 2.0021e-06 & 4.30 & 7.1827e-07 & 4.48 \\
+64 & 1.3172e-04 & 2.19 & 1.9414e-04 & 2.18 & 1.0435e-07 & 4.26 & 3.2796e-08 & 4.45 \\  & & \(\approx\)2.2 & & \(\approx\)2.2 & & \(\approx\)4.2 & & \(\approx\)4.2 \\ \hline \hline \end{tabular}
+\end{table}
+Table 2: Errors and convergence orders of the proposed B-spline collocation method for problem (1) when \(u(x)=\sin(\pi x^{2})\).
+
+* [17]U. Grenander, G. Szego. _Toeplitz Forms and Their Applications_. Second Edition, Chelsea, New York (1984).
+* [18]Z. Hao, Z. Zhang. _Optimal regularity and error estimates of a spectral Galerkin method for fractional advection-diffusion-reaction equations_. SIAM J. Numer. Anal. **58**, 211-233 (2020).
+* [19]H. Hejazi, T. Moroney, F. Liu. _Stability and convergence of a finite volume method for the space fractional advection-dispersion equation_. J. Comput. Appl. Math. **255**, 684-697 (2014).
+* [20]S.L. Lei, H.W. Sun. _A circulant preconditioner for fractional diffusion equations_. J. Comput. Phys. **242**, 715-725 (2013).
+* [21]Z. Lin, D. Wang. _A finite element formulation preserving symmetric and banded diffusion stiffness matrix characteristics for fractional differential equations._ Comput. Mech. **62**, 185-211 (2018).
+* [22]J. Liu, H. Fu, H. Wang, X. Chai. _A preconditioned fast quadratic spline collocation method for two-sided space-fractional partial differential equations_. J. Comput. Appl. Math. **360**, 138-156 (2019).
+* [23]T. Lyche, C. Manni, H. Speleers. _Foundations of spline theory: B-splines, spline approximation, and hierarchical refinement_. In: T. Lyche et al. (eds.) Splines and PDEs: From Approximation Theory to Numerical Linear Algebra, Lect. Notes Math. **2219**, 1-76 (2018).
+* [24]Z. Mao, G. E. Karniakadis. _A spectral method (of exponential convergence) for singular solutions of the diffusion equation with general two-sided fractional derivative_. SIAM J. Numer. Anal. **56**, 24-49 (2018).
+* [25]M. Mazza, C. Manni, A. Ratnani, S. Serra-Capizzano, H. Speleers. _Isogeometric analysis for 2D and 3D curl-div problems: Spectral symbols and fast iterative solvers_. Comput. Methods Appl. Mech. Engrg. **344**, 970-997 (2019).
+* [26]M.M. Meerschaert, C. Tadjeran. _Finite difference approximations for fractional advection-dispersion flow equations_. J. Comput. Appl. Math. **172**, 65-77 (2004).
+* [27]H. Moghaderi, M. Dehghan, M. Donatelli, M. Mazza. _Spectral analysis and multigrid preconditioners for two-dimensional space-fractional diffusion equations_, J. Comput. Phys. **350**, 992-1011 (2017).
+* [28]G. Pan, W. Chen, K.Y. Sze. _Gauss-Jacobi-type quadrature rules for fractional directional integrals_. Comput. Math. Appl. **66**, 597-607 (2013).
+* [29]J. Pan, M.K. Ng, H. Wang. _Fast preconditioned iterative methods for finite volume discretization of steady-state space-fractional diffusion equations_. Numer. Algor. **74**, 153-173 (2017).
+* [30]H. Pang, H.W. Sun. _Multigrid method for fractional diffusion equations_. J. Comput. Phys. **231**, 693-703 (2012).
+* [31]A. Pedas, E. Tamme. _On the convergence of spline collocation methods for solving fractional differential equations_. J. Comput. Appl. Math. **235**, 3502-3514 (2011).
+* [32]L. Pezza, F. Pitolli. _A multiscale collocation method for fractional differential problems_. Math. Comput. Simul. **147**, 210-219 (2018).
+* [33]F. Pitolli. _Optimal B-spline bases for numerical solution of fractional differential problems_. Axioms **7**, 46 (2018).
+* [34]F. Pitolli. _On the numerical solution of fractional boundary value problems by a spline quasi-interpolant operator_. Axioms **9**, 61 (2020).
+* [35]I. Podlubny. _Fractional Differential Equations_. Academic Press (1998).
+
+* [36]H. Speleers. _Inner products of box splines and their derivatives_. BIT Numer. Math. **55**, 559-567 (2015).
+* [37]W. Tian, H. Zhou, W. Deng. _A class of second order difference approximations for solving space-fractional diffusion equations_. Math. Comput. **84**, 1703-1727 (2015).
+* [38]M. Unser, T. Blu. _Fractional splines and wavelets._ SIAM Rev. **42**, 43-67 (2000).
+* [39]H. Wang, N. Du. _A superfast-preconditioned iterative method for steady-state space-fractional diffusion equations_, J. Comput. Phys. **240**, 49-57 (2013).
+* [40]F. Zeng, Z. Mao, G. E. Karniadakis. _A generalized spectral collocation method with tunable accuracy for fractional differential equations with end-point singularities_. SIAM J. Sci. Comput. **39**, A360-A383 (2017).

@@ -4,3 +4,4 @@ grobid-client-python
 beautifulsoup4
 tqdm
 pandas
+nougat-ocr

@@ -316,7 +316,7 @@ def get_dataframe(path_to_extraction_folder, k=None):
     return df
 
 
-class PaperParser:
+class GROBIDPaperParser:
     def __init__(self, input_pdf_dir, output_dir, consolidate_citations=False, tei_coordinates=False, force=False, config_path="./krawl/parser/config/config.json", processing_batch_size=1):
         self.input_pdf_dir = str(input_pdf_dir) 
         self.output_dir = str(output_dir)
@@ -423,15 +423,15 @@ class PaperParser:
             print(f"Total TEI XML files in '{self.output_dir}': {final_tei_count}.")
 
         except RuntimeError as e:
-            print(f"A runtime error occurred during PaperParser execution: {e}")
+            print(f"A runtime error occurred during GROBIDPaperParser execution: {e}")
             raise
         except Exception as e:
-            print(f"An unexpected error occurred in PaperParser.run: {e}")
+            print(f"An unexpected error occurred in GROBIDPaperParser.run: {e}")
             traceback.print_exc()
             self.grobid.fetch_container_logs() 
             raise
         finally:
-            print("PaperParser run finished. Attempting to stop GROBID manager...")
+            print("GROBIDPaperParser run finished. Attempting to stop GROBID manager...")
             self.grobid.stop()
 
     def summary(self):
@@ -452,7 +452,7 @@ if __name__ == "__main__":
     print(f"Input PDF directory: {input_pdf_dir_path}")
     print(f"Output TEI directory: {output_dir_path}")
 
-    parser = PaperParser(
+    parser = GROBIDPaperParser(
         input_pdf_dir=input_pdf_dir_path,
         output_dir=output_dir_path,
         consolidate_citations=True,
