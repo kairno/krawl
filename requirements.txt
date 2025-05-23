@@ -5,3 +5,4 @@ beautifulsoup4
 tqdm
 pandas
 nougat-ocr
+feedparser

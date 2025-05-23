@@ -24,7 +24,7 @@ class BaseSource:
 
         # Create the output directory if it doesn't exist
         output_dir = os.path.dirname(output_filename)
-        if not os.path.exists(output_dir):
+        if output_dir and not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
         # Export metadata to JSON

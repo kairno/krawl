@@ -40,7 +40,7 @@ def main(event_id: str):
 
 if __name__ == "__main__":
 
-    # RUN: python -m main
+    # RUN: python -m krawl.scripts.run_acl_anthology
 
     target_event_ids = ["coling", "lrec", "eacl", "tacl", "acl", "naacl", "emnlp"] 
 
